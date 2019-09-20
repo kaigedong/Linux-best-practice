@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Latin-ish · Kaige Dong&#x27;s Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Check the [documentation](https://docusaurus.io) for how to use Docusaurus."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Latin-ish · Kaige Dong&#x27;s Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kaigedong.github.io/Linux-best-practice/"/><meta property="og:description" content="Check the [documentation](https://docusaurus.io) for how to use Docusaurus."/><meta property="og:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Linux-best-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/atom.xml" title="Kaige Dong&#x27;s Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/feed.xml" title="Kaige Dong&#x27;s Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Linux-best-practice/js/scrollSpy.js"></script><link rel="stylesheet" href="/Linux-best-practice/css/main.css"/><script src="/Linux-best-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Linux-best-practice/"><img class="logo" src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site"/><h2 class="headerTitleWithLogo">Kaige Dong&#x27;s Site</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/Linux-best-practice/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/Linux-best-practice/docs/doc4" target="_self">API</a></li><li class=""><a href="/Linux-best-practice/help" target="_self">Help</a></li><li class=""><a href="/Linux-best-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Docusaurus</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Docusaurus</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/docs/doc1">Example Page</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc9">This is Doc 9</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">First Category</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc2">document number 2</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Second Category</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc3">This is document number 3</a></li></ul></div></div></section></div><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Docusaurus 构建网站 · Kaige Dong&#x27;s Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## 1. 初始化环境配置"/><meta name="docsearch:version" content="0.1.2"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Docusaurus 构建网站 · Kaige Dong&#x27;s Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kaigedong.github.io/Linux-best-practice/"/><meta property="og:description" content="## 1. 初始化环境配置"/><meta property="og:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Linux-best-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/atom.xml" title="Kaige Dong&#x27;s Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/feed.xml" title="Kaige Dong&#x27;s Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Linux-best-practice/js/scrollSpy.js"></script><link rel="stylesheet" href="/Linux-best-practice/css/main.css"/><script src="/Linux-best-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Linux-best-practice/"><img class="logo" src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site"/><h2 class="headerTitleWithLogo">Kaige Dong&#x27;s Site</h2></a><a href="/Linux-best-practice/versions"><h3>0.1.2</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/Linux-best-practice/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/Linux-best-practice/docs/doc4" target="_self">API</a></li><li class=""><a href="/Linux-best-practice/help" target="_self">Help</a></li><li class=""><a href="/Linux-best-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Docusaurus</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Docusaurus</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/docs/doc1">Docusaurus 构建网站</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc2">Manjaro的安装、配置到GPU</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">First Category</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc9">This is Doc 9</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Second Category</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc3">This is document number 3</a></li></ul></div></div></section></div><script>
             var coll = document.getElementsByClassName('collapsible');
             var checkActiveCategory = true;
             for (var i = 0; i < coll.length; i++) {
@@ -54,16 +54,157 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Latin-ish</h1></header><article><div><span><p>Check the <a href="https://docusaurus.io">documentation</a> for how to use Docusaurus.</p>
-<h2><a class="anchor" aria-hidden="true" id="lorem"></a><a href="#lorem" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lorem</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum massa eget nulla aliquet sagittis. Proin odio tortor, vulputate ut odio in, ultrices ultricies augue. Cras ornare ultrices lorem malesuada iaculis. Etiam sit amet libero tempor, pulvinar mauris sed, sollicitudin sapien.</p>
-<h2><a class="anchor" aria-hidden="true" id="mauris-in-code"></a><a href="#mauris-in-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mauris In Code</h2>
-<pre><code class="hljs">Mauris vestibulum ullamcorper nibh, ut semper purus pulvinar ut. Donec volutpat <span class="hljs-keyword">orci </span>sit amet mauris malesuada, non pulvinar augue aliquam. Vestibulum ultricies <span class="hljs-built_in">at</span> urna ut suscipit. Morbi iaculis, erat <span class="hljs-built_in">at</span> imperdiet semper, ipsum nulla sodales erat, eget tincidunt <span class="hljs-keyword">justo </span>dui quis <span class="hljs-keyword">justo. </span>Pellentesque <span class="hljs-keyword">dictum </span><span class="hljs-keyword">bibendum </span><span class="hljs-keyword">diam </span><span class="hljs-built_in">at</span> aliquet. Sed pulvinar, dolor quis finibus <span class="hljs-keyword">ornare, </span>eros odio facilisis erat, eu rhoncus nunc dui sed ex. Nunc gravida dui massa, sed <span class="hljs-keyword">ornare </span>arcu tincidunt sit amet. Maecenas efficitur sapien neque, a laoreet libero feugiat ut.
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Docusaurus 构建网站</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="1-初始化环境配置"></a><a href="#1-初始化环境配置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. 初始化环境配置</h2>
+<ul>
+<li><p>安装Git</p></li>
+<li><p>安装Node.js</p>
+<pre><code class="hljs">$ brew install <span class="hljs-keyword">node</span>
+<span class="hljs-title">$</span> <span class="hljs-keyword">node</span> <span class="hljs-title">-v</span>
+
+v8.<span class="hljs-number">5.0</span>
+</code></pre></li>
+<li><p>创建一个GitHub项目：</p>
+<p>例如 repository 名为 <code>docusaurus-tutorial</code>，不要加<code>.gitignore</code>与license</p></li>
+<li><p>在终端：</p>
+<pre><code class="hljs">cd /Users/NAME/doc_projects <span class="hljs-comment"># macOS example</span>
+
+git <span class="hljs-keyword">clone</span> <span class="hljs-title">git</span>@github.com:USERNAME/docusaurus-tutorial.git <span class="hljs-comment"># SSH</span>
+<span class="hljs-comment"># or</span>
+git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/USERNAME/docusaurus-tutorial.git <span class="hljs-comment"># HTTPS</span>
+</code></pre></li>
+<li><p>安装 <code>Docusaurus 初始化</code>命令</p>
+<pre><code class="hljs"><span class="hljs-built_in">npm</span> install --<span class="hljs-built_in">global</span> docusaurus-init
+</code></pre></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="2-初始化一个站点"></a><a href="#2-初始化一个站点" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 初始化一个站点</h2>
+<pre><code class="hljs">$ cd docusaurus-tutorial
+$ docusaurus-init # 将创建一些模板，部分文件如下：
+
+├── Dockerfile
+├── docker-compose.yml
+├── docs
+│   ├── doc1.md
+│   ├── doc2.md
+│   ├── doc3.md
+│   ├── exampledoc4.md
+│   └── exampledoc5.md
+└── website
+    ├── README.md
+    ├── blog
+    │   ├── <span class="hljs-number">2016</span><span class="hljs-number">-03</span><span class="hljs-number">-11</span>-blog-post.md
+    │   ├── <span class="hljs-number">2017</span><span class="hljs-number">-04</span><span class="hljs-number">-10</span>-blog-post-two.md
+    │   ├── <span class="hljs-number">2017</span><span class="hljs-number">-09</span><span class="hljs-number">-25</span>-testing-rss.md
+    │   ├── <span class="hljs-number">2017</span><span class="hljs-number">-09</span><span class="hljs-number">-26</span>-adding-rss.md
+    │   └── <span class="hljs-number">2017</span><span class="hljs-number">-10</span><span class="hljs-number">-24</span>-new-version<span class="hljs-number">-1.0</span><span class="hljs-number">.0</span>.md
+    ├── sidebars.json
+    ├── siteConfig.js
+
+$ cd website &amp;&amp; npm start  # 将会在浏览器打开 http:<span class="hljs-comment">//localhost:3000</span>
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="nulla"></a><a href="#nulla" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nulla</h2>
-<p>Nulla facilisi. Maecenas sodales nec purus eget posuere. Sed sapien quam, pretium a risus in, porttitor dapibus erat. Sed sit amet fringilla ipsum, eget iaculis augue. Integer sollicitudin tortor quis ultricies aliquam. Suspendisse fringilla nunc in tellus cursus, at placerat tellus scelerisque. Sed tempus elit a sollicitudin rhoncus. Nulla facilisi. Morbi nec dolor dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras et aliquet lectus. Pellentesque sit amet eros nisi. Quisque ac sapien in sapien congue accumsan. Nullam in posuere ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin lacinia leo a nibh fringilla pharetra.</p>
-<h2><a class="anchor" aria-hidden="true" id="orci"></a><a href="#orci" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Orci</h2>
-<p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin venenatis lectus dui, vel ultrices ante bibendum hendrerit. Aenean egestas feugiat dui id hendrerit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur in tellus laoreet, eleifend nunc id, viverra leo. Proin vulputate non dolor vel vulputate. Curabitur pretium lobortis felis, sit amet finibus lorem suscipit ut. Sed non mollis risus. Duis sagittis, mi in euismod tincidunt, nunc mauris vestibulum urna, at euismod est elit quis erat. Phasellus accumsan vitae neque eu placerat. In elementum arcu nec tellus imperdiet, eget maximus nulla sodales. Curabitur eu sapien eget nisl sodales fermentum.</p>
-<h2><a class="anchor" aria-hidden="true" id="phasellus"></a><a href="#phasellus" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Phasellus</h2>
-<p>Phasellus pulvinar ex id commodo imperdiet. Praesent odio nibh, sollicitudin sit amet faucibus id, placerat at metus. Donec vitae eros vitae tortor hendrerit finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque vitae purus dolor. Duis suscipit ac nulla et finibus. Phasellus ac sem sed dui dictum gravida. Phasellus eleifend vestibulum facilisis. Integer pharetra nec enim vitae mattis. Duis auctor, lectus quis condimentum bibendum, nunc dolor aliquam massa, id bibendum orci velit quis magna. Ut volutpat nulla nunc, sed interdum magna condimentum non. Sed urna metus, scelerisque vitae consectetur a, feugiat quis magna. Donec dignissim ornare nisl, eget tempor risus malesuada quis.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/Linux-best-practice/docs/doc9"><span>This is Doc 9</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#lorem">Lorem</a></li><li><a href="#mauris-in-code">Mauris In Code</a></li><li><a href="#nulla">Nulla</a></li><li><a href="#orci">Orci</a></li><li><a href="#phasellus">Phasellus</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Linux-best-practice/" class="nav-home"><img src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Linux-best-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Linux-best-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/Linux-best-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Linux-best-practice/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Linux-best-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Linux-best-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Your Name or Your Company Name</section></footer></div></body></html>
+<h2><a class="anchor" aria-hidden="true" id="3-创建一个页面"></a><a href="#3-创建一个页面" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. 创建一个页面</h2>
+<h3><a class="anchor" aria-hidden="true" id="31-创建一个常规的页面"></a><a href="#31-创建一个常规的页面" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.1 创建一个常规的页面</h3>
+<ol>
+<li>进入<code>website/pages/en</code>文件夹，保存下面内容到<code>hello-world.js</code>:</li>
+</ol>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> React = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react'</span>);
+
+<span class="hljs-keyword">const</span> CompLibrary = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../../core/CompLibrary.js'</span>);
+
+<span class="hljs-keyword">const</span> Container = CompLibrary.Container;
+<span class="hljs-keyword">const</span> GridBlock = CompLibrary.GridBlock;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">HelloWorld</span>(<span class="hljs-params">props</span>) </span>{
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"docMainWrapper wrapper"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Container</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"mainContainer documentContainer postContainer"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello World!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is my first page!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Container</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+
+<span class="hljs-built_in">module</span>.exports = HelloWorld;
+</code></pre>
+<ol start="2">
+<li>然后到 <a href="http://localhost:3000/hello-world">http://localhost:3000/hello-world</a> 查看内容</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="32-创建一个文档页面"></a><a href="#32-创建一个文档页面" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.2 创建一个文档页面</h3>
+<ol>
+<li><p>进入<code>docs</code>文件夹(与website文件夹在同一级)，并创建<code>doc9.md</code>文件。</p></li>
+<li><p>在<code>doc9.md</code>中放入下面内容：</p>
+<pre><code class="hljs">---
+id: doc9
+<span class="hljs-section">title: This is Doc 9
+---</span>
+
+I can write content using [<span class="hljs-string">GitHub-flavored Markdown syntax</span>](<span class="hljs-link">https://github.github.com/gfm/</span>).
+
+<span class="hljs-section">## Markdown Syntax</span>
+
+<span class="hljs-strong">**Bold**</span> <span class="hljs-emphasis">_italic_</span> <span class="hljs-code">`code`</span> [<span class="hljs-string">Links</span>](<span class="hljs-link">#url</span>)
+
+<span class="hljs-quote">&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse</span>
+<span class="hljs-quote">&gt; id sem consectetuer libero luctus adipiscing.</span>
+<span class="hljs-bullet">
+* </span>Hey
+<span class="hljs-bullet">* </span>Ho
+<span class="hljs-bullet">* </span>Let's Go
+</code></pre></li>
+<li><p>修改<code>sidebars.json</code>将markdown文件显示出来：打开<code>website/sidebars.json</code>，并添加<code>doc9</code>. <code>ID</code>要与<code>doc9.md</code>的ID相同</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"docs"</span>: {
+    <span class="hljs-attr">"Docusaurus"</span>: [
+      <span class="hljs-string">"doc1"</span>,
++     <span class="hljs-string">"doc9"</span>
+    ],
+    <span class="hljs-attr">"First Category"</span>: [<span class="hljs-string">"doc2"</span>],
+    <span class="hljs-attr">"Second Category"</span>: [<span class="hljs-string">"doc3"</span>]
+  },
+  <span class="hljs-attr">"docs-other"</span>: {
+    <span class="hljs-attr">"First Category"</span>: [<span class="hljs-string">"doc4"</span>, <span class="hljs-string">"doc5"</span>]
+  }
+}
+</code></pre></li>
+<li><p><code>cmd</code> + <code>C</code> 关闭启动并<code>npm start</code>重启</p></li>
+<li><p><a href="http://localhost:3000/docs/doc9">http://localhost:3000/docs/doc9</a>  将能显示该markdown页面。</p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="4-发布站点"></a><a href="#4-发布站点" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. 发布站点</h2>
+<ol>
+<li><p>编辑<code>docusaurus-tutorial/website/siteConfig.js</code> 修改以下内容：</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> siteConfig = {
+  ...
+  url: <span class="hljs-string">'https://USERNAME.github.io'</span>, <span class="hljs-comment">// Replace USERNAME with your GitHub username.</span>
+  baseUrl: <span class="hljs-string">'/docusaurus-tutorial/'</span>, <span class="hljs-comment">// The name of your GitHub project.</span>
+  projectName: <span class="hljs-string">'docusaurus-tutorial'</span>,  <span class="hljs-comment">// The name of your GitHub project. Same as above.</span>
+  organizationName: <span class="hljs-string">'USERNAME'</span> <span class="hljs-comment">// Your GitHub username.</span>
+  ...
+}
+</code></pre></li>
+<li><p>在终端<code>cmd+C</code></p></li>
+<li><p>在<code>website</code>文件夹，运行<code>npm run build</code>. 该命令会生成HTML静态文件到<code>docusaurus-tutorial/website/build</code> 文件夹。</p></li>
+<li><p>用自己的用户名替换 <code>USERNAME</code>并运行下面命令：</p></li>
+</ol>
+<pre><code class="hljs"><span class="hljs-attribute">GIT_USER</span>=USERNAME <span class="hljs-attribute">CURRENT_BRANCH</span>=master <span class="hljs-attribute">USE_SSH</span>=<span class="hljs-literal">true</span> npm <span class="hljs-builtin-name">run</span> publish-gh-pages # SSH
+<span class="hljs-comment"># or</span>
+<span class="hljs-attribute">GIT_USER</span>=USERNAME <span class="hljs-attribute">CURRENT_BRANCH</span>=master npm <span class="hljs-builtin-name">run</span> publish-gh-pages # HTTPS
+</code></pre>
+<p>HTML会放到<code>https://github.com/USERNAME/docusaurus-tutorial</code></p>
+<h2><a class="anchor" aria-hidden="true" id="5-添加版本"></a><a href="#5-添加版本" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. 添加版本</h2>
+<p>杀手级功能--版本控制。</p>
+<h3><a class="anchor" aria-hidden="true" id="51-发布一个版本"></a><a href="#51-发布一个版本" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5.1 发布一个版本</h3>
+<p>假设你对当前版本满意，并想将其冻结为<code>V1.0.0</code>版本:</p>
+<pre><code class="hljs">$ cd website
+$ npm run examples versions # 生成一个 versions.json，它保存该项目中的所有的版本信息
+$ npm run version <span class="hljs-number">1.0</span><span class="hljs-number">.0</span> # 生成你想冻结的版本，如<span class="hljs-number">1.0</span><span class="hljs-number">.0</span>;将考本docs文件到website/versioned_docs/version<span class="hljs-number">-1.0</span><span class="hljs-number">.0</span>文件夹
+</code></pre>
+<p>输入<code>npm start</code>启动，可以看到左上角有版本信息。现在，如果去<code>docs/doc1.md</code>修改一些信息，打开看网页还是没变。这是因为版本的信息已被保存，直到下个版本才能被显示出来。</p>
+<h3><a class="anchor" aria-hidden="true" id="52-下一个版本"></a><a href="#52-下一个版本" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5.2 下一个版本</h3>
+<p>假如文件有修改，还不想发布，可以通过：</p>
+<p><code>http://localhost:3000/Linux-best-practice/docs/next/doc1</code> 来查看。</p>
+<p>如果发布到下个版本，可以输入：</p>
+<pre><code class="hljs">npm run version <span class="hljs-number">1.0</span><span class="hljs-number">.1</span>
+</code></pre>
+<p>则<code>1.0.1</code>版本成为了过去，当前版本变成了<code>1.0.1</code>.但仍可以通过URL访问旧版本：<code>http://localhost:3000/docusaurus-tutorial/docs/1.0.0/doc1</code></p>
+<p>然后按照<code>第4步</code>进行发布吧。</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/Linux-best-practice/docs/doc2"><span>Manjaro的安装、配置到GPU</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#1-初始化环境配置">1. 初始化环境配置</a></li><li><a href="#2-初始化一个站点">2. 初始化一个站点</a></li><li><a href="#3-创建一个页面">3. 创建一个页面</a><ul class="toc-headings"><li><a href="#31-创建一个常规的页面">3.1 创建一个常规的页面</a></li><li><a href="#32-创建一个文档页面">3.2 创建一个文档页面</a></li></ul></li><li><a href="#4-发布站点">4. 发布站点</a></li><li><a href="#5-添加版本">5. 添加版本</a><ul class="toc-headings"><li><a href="#51-发布一个版本">5.1 发布一个版本</a></li><li><a href="#52-下一个版本">5.2 下一个版本</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Linux-best-practice/" class="nav-home"><img src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Linux-best-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Linux-best-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/Linux-best-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Linux-best-practice/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Linux-best-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Linux-best-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Your Name or Your Company Name</section></footer></div></body></html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Manjaro的安装、配置到GPU · Kaige Dong&#x27;s Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## 安装并配置Manjaro"/><meta name="docsearch:version" content="0.1.1"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Manjaro的安装、配置到GPU · Kaige Dong&#x27;s Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kaigedong.github.io/Linux-best-practice/"/><meta property="og:description" content="## 安装并配置Manjaro"/><meta property="og:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Linux-best-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/atom.xml" title="Kaige Dong&#x27;s Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/feed.xml" title="Kaige Dong&#x27;s Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Linux-best-practice/js/scrollSpy.js"></script><link rel="stylesheet" href="/Linux-best-practice/css/main.css"/><script src="/Linux-best-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Linux-best-practice/"><img class="logo" src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site"/><h2 class="headerTitleWithLogo">Kaige Dong&#x27;s Site</h2></a><a href="/Linux-best-practice/versions"><h3>0.1.1</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/Linux-best-practice/docs/0.1.1/doc1" target="_self">Docs</a></li><li class=""><a href="/Linux-best-practice/docs/0.1.1/doc4" target="_self">API</a></li><li class=""><a href="/Linux-best-practice/help" target="_self">Help</a></li><li class=""><a href="/Linux-best-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>First Category</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Docusaurus</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/0.1.1/doc1">docusaurus 简明教程</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/0.1.1/doc9">This is Doc 9</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">First Category</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/docs/0.1.1/doc2">Manjaro的安装、配置到GPU</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Second Category</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/0.1.1/doc3">This is document number 3</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Manjaro的安装、配置到GPU</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="安装并配置manjaro"></a><a href="#安装并配置manjaro" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>安装并配置Manjaro</h2>
+<h3><a class="anchor" aria-hidden="true" id="制作manjaro启动镜像"></a><a href="#制作manjaro启动镜像" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>制作Manjaro启动镜像</h3>
+<ul>
+<li><p>从<a href="https://mirrors.ustc.edu.cn/manjaro-cd/">中科大镜像</a>下载、安装Manjaro (kde) ：</p></li>
+<li><p>Mac OS系统下制作U盘启动：</p>
+<pre><code class="hljs">$ sudo diskutil list
+<span class="hljs-built_in">..</span>.
+/dev/disk8 (external, physical):
+   #:                      <span class="hljs-built_in"> TYPE </span>NAME                    SIZE       IDENTIFIER
+   0:     FDisk_partition_scheme                        <span class="hljs-number">*31</span>.0 GB    disk8
+   1:             Windows_FAT_32 KINGSTON                31.0 GB    disk8s1
+
+$ diskutil umount /dev/disk8s1 
+Volume KINGSTON on disk8s1 unmounted
+
+$ sudo dd <span class="hljs-attribute">if</span>=/path/of/manjaro-kde-18.1.0-stable-x86_64.iso  <span class="hljs-attribute">of</span>=/dev/disk8 <span class="hljs-attribute">bs</span>=1m
+</code></pre></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="修改系统语言"></a><a href="#修改系统语言" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>修改系统语言</h3>
+<ul>
+<li>安装。系统语言先选英文。装好系统再改为中文 (这样<code>~</code>下的文件夹就会是英文的了)。
+<pre><code class="hljs">首先：修改`/etc/locale.gen`，取消zh.UTF-<span class="hljs-number">8</span>的注释
+然后：运行命令`locale-gen`
+然后：修改`locale.conf`，并设置为：
+LANG=<span class="hljs-string">"zh_CN.UTF-8"</span>
+LANGUAGE=<span class="hljs-string">"zh_CN:en_GB:en"</span>
+然后，从系统设置里下载语言包
+</code></pre></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="配置国内镜像源"></a><a href="#配置国内镜像源" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>配置国内镜像源</h3>
+<p>Manjaro 国内源 + ArchlinuxCN 国内源</p>
+<ul>
+<li><p>Manjaro 国内源</p>
+<pre><code class="hljs"><span class="hljs-variable">$ </span>sudo pacman-mirrors -i -c China -m rank  <span class="hljs-comment"># 生成可用中国镜像站列表，勾选 http://mirrors.ustc.edu.cn/manjaro/ ，然后按 OK 键两次。</span>
+<span class="hljs-variable">$ </span>sudo pacman -Syyu <span class="hljs-comment"># 升级系统到最新</span>
+</code></pre></li>
+<li><p>ArchLinuxCN 中科大源(Arch Linux 中文社区仓库是由 Arch Linux 中文社区驱动的非官方用户仓库)：</p>
+<pre><code class="hljs"><span class="hljs-comment"># /etc/pacman.conf 文件末尾添加：</span>
+
+[archlinuxcn]
+Server = https:<span class="hljs-regexp">//mi</span>rrors.ustc.edu.cn<span class="hljs-regexp">/archlinuxcn/</span><span class="hljs-variable">$arch</span>
+
+<span class="hljs-comment"># 然后安装 archlinuxcn-keyring 包以导入 GPG key。</span>
+$ sudo pacman -Syyu
+$ sudo pacman -S archlinuxcn-keyring
+</code></pre></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="开机挂载第二块硬盘"></a><a href="#开机挂载第二块硬盘" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>开机挂载第二块硬盘</h3>
+<ul>
+<li><p>查看硬盘信息:</p>
+<pre><code class="hljs">sudo fdisk -l <span class="hljs-comment"># 查看我的是/dev/sdb1</span>
+ls -l <span class="hljs-regexp">/dev/</span>disk<span class="hljs-regexp">/by-uuid/</span> <span class="hljs-comment"># 查看对应的UUID</span>
+</code></pre></li>
+<li><p>然后编辑<code>/etc/fstab</code>, 增加一行:</p>
+<pre><code class="hljs">UUID=a8786e51-eda0<span class="hljs-number">-41f</span>e-... /home/bobo/Data ext4 defaults <span class="hljs-number">0</span> <span class="hljs-number">0</span>`
+</code></pre></li>
+</ul>
+<blockquote>
+<p>要注意建立个文件夹用于挂载硬盘，并有bobo的所有权，否则任何操作都要root。</p>
+<p>然后<strong>重启</strong>之后就自动挂载了。</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="xfce-添加网速监控"></a><a href="#xfce-添加网速监控" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>xfce 添加网速监控</h3>
+<pre><code class="hljs">$<span class="hljs-built_in"> ip </span>addr # 结果显示
+
+1: lo: <span class="hljs-built_in">..</span>.
+2: enp7s0: <span class="hljs-built_in">..</span>.
+3. wlp6s0: <span class="hljs-built_in">..</span>.
+</code></pre>
+<blockquote>
+<p>其中第三个是我的无线网卡，在面板下面<code>右键</code>，<code>面板</code>--<code>添加新项目</code>中添加<code>网速监控</code>，则面板下方出现一个<code>Net</code>。</p>
+<p>然后在面板的Net上右键<code>网速监控模块</code>--<code>属性</code>--在网络设备填入<code>wlp6s0</code>即可！</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="安装常用软件"></a><a href="#安装常用软件" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>安装常用软件</h2>
+<ul>
+<li><p>安装AUR管理器</p>
+<pre><code class="hljs">git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://aur.archlinux.org/yay.git
+makepkg -si
+
+<span class="hljs-comment"># 用法与pacman一样</span>
+yay install some-package
+</code></pre></li>
+<li><p>安装其他常用软件</p>
+<pre><code class="hljs">sudo pacman -S code vim guake zotero pycharm-professional typora skype dbeaver shadowsocks-qt<span class="hljs-number">5</span> telegram-desktop electronic-wechat teamviewer foxitreader chromium flameshot wps-office netease-cloud-music flashplugin
+
+sudo pacman -S adobe-source-han-serif-cn-fonts adobe-source-han-serif-tw-fonts adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts # 安装中文简体、繁体字体
+
+sudo teamviewer --daemon start 
+sudo pacman -S mysql # https://wiki.archlinux.org/index.php/MariaDB_(<span class="hljs-symbol">%E7</span><span class="hljs-symbol">%AE</span><span class="hljs-symbol">%80</span><span class="hljs-symbol">%E4</span><span class="hljs-symbol">%BD</span><span class="hljs-symbol">%93</span><span class="hljs-symbol">%E4</span><span class="hljs-symbol">%B8</span><span class="hljs-symbol">%AD</span><span class="hljs-symbol">%E6</span><span class="hljs-symbol">%96</span><span class="hljs-symbol">%87</span>)#<span class="hljs-symbol">%E5</span><span class="hljs-symbol">%AE</span><span class="hljs-symbol">%89</span><span class="hljs-symbol">%E8</span><span class="hljs-symbol">%A3</span><span class="hljs-symbol">%85</span>
+
+#　安装powerline字体
+# clone
+git clone https://github.com/powerline/fonts.git --depth=<span class="hljs-number">1</span>
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+</code></pre></li>
+</ul>
+<blockquote>
+<p>chromium 启用代理，用以同步各种插件： <code>chromium --proxy-server=&quot;socks5://127.0.0.1:1080</code></p>
+<p>flameshot 最好的截图软件，截图的命令是 <code>flameshot gui</code>，设置到系统的自定义快捷键，并开机启动</p>
+<p>安装完Teamviewer之后，打开网络有问题。执行<code>sudo teamviewer --daemon start</code>，再次打开，过一会就好了，<a href="https://bbs.archlinux.org/viewtopic.php?id=192406">参考</a>。</p>
+</blockquote>
+<ul>
+<li><p>SSR指定SwitchOmega规则：<code>https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</code></p></li>
+<li><p>git 指定代理：</p></li>
+</ul>
+<pre><code class="hljs">git config --global http<span class="hljs-selector-class">.proxy</span> <span class="hljs-string">'socks5://127.0.0.1:1080'</span>
+git config --global https<span class="hljs-selector-class">.proxy</span> <span class="hljs-string">'socks5://127.0.0.1:1080'</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="安装搜狗输入法"></a><a href="#安装搜狗输入法" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>安装搜狗输入法</h2>
+<pre><code class="hljs">$ sudo pacman -S fcitx fcitx-configtool
+$ sudo pacman -S fcitx-gtk2 fcitx-gtk3 fcitx-qt4 fcitx-qt5 # 有些文章写可以用fcitx-im替代这些，其实im不会安装qt4，导致输入法异常！
+$ sudo pacman -S fcitx-sogoupinyin
+
+$ vim ~/.xprofile
+<span class="hljs-builtin-name">export</span> <span class="hljs-attribute">GTK_IM_MODULE</span>=fcitx
+<span class="hljs-builtin-name">export</span> <span class="hljs-attribute">QT_IM_MODULE</span>=fcitx
+<span class="hljs-builtin-name">export</span> <span class="hljs-attribute">XMODIFIERS</span>=<span class="hljs-string">"@im=fcitx"</span>
+
+重启之后，配置即可。
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="终端-zsh的配置"></a><a href="#终端-zsh的配置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>终端、zsh的配置</h2>
+<ul>
+<li><p>安装oh-my-zsh</p>
+<pre><code class="hljs">git clone http<span class="hljs-variable">s:</span>//github.<span class="hljs-keyword">com</span>/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh &amp;&amp; <span class="hljs-keyword">cp</span> ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+
+修改默认<span class="hljs-keyword">shell</span>, 或自动启动zsh，这个没必要，我使用的是guake，可设置开启终端时的默认<span class="hljs-keyword">shell</span>。
+# chsh -s /bin/zsh <span class="hljs-built_in">or</span> <span class="hljs-keyword">echo</span> <span class="hljs-string">"exec /path/of/zsh --login"</span> &gt;&gt; .bash_profile #
+</code></pre></li>
+<li><p>oh-my-zsh 主题及插件下载</p>
+<pre><code class="hljs">+ 安装zsh主题：
+
+<span class="hljs-built_in">cd</span> <span class="hljs-variable">$ZSH_CUSTOM</span>
+<span class="hljs-built_in">cd</span> themes
+git <span class="hljs-built_in">clone</span> https://github.com/sindresorhus/pure.git &amp;&amp; <span class="hljs-built_in">cd</span> pure
+ln -s async.zsh async
+ln -s pure.zsh prompt_pure_setup
+
+<span class="hljs-comment"># .zshrc</span>
+fpath=(<span class="hljs-string">"/home/bobo/.oh-my-zsh/custom/themes/pure"</span> <span class="hljs-variable">$fpath</span>)
+<span class="hljs-built_in">autoload</span> -U promptinit; promptinit
+prompt pure
+
+<span class="hljs-comment"># 2. zsh-syntax-highlighting 语法高亮插件</span>
+$ git <span class="hljs-built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="hljs-variable">${ZSH_CUSTOM:-~/.oh-my-zsh/custom}</span>/plugins/zsh-syntax-highlighting
+</code></pre></li>
+<li><p><code>.zshrc</code> 的一些配置</p>
+<pre><code class="hljs"><span class="hljs-comment"># .zshrc: </span>
+<span class="hljs-comment"># tldr代替man，fd 代替find，在rust那里下载安装。</span>
+
+alias la=<span class="hljs-string">"ls -lth"</span>
+alias man=<span class="hljs-string">"tldr"</span>
+
+ZSH_THEME=<span class="hljs-string">"spaceship"</span>
+
+HIST_STAMPS=<span class="hljs-string">"yyyy-mm-dd"</span>
+
+plugins=(
+  extract git zsh-syntax-highlighting
+)
+</code></pre></li>
+<li><p>dir 颜色的设置： <a href="https://github.com/trapd00r/LS_COLORS">参考</a></p>
+<pre><code class="hljs">wget <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/raw.github.com/trapd</span>00r/LS_COLORS/master/LS_COLORS -O $HOME/.dircolors
+echo <span class="hljs-string">'eval $(dircolors -b $HOME/.dircolors)'</span> <span class="hljs-meta">&gt;&gt; </span>$HOME/.zshrc
+zsh
+</code></pre></li>
+<li><p>配置vim</p>
+<pre><code class="hljs"><span class="hljs-variable">$ </span>git clone --depth=<span class="hljs-number">1</span> <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/github.com/amix</span><span class="hljs-regexp">/vimrc.git ~/</span>.vim_runtime
+<span class="hljs-variable">$ </span>sh ~<span class="hljs-regexp">/.vim_runtime/install</span>_awesome_vimrc.sh
+</code></pre></li>
+<li><p>配置pet</p>
+<pre><code class="hljs">pet configure 的输出：
+ [General]
+   <span class="hljs-attr">snippetfile</span> = <span class="hljs-string">"/home/dongkaige/.config/pet/snippet.toml"</span>
+   <span class="hljs-attr">editor</span> = <span class="hljs-string">"vim"</span>
+   <span class="hljs-attr">column</span> = <span class="hljs-number">40</span>
+   <span class="hljs-attr">selectcmd</span> = <span class="hljs-string">"fzf"</span>
+   <span class="hljs-attr">auto_sync</span> = <span class="hljs-string">"true"</span>
+
+ [Gist]
+   <span class="hljs-attr">file_name</span> = <span class="hljs-string">"pet-snippet.toml"</span>
+   <span class="hljs-attr">access_token</span> = <span class="hljs-string">"3e442b8baaf53420741c398ba71e27d3eac21a08"</span>
+   <span class="hljs-attr">gist_id</span> = <span class="hljs-string">"e6d13028c0569c345884f429c4648d9c"</span>
+   <span class="hljs-attr">public</span> = <span class="hljs-literal">false</span>
+   <span class="hljs-attr">auto_sync</span> = <span class="hljs-literal">true</span>
+</code></pre></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="安装配置rust开发环境"></a><a href="#安装配置rust开发环境" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>安装配置rust开发环境</h2>
+<pre><code class="hljs"><span class="hljs-comment"># 1. 安装rust 中科大镜像加速rust安装 (参考https://lug.ustc.edu.cn/wiki/mirrors/help/rust-static)</span>
+添加到 .zshrc
+$ export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static  <span class="hljs-comment"># (用于更新 toolchain)</span>
+$ export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup  <span class="hljs-comment"># (用于更新 rustup)</span>
+
+curl https://sh.rustup.rs -sSf | sh  <span class="hljs-comment"># 官网的安装程序</span>
+
+<span class="hljs-comment"># 2. 设置中科大Rust crates镜像 (https://lug.ustc.edu.cn/wiki/mirrors/help/rust-crates)</span>
+<span class="hljs-comment"># 在 $HOME/.cargo/config 添加下面内容</span>
+
+[source.crates-io]
+registry = "https://github.com/rust-lang/crates.io-index"
+<span class="hljs-keyword">replace</span>-<span class="hljs-keyword">with</span> = <span class="hljs-string">'ustc'</span>
+[source.ustc]
+registry = <span class="hljs-string">"git://mirrors.ustc.edu.cn/crates.io-index"</span>
+
+<span class="hljs-comment"># 3. 安装 nightly 版本</span>
+rustup toolchain <span class="hljs-keyword">install</span> <span class="hljs-comment">--help</span>
+rustup toolchain <span class="hljs-keyword">install</span> nightly
+rustup toolchain <span class="hljs-keyword">list</span> <span class="hljs-comment"># 查看已经安装的版本</span>
+rustup <span class="hljs-keyword">default</span> stable-x86_64-apple-darwin <span class="hljs-comment"># 这种方式选择版本</span>
+
+<span class="hljs-comment"># 4. 添加rust可执行程序文件夹到~/.zshrc</span>
+echo <span class="hljs-string">"export PATH=$PATH:$HOME/.cargo/bin"</span> &gt;&gt; ~/.zshrc
+
+<span class="hljs-comment"># 5. 安装好用的rust程序 fd &amp; tldr</span>
+cargo <span class="hljs-keyword">install</span> fd-find
+cargo <span class="hljs-keyword">install</span> tealdeer
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="安装nvidia组件"></a><a href="#安装nvidia组件" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>安装NVIDIA组件</h2>
+<p>我的笔记本：Acer VN7 592G；Intel + GTX 960M 双显卡</p>
+<p>看了<a href="http://www.cnblogs.com/smlile-you-me/p/8830949.html">http://www.cnblogs.com/smlile-you-me/p/8830949.html</a>，没成功。但很有帮助。</p>
+<p>又看了<a href="https://www.youtube.com/watch?v=7KgX-LgDwQw">https://www.youtube.com/watch?v=7KgX-LgDwQw</a> 终于成功了！</p>
+<ul>
+<li><p>首先，确保系统已更新，并重启。</p></li>
+<li><p>修改GRUB (可选)</p>
+<pre><code class="hljs"><span class="hljs-meta"># 上面的视频教程需要这个步骤，我没有ACPI错误，没进行这一步也没问题。</span>
+$ sudo nano /etc/<span class="hljs-keyword">default</span>/grub
+修改：GRUB_CMDLINE_LINUX_DEFAULT=<span class="hljs-string">"quiet resume=UUID... acpi_osi=! acpi_osi='Windows 2009'"</span>
+<span class="hljs-meta"># 如果要运行NVIDIA显卡，需要添加后面两个 acpi_osi=! acpi_osi=<span class="hljs-string">'Windows 2009'</span>；不然有可能黑屏进不去系统，或者出现ACPI 错误。</span>
+$ sudo update-grub <span class="hljs-meta"># 更新grub， 再次重启系统</span>
+</code></pre></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="安装nvidia组件-1"></a><a href="#安装nvidia组件-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>安装NVIDIA组件</h2>
+<pre><code class="hljs">$ sudo mhwd -a pci nonfree <span class="hljs-number">0300</span>
+
+# 上面的步骤安装了<span class="hljs-number">9</span>个软件： 
+# Packages (<span class="hljs-number">9</span>) egl-wayland<span class="hljs-number">-1.1</span><span class="hljs-number">.2</span><span class="hljs-number">-1</span>  eglexternalplatform<span class="hljs-number">-1.0</span>+<span class="hljs-number">3</span>+g7c8f8e2<span class="hljs-number">-1</span>  primus<span class="hljs-number">-20151110</span><span class="hljs-number">-8</span>  bumblebee<span class="hljs-number">-3.2</span><span class="hljs-number">.1</span><span class="hljs-number">-22</span>  lib32-nvidia-utils<span class="hljs-number">-1</span>:<span class="hljs-number">418.43</span><span class="hljs-number">-2</span>  lib32-primus<span class="hljs-number">-20151110</span><span class="hljs-number">-4</span>  linux419-bbswitch<span class="hljs-number">-0.8</span><span class="hljs-number">-27</span>  linux419-nvidia<span class="hljs-number">-1</span>:<span class="hljs-number">418.43</span><span class="hljs-number">-9</span>  nvidia-utils<span class="hljs-number">-1</span>:<span class="hljs-number">418.43</span><span class="hljs-number">-2</span>
+
+sudo gpasswd -a xxx bumblebee # 将用户添加到bumblebee组，后面运行NVIDIA的setting组件，会提示错误。
+</code></pre>
+<ul>
+<li><strong>重启</strong>检查是否安装好了</li>
+</ul>
+<pre><code class="hljs">$ mhwd -li # 可以发现
+
+<span class="hljs-comment">--------------------------------------------------------------------------------</span>
+                     <span class="hljs-type">NAME</span>               <span class="hljs-keyword">VERSION</span>          FREEDRIVER           <span class="hljs-keyword">TYPE</span>
+<span class="hljs-comment">--------------------------------------------------------------------------------</span>
+            network-r8168            <span class="hljs-number">2016.04</span><span class="hljs-number">.20</span>                <span class="hljs-keyword">true</span>            PCI
+              video-linux            <span class="hljs-number">2018.05</span><span class="hljs-number">.04</span>                <span class="hljs-keyword">true</span>            PCI
+video-hybrid-intel-nvidia-bumblebe   <span class="hljs-number">2018.08</span><span class="hljs-number">.09</span>               <span class="hljs-keyword">false</span>            PCI
+   
+$ sudo optirun glxgears # Ran后跑起来一个轮子测试一下，会出现一个小正方形动图。
+
+# 我们看看GPU是<span class="hljs-keyword">OFF</span> 还是 <span class="hljs-keyword">ON</span>？
+
+$ watch cat /proc/acpi/bbswitch # <span class="hljs-keyword">refresh</span> every <span class="hljs-number">2</span> seconds, <span class="hljs-keyword">to</span> see whether GPU <span class="hljs-keyword">is</span> <span class="hljs-string">'ON'</span> <span class="hljs-keyword">or</span> <span class="hljs-string">'OFF'</span>
+
+# 然后再看一下，有哪些程序运行在NVIDIA上
+$ nvidia-smi
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="配置steam游戏自动调用nvidia显卡"></a><a href="#配置steam游戏自动调用nvidia显卡" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>配置steam游戏自动调用NVIDIA显卡</h3>
+<blockquote>
+<p>到上面，就已经安装好了NVIDIA，当需要的时候是能够运行NVIDIA的。</p>
+<p>那么怎么启动呢？其实，Manjaro网站上的<a href="https://wiki.manjaro.org/index.php?title=Configure_NVIDIA_(non-free)_settings_and_load_them_on_Startup">教程</a>很详细.</p>
+<p>当我们需要用显卡运行一个程序，运行命令 <code>primusrun program1</code> (program是steam主程序，我的会有点问题!!)</p>
+</blockquote>
+<ul>
+<li>具体步骤
+当我们想要用显卡运行steam里面的游戏，进去steam的库，右键游戏，点<code>属性</code>，然后点<code>设置启动选项</code>，里面输入<code>primusrun %command%</code>。
+然后再运行游戏，就能调用显卡就行了！！</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="pytorch-调用显卡"></a><a href="#pytorch-调用显卡" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pytorch 调用显卡</h3>
+<pre><code class="hljs"># 首先安装组件
+sudo pacman -S python-pytorch-cuda
+#　这将安装以下包，之所以不用pytorch官网的方法，是太慢啦。
+Packages (<span class="hljs-number">8</span>) cblas<span class="hljs-number">-3.8</span><span class="hljs-number">.0</span><span class="hljs-number">-2</span>  cuda<span class="hljs-number">-10.1</span><span class="hljs-number">.105</span><span class="hljs-number">-6</span>  cudnn<span class="hljs-number">-7.5</span><span class="hljs-number">.0</span><span class="hljs-number">.56</span><span class="hljs-number">-1</span>  nccl<span class="hljs-number">-2.4</span><span class="hljs-number">.2</span><span class="hljs-number">-4</span>  opencl-nvidia<span class="hljs-number">-1</span>:<span class="hljs-number">418.43</span><span class="hljs-number">-1</span>  opencv<span class="hljs-number">-4.0</span><span class="hljs-number">.1</span><span class="hljs-number">-6</span>  python-numpy<span class="hljs-number">-1.16</span><span class="hljs-number">.2</span><span class="hljs-number">-1</span>  python-pytorch-cuda<span class="hljs-number">-1.0</span><span class="hljs-number">.1</span><span class="hljs-number">-5</span>
+
+# 测试pytorch能否调用NVIDIA显卡
+$ python
+&gt;&gt;&gt;<span class="hljs-keyword">import</span> torch
+&gt;&gt;&gt;print(torch.cuda.is_available())
+False
+
+# 因为NVIDIA显卡没有开！下面命令打开和关闭NVIDIA程序，当是ON的时候，上面就是TRUE了！！
+
+sudo tee /proc/acpi/bbswitch &lt;&lt;&lt; ON
+sudo tee /proc/acpi/bbswitch &lt;&lt;&lt; OFF
+
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/Linux-best-practice/docs/0.1.1/doc9"><span class="arrow-prev">← </span><span>This is Doc 9</span></a><a class="docs-next button" href="/Linux-best-practice/docs/0.1.1/doc3"><span>This is document number 3</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#安装并配置manjaro">安装并配置Manjaro</a><ul class="toc-headings"><li><a href="#制作manjaro启动镜像">制作Manjaro启动镜像</a></li><li><a href="#修改系统语言">修改系统语言</a></li><li><a href="#配置国内镜像源">配置国内镜像源</a></li><li><a href="#开机挂载第二块硬盘">开机挂载第二块硬盘</a></li><li><a href="#xfce-添加网速监控">xfce 添加网速监控</a></li></ul></li><li><a href="#安装常用软件">安装常用软件</a></li><li><a href="#安装搜狗输入法">安装搜狗输入法</a></li><li><a href="#终端-zsh的配置">终端、zsh的配置</a></li><li><a href="#安装配置rust开发环境">安装配置rust开发环境</a></li><li><a href="#安装nvidia组件">安装NVIDIA组件</a></li><li><a href="#安装nvidia组件-1">安装NVIDIA组件</a><ul class="toc-headings"><li><a href="#配置steam游戏自动调用nvidia显卡">配置steam游戏自动调用NVIDIA显卡</a></li><li><a href="#pytorch-调用显卡">pytorch 调用显卡</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Linux-best-practice/" class="nav-home"><img src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Linux-best-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Linux-best-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/Linux-best-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Linux-best-practice/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Linux-best-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Linux-best-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Your Name or Your Company Name</section></footer></div></body></html>
