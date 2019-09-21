@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>01两数之和 · Kaige Dong&#x27;s Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## 题目类型"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="01两数之和 · Kaige Dong&#x27;s Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kaigedong.github.io/Linux-best-practice/"/><meta property="og:description" content="## 题目类型"/><meta property="og:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Linux-best-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/atom.xml" title="Kaige Dong&#x27;s Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/feed.xml" title="Kaige Dong&#x27;s Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Linux-best-practice/js/scrollSpy.js"></script><link rel="stylesheet" href="/Linux-best-practice/css/main.css"/><script src="/Linux-best-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Linux-best-practice/"><img class="logo" src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site"/><h2 class="headerTitleWithLogo">Kaige Dong&#x27;s Site</h2></a><a href="/Linux-best-practice/versions"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/Linux-best-practice/docs/next/doc1" target="_self">Docs</a></li><li class=""><a href="/Linux-best-practice/docs/next/doc4" target="_self">API</a></li><li class=""><a href="/Linux-best-practice/help" target="_self">Help</a></li><li class=""><a href="/Linux-best-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Algorithm</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Docusaurus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc1">Docusaurus 构建网站</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc2">Manjaro的安装、配置到GPU</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">First Category<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc9">This is Doc 9</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Second Category<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc3">This is document number 3</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Algorithm<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/docs/next/doc100">01两数之和</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc101">232用栈实现队列</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc102">738单调递增的数字</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc103">doc103</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc104">doc104</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">01两数之和</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="题目类型"></a><a href="#题目类型" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>题目类型</h2>
+<p><code>array</code>；<code>hash-table</code></p>
+<h2><a class="anchor" aria-hidden="true" id="思路"></a><a href="#思路" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>思路</h2>
+<p>1、两层循环。都是从<code>0..nums.len()</code>,如果等于<code>target</code>，就返回。时间复杂度：<code>On^2</code></p>
+<pre><code class="hljs css language-rust"><span class="hljs-comment">// twosum.rs </span>
+<span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">two_sum</span></span>(nums: <span class="hljs-built_in">Vec</span>&lt;<span class="hljs-built_in">i32</span>&gt;, target: <span class="hljs-built_in">i32</span>) -&gt; <span class="hljs-built_in">Vec</span>&lt;<span class="hljs-built_in">i32</span>&gt; {
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>..nums.len()-<span class="hljs-number">1</span> {
+        <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> i+<span class="hljs-number">1</span>..nums.len() {
+            <span class="hljs-keyword">if</span> nums[i] + nums[j] == target {
+                <span class="hljs-keyword">return</span> <span class="hljs-built_in">vec!</span>[i <span class="hljs-keyword">as</span> <span class="hljs-built_in">i32</span>, j <span class="hljs-keyword">as</span> <span class="hljs-built_in">i32</span>];
+            }
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">vec!</span>[];
+}
+
+</code></pre>
+<p>Leetcode 结果：</p>
+<table>
+<thead>
+<tr><th style="text-align:left">执行用时</th><th style="text-align:left">内存消耗</th><th style="text-align:left">语言</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left">52 ms</td><td style="text-align:left">2.1 MB</td><td style="text-align:left">Rust</td></tr>
+</tbody>
+</table>
+<p>2、<code>Hash-table</code>法。一遍循环，将已经见过的数字及下标存入字典，并对下一个数字判断它与target的差值是否已经在字典里出现过。时间复杂度<code>O(n)</code></p>
+<pre><code class="hljs css language-rust"><span class="hljs-comment">/*
+ * @lc app=leetcode.cn id=1 lang=rust
+ *
+ * [1] 两数之和
+ */</span>
+
+<span class="hljs-comment">// twosum.rs </span>
+<span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">two_sum</span></span>(nums: <span class="hljs-built_in">Vec</span>&lt;<span class="hljs-built_in">i32</span>&gt;, target: <span class="hljs-built_in">i32</span>) -&gt; <span class="hljs-built_in">Vec</span>&lt;<span class="hljs-built_in">i32</span>&gt; {
+    <span class="hljs-keyword">use</span> std::collections::HashMap;
+    <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> seen_nums = HashMap::new(); <span class="hljs-comment">// seen_nums: 保存已经见过的数字及对应索引</span>
+
+    <span class="hljs-keyword">for</span> (i, val) <span class="hljs-keyword">in</span> nums.iter().enumerate() { <span class="hljs-comment">// i: 索引，val：数值</span>
+        <span class="hljs-keyword">match</span> seen_nums.get( &amp;(target-val) ) {
+            <span class="hljs-literal">Some</span>(seen_num) =&gt; {
+                <span class="hljs-keyword">return</span> <span class="hljs-built_in">vec!</span>[ *seen_nums.get(&amp;(target-val)).unwrap() ,i <span class="hljs-keyword">as</span> <span class="hljs-built_in">i32</span>]; <span class="hljs-comment">// get 返回Option(&amp;V); i为usize</span>
+            }
+            <span class="hljs-literal">None</span> =&gt; {
+                seen_nums.insert(val, i <span class="hljs-keyword">as</span> <span class="hljs-built_in">i32</span>); <span class="hljs-comment">// i 是 usize</span>
+            }
+        }
+    }
+    <span class="hljs-built_in">vec!</span>[]
+}
+
+
+<span class="hljs-comment">// 测试：lib.rs</span>
+<span class="hljs-keyword">mod</span> twosum;
+
+<span class="hljs-meta">#[cfg(test)]</span>
+<span class="hljs-keyword">mod</span> tests {
+    <span class="hljs-keyword">use</span> crate::twosum::two_sum;
+    <span class="hljs-meta">#[test]</span>
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">test_twosum</span></span>() {
+        <span class="hljs-built_in">assert_eq!</span>(<span class="hljs-built_in">vec!</span>[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>], two_sum(<span class="hljs-built_in">vec!</span>[<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>], <span class="hljs-number">6</span>));
+        <span class="hljs-built_in">assert_eq!</span>(<span class="hljs-built_in">vec!</span>[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>], two_sum(<span class="hljs-built_in">vec!</span>[<span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">11</span>, <span class="hljs-number">15</span>], <span class="hljs-number">9</span>));
+        <span class="hljs-built_in">assert_eq!</span>(<span class="hljs-built_in">vec!</span>[<span class="hljs-number">0</span>, <span class="hljs-number">2</span>], two_sum(<span class="hljs-built_in">vec!</span>[-<span class="hljs-number">1</span>, <span class="hljs-number">33</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>], <span class="hljs-number">0</span> ));
+    }
+}
+ 
+</code></pre>
+<p>Leetcode 结果：</p>
+<table>
+<thead>
+<tr><th style="text-align:left">执行用时</th><th style="text-align:left">内存消耗</th><th style="text-align:left">语言</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left">0 ms</td><td style="text-align:left">2.7 MB</td><td style="text-align:left">Rust</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="tips"></a><a href="#tips" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tips</h2>
+<p><code>nums.iter().enumerate()</code>对数组进行迭代并显示下标；用 <code>match</code> 替代<code>if</code></p>
+<h2><a class="anchor" aria-hidden="true" id="leetcode-中相似的题型"></a><a href="#leetcode-中相似的题型" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Leetcode 中相似的题型</h2>
+<p>136题：只有1个数字出现了一次。1. 使用异或<code>^</code>; 2. 使用HashTable; 时间复杂度<code>O(n)</code></p>
+<p>961：重复N次的元素。题目中只有1个数有重复，直接使用HashSet即可。时间复杂度<code>O(n)</code></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/Linux-best-practice/docs/next/doc3"><span class="arrow-prev">← </span><span>This is document number 3</span></a><a class="docs-next button" href="/Linux-best-practice/docs/next/doc101"><span>232用栈实现队列</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#题目类型">题目类型</a></li><li><a href="#思路">思路</a></li><li><a href="#tips">Tips</a></li><li><a href="#leetcode-中相似的题型">Leetcode 中相似的题型</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Linux-best-practice/" class="nav-home"><img src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Linux-best-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Linux-best-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/Linux-best-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Linux-best-practice/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Linux-best-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Linux-best-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Kaige Dong</section></footer></div></body></html>
