@@ -1,0 +1,385 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>modele_name · Kaige Dong&#x27;s Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="---"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="modele_name · Kaige Dong&#x27;s Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kaigedong.github.io/Linux-best-practice/blog/2018/12/09_unroot_install_UCSC_genome_browser"/><meta property="og:description" content="---"/><meta property="og:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Linux-best-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/atom.xml" title="Kaige Dong&#x27;s Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/feed.xml" title="Kaige Dong&#x27;s Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Linux-best-practice/js/scrollSpy.js"></script><link rel="stylesheet" href="/Linux-best-practice/css/main.css"/><script src="/Linux-best-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Linux-best-practice/"><img class="logo" src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site"/><h2 class="headerTitleWithLogo">Kaige Dong&#x27;s Site</h2></a><a href="/Linux-best-practice/versions"><h3>0.1.5</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/Linux-best-practice/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/Linux-best-practice/docs/doc4" target="_self">API</a></li><li class=""><a href="/Linux-best-practice/help" target="_self">Help</a></li><li class="siteNavGroupActive"><a href="/Linux-best-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>All blog posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All blog posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/09/20/scrapy_to_search_engine_Introduction">1.爬虫课程的介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Python_sorting">Python排序算法</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Learn_make_Donot_starve_mods">学习制作饥荒mod</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Donot_starve_mod1">饥荒mod1</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/python_virtual_env">virtualenv 和 pyenv的使用</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/16/Wuenda_machine_learning">吴恩达机器学习笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/13/Django-Apache-wsgi-_deploy">Django+Apache wsgi 部署</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/12/Apache-deploy-Django">Apache 部署 Django</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09/pytorch-60min">PyTorch 60min教程</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09/no_root_install_Apache">无root安装Apache</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/07/GIVEinstall">GIVE安装笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/06/wali_v2ray">搬瓦工2: v2ray</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/16/Curses-python3-7">Curses_python3.7</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/05/12/wali_note">搬瓦工笔记1：ssr</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/19/DQN_5">强化学习实战：从零开始下五子棋</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17/DQN_Sarsa">强化学习之Sarsa</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17/DQN_Sarsa-lambda">增强学习之Sarsa(lambda)</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/16/DQN_Q-learning">深度学习02之Q-learning介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/16/DQN">强化学习介绍与分类01</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/07_shadowsocks_settings">shadowsocks配置</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/19_shell_env_set/env-export">shell变量及进程及set,env,export</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/12_Perl/install_models">Perl安装模块与卸载</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/11_python_convert_exe_videos">python批量转换exe视频</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09_no_root_install_MySQL">服务器无root安装MySQL</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/05/08_Macinstall_MySQL">Mac安装MySQL &amp; Ubuntu下安装MySQL记录</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/tmus">tmus指南</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17_DQN_DQN">增强学习之DQN介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17_DQN2/Algo">增强学习之DQN算法</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/17python的decode/encode-与-r-b-u">python的decode/encode 与 r/b/u</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/17_golang_notes">golang笔记</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09_unroot_install_UCSC_genome_browser">modele_name</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/13_Acer中Arch安装Secure/boot-EFI-设置">Acer中Arch安装Secure boot EFI 设置</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13_HTMLandCSS_basic_03">HTML与CSS基础03-Web框架与表单设计</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/08/20_Linux_crontab">Linux crontab定时任务</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/learn-git">learn-git</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/items2">items2技巧</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_gene_A07-A09">陈巍学基因A07-A09</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_gene_A01-A03">陈巍学基因A01-A03</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_geneA04-A06">陈巍学基因A04-A06</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/boxplot">数据可视化之柱状图</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/begin_building_sites">开始建站Hexo+NexT</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/Hexo-NexT404pages">Hexo-NexT主题的404页面</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/HTMLandCSS_basic_01">HTML和CSS基础01-html的语法和基本结构文档设置标记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/HTML_CSS_basic2">HTML和CSS基础02-图像超链接和表格</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/pig_exons">modele_name</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/Counting-known-microRNAs-in-five-easy-steps">Counting known microRNAs in five easy steps</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/R_214">R极客的情人节</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/25/Adapter-and-quality-trimming-of-illumina-data">Adapter and quality trimming of illumina data</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch_bach">pytorch批训练</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch-Optimizer">pytorch:Optimizer优化器</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch-CNN">pytorch:CNN卷积神经网络</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/sync_server_files">同步服务器文件夹</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch07">pytorch07</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch06">pytorch06</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch05">pytorch05</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/Affymetrix">Affymetrix芯片原理</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch03">pytorch03</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch02">pytorch02</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch01">pytorch 学习笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab04">matlab04图像的增强处理</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab03">matlab03图像的几何变换</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab02">matlab02图像的点运算</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab">matlab学习笔记01</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/WEB_frame">WEB框架</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/ChIP-seq-masc">ChIP-seq-macs</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/CSS">CSS层叠样式表</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch04">pytorch04</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/Linux-best-practice/blog/2018/12/09_unroot_install_UCSC_genome_browser">modele_name</a></h1><p class="post-meta">December 9, 2018</p><div class="authorBlock"><p class="post-authorName"><a href="" target="_blank" rel="noreferrer noopener">woobamboo</a></p></div></header><div><span><hr>
+<p>title: 无root安装UCSC genome browser
+author: woobamboo
+authorURL:
+authorFBID:</p>
+<hr>
+<p>如何在本地实现一个定制化的UCSC genome browser?</p>
+<!--truncate-->
+<h2><a class="anchor" aria-hidden="true" id="1-安装必要的软件"></a><a href="#1-安装必要的软件" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. 安装必要的软件</h2>
+<p>需要安装Apache 及 MySQL (版本5.x)， 其中Apache可以更换成Nginx，MySQL后面直接同步UCSC的数据库到本地，因此不要更改。</p>
+<p>MySQL有编译好的版本，Apache编译好的版本已经比较老了。两者的安装方法很简单，请看<strong>前面的文章</strong>。</p>
+<p>另外，由于UCSC部分代码是C语言实现的，请<strong><em>确保你的glibc版本！！！</em></strong>至少大于等于``GLIBC_2.17<code>，你应该能通过下面的命令看到</code>GLIBC_2.17`：</p>
+<h4><a class="anchor" aria-hidden="true" id="检查glibc版本"></a><a href="#检查glibc版本" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>检查glibc版本</h4>
+<pre><code class="hljs">$<span class="hljs-built_in">string</span>s /lib64/libc.so<span class="hljs-number">.6</span> |grep GLIBC
+</code></pre>
+<p>版本太低会报错：<code>/lib64/libc.so.6: version 'GLIBC_2.14' not found</code> ,  <code>/lib64/libc.so.6: version 'GLIBC_2.17' not found</code></p>
+<h2><a class="anchor" aria-hidden="true" id="2-请确保一下事情已经做好"></a><a href="#2-请确保一下事情已经做好" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 请确保一下事情已经做好：</h2>
+<ul>
+<li><code>glibc</code> 大于等于2.17</li>
+<li><code>Apache</code> 已安装并正常运行</li>
+<li><code>MySQL(v5.x)</code> 已安装并正常运行，再次强调版本是<code>5.x</code></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="3-几个目录的说明"></a><a href="#3-几个目录的说明" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. 几个目录的说明：</h2>
+<pre><code class="hljs css language-shell"><span class="hljs-meta">#</span><span class="bash"> Apache 的安装目录</span>
+drwxr-xr-x.  2 dongkaige rnomics   39 Dec 11 10:10 logs
+drwxr-xr-x.  9 dongkaige rnomics 4.0K Dec 10 20:43 htdocs
+drwxr-xr-x.  4 dongkaige rnomics  145 Dec  8 20:31 conf
+drwxr-xr-x.  2 dongkaige rnomics 4.0K Dec  8 02:28 modules
+drwxr-xr-x.  2 dongkaige rnomics   74 Dec  7 16:50 cgi-bin
+drwxr-xr-x.  2 dongkaige rnomics 4.0K Dec  2 23:02 bin
+......
+</code></pre>
+<ul>
+<li>几个重要目录
+<ul>
+<li><code>htdocs</code> 这个目录就是你网站的默认根目录。安装好Apache之后，访问的第一个网页就在这里放着！</li>
+<li><code>conf</code> Apache的配置目录，前期要经常修改配置文件。</li>
+<li><code>cgi-bin</code> 存放的是可执行程序，由网页调用。这是安装好Apache之后的默认可执行程序存放路径，我们后面会修改。比如你写了个<code>helloWorld.py</code> ，正确的配置将使它显示执行结果而不是在网页显示你的代码。</li>
+<li><code>logs</code> 这个文件很有用！显示Apache执行日志以及错误日志；</li>
+<li><code>bin</code> 存放Apache主程序，后面可能经常用到 <code>./apachectl restart</code></li>
+<li><code>modules</code>:存放MySQL默认编译好的模块，后面我们自己编译的模块也需要放到这里面。</li>
+</ul></li>
+</ul>
+<pre><code class="hljs"># MySQL 的安装目录
+-rw-r-----.  <span class="hljs-number">1</span> dongkaige rnomics <span class="hljs-number">145</span>K Dec <span class="hljs-number">11</span> <span class="hljs-number">12</span>:<span class="hljs-number">13</span> error.log
+drwxr-x---. <span class="hljs-number">11</span> dongkaige rnomics <span class="hljs-number">4.0</span>K Dec <span class="hljs-number">10</span> <span class="hljs-number">14</span>:<span class="hljs-number">45</span> data
+-rw-r--r--.  <span class="hljs-number">1</span> dongkaige rnomics  <span class="hljs-number">552</span> Dec  <span class="hljs-number">9</span> <span class="hljs-number">14</span>:<span class="hljs-number">19</span> my.cnf
+drwxr-xr-x.  <span class="hljs-number">2</span> dongkaige rnomics <span class="hljs-number">4.0</span>K Dec  <span class="hljs-number">7</span> <span class="hljs-number">16</span>:<span class="hljs-number">02</span> bin
+...
+</code></pre>
+<ul>
+<li>几个重要目录
+<ul>
+<li><code>my.cnf</code> MySQL配置文件，一般配置好了就不再修改了。</li>
+<li><code>data</code> MySQL 数据库文件，里面一个文件夹就是一个数据库！</li>
+<li><code>bin</code> MySQL 主程序，常用语法就那么几个，看前面博客。</li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="4-下载静态文件-让ucsc主页显示出来"></a><a href="#4-下载静态文件-让ucsc主页显示出来" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. 下载静态文件，让UCSC主页显示出来!</h2>
+<p>前面说过，Apache下的<code>htdocs</code> 目录存放的是网页信息，我们在其中下载静态网页：</p>
+<pre><code class="hljs"><span class="hljs-attr">cd</span> <span class="hljs-string">htdocs &amp;&amp; mkdir genomebrowser</span>
+<span class="hljs-attr">rsync</span> <span class="hljs-string">-avzP rsync://hgdownload.cse.ucsc.edu/htdocs/ genomebrowser/</span>
+<span class="hljs-comment">
+# 然后，在htdocs目录下(一些网页引用资源的相对位置在其本身的上层目录)：</span>
+<span class="hljs-attr">ln</span> <span class="hljs-string">-s genomebrowser/js</span>
+<span class="hljs-attr">ln</span> <span class="hljs-string">-s genomebrowser/style</span>
+<span class="hljs-attr">ln</span> <span class="hljs-string">-s genomebrowser/images</span>
+<span class="hljs-comment">
+# 下载完之后，浏览器打开http://your.url:port/genomebrowser 将能显示浏览器主页！</span>
+<span class="hljs-comment">
+# 在genomebrowser文件夹 新建一个cgi-bin，并下载网页后台调用的程序：</span>
+<span class="hljs-attr">mkdir</span> <span class="hljs-string">genomebrowser/cgi-bin</span>
+<span class="hljs-attr">rsync</span> <span class="hljs-string">-avzP rsync://hgdownload.cse.ucsc.edu/cgi-bin/ genomebrowser/cgi-bin/</span>
+</code></pre>
+<p>参考这个图，理解下面的内容：<img src="/Linux-best-practice/blog/assets/2018-12/genome_browser_1.png" alt="genomebrowser 1"></p>
+<h4><a class="anchor" aria-hidden="true" id="让apache找到可执行程序"></a><a href="#让apache找到可执行程序" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>让Apache找到可执行程序</h4>
+<p>现在静态文件已经能显示出来了，但导航栏是用<code>cgi-bin</code>程序实现的，现在并不能看到。我们需要配置Apache，让它知道到<strong>如何找到</strong>这些可执行程序，这里需要配置<code>httpd.conf</code> (Apache 的配置文件)，添加下面内容：</p>
+<pre><code class="hljs">ScriptAlias /genomebrowser/cgi-bin /your/<span class="hljs-type">path</span>/<span class="hljs-keyword">to</span>/apache_2<span class="hljs-number">.4</span><span class="hljs-number">.37</span>/htdocs/genomebrowser/cgi-bin
+&lt;Directory "/your/path/to/apache_2.4.37/htdocs/genomebrowser/cgi-bin"&gt;
+AllowOverride <span class="hljs-keyword">None</span>
+<span class="hljs-meta">#Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch</span>
+<span class="hljs-keyword">Options</span> +ExecCGI
+<span class="hljs-keyword">Order</span> allow,deny
+Allow <span class="hljs-keyword">from</span> <span class="hljs-keyword">all</span>
+AddHandler cgi-script .cgi .pl .py
+Require <span class="hljs-keyword">all</span> granted
+&lt;/Directory&gt;
+</code></pre>
+<blockquote>
+<p>大意就是添加一个可执行程序的位置，并将几种后缀认为是可执行程序(<code>.cgi</code>, <code>.pi</code>, <code>.py</code> 没必要添加<code>.py</code>，我是为了测试用)，并允许这个文件夹下内容访问远程资源。</p>
+</blockquote>
+<p>另外在<code>httpd.conf</code>中添加下面内容使得网页正确显示：</p>
+<pre><code class="hljs"><span class="hljs-attribute">XBitHack</span> <span class="hljs-literal">on</span>
+<span class="hljs-section">&lt;Directory /your/pach/to/genomebrowser&gt;</span>
+<span class="hljs-attribute">AllowOverride</span> AuthConfig
+<span class="hljs-attribute"><span class="hljs-nomarkup">Options</span></span> +Includes
+<span class="hljs-section">&lt;/Directory&gt;</span>
+</code></pre>
+<p>现在，<code>Apache</code>已经知道如何找到UCSC的可执行程序了，还需要进一步配置，让可执行程序找到MySQL的数据：</p>
+<h4><a class="anchor" aria-hidden="true" id="让可执行程序访问mysql"></a><a href="#让可执行程序访问mysql" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>让可执行程序访问MySQL</h4>
+<p><strong><em><code>hg.conf</code></em></strong> 这个文件至关重要，应用程序通过它访问MySQL。可以下载个样本：<code>http://genome-test.cse.ucsc.edu/~kent/src/unzipped/product/ex.hg.conf</code> 看看。</p>
+<p>在配置<code>hg.conf</code>之前，先进行MySQL的配置(按前面博客)，然后建立三个用户，使之拥有不同权限：</p>
+<ul>
+<li><code>ucsc_read</code>: 只读权限的用户:</li>
+<li><code>ucsc_readwrite</code>: 对一个数据库具有读写权限的用户，因为<code>cgi-bin</code>程序需要更新 <code>hgcentral</code> 来维护用户的cookie设置</li>
+<li><code>ucsc_admin</code>: 一个MySQL用户，具有所有browser和genome数据库的权限:</li>
+</ul>
+<pre><code class="hljs"><span class="hljs-comment"># 创建三个用户，并赋予不同权限</span>
+<span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ALL</span> <span class="hljs-keyword">PRIVILEGES</span> <span class="hljs-keyword">ON</span> *.* <span class="hljs-keyword">TO</span> <span class="hljs-string">'ucsc_admin'</span>@<span class="hljs-string">'%'</span>;
+<span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">ON</span> *.* <span class="hljs-keyword">TO</span> <span class="hljs-string">'ucsc_read'</span>@<span class="hljs-string">'%'</span>;
+<span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ALL</span> <span class="hljs-keyword">PRIVILEGES</span> <span class="hljs-keyword">ON</span> hgcentral <span class="hljs-keyword">TO</span> <span class="hljs-string">'ucsc_readwrite'</span>@<span class="hljs-string">'%'</span>;
+<span class="hljs-keyword">flush</span> <span class="hljs-keyword">PRIVILEGES</span>;
+</code></pre>
+<p><code>hg.conf</code>配置如下：</p>
+<pre><code class="hljs"><span class="hljs-attr">db.host</span>=<span class="hljs-number">10.10</span>.<span class="hljs-number">123.123</span> <span class="hljs-comment"># 填你自己的。这里写localhost似乎不行，因为这样写会导致port(端口) 的设置无效！</span>
+<span class="hljs-attr">db.socket</span>=/picb/rnomics2/RBP_database/dbweb/Softwares/mysql_5/mysql.sock <span class="hljs-comment"># MySQL运行时的sock文件！</span>
+<span class="hljs-attr">db.port</span>=<span class="hljs-number">7090</span> <span class="hljs-comment"># 访问MySQL的端口</span>
+
+<span class="hljs-attr">db.user</span>=ucsc_read <span class="hljs-comment"># 填你自己的MySQL用户名</span>
+<span class="hljs-attr">db.password</span>=PASSWORD
+
+<span class="hljs-attr">db.trackDb</span>=trackDb <span class="hljs-comment"># trackDb 是MySQL中 hgcentral 数据库的一个表，这个数据库后面再创建，这里主要是让UCSC能访问MySQL！</span>
+<span class="hljs-attr">db.grp</span>=grp
+<span class="hljs-attr">defaultGenome</span>=Human
+
+<span class="hljs-attr">central.host</span>=<span class="hljs-number">10.10</span>.<span class="hljs-number">123.123</span>
+<span class="hljs-attr">central.socket</span>=/picb/rnomics2/RBP_database/dbweb/Softwares/mysql_5/mysql.sock <span class="hljs-comment"># MySQL运行时的sock文件！</span>
+<span class="hljs-attr">central.port</span>=<span class="hljs-number">7090</span> <span class="hljs-comment"># 访问MySQL的端口</span>
+
+<span class="hljs-attr">central.user</span>=ucsc_readwrite
+<span class="hljs-attr">central.password</span>=PASSWORD
+<span class="hljs-attr">central.db</span>=hgcentral <span class="hljs-comment"># 我们后面会创建这个数据库：hgcentral</span>
+<span class="hljs-attr">central.domain</span>=
+</code></pre>
+<blockquote>
+<p><strong><em>重要说明：</em></strong></p>
+<p>因为我们本地非root安装了MySQL，运行MySQL的端口和<code>sock</code>文件是自己指定的，所以<code>hg.conf</code>一定要指定端口和<code>sock</code>文件才能正确连接！</p>
+<p>及时查看Apache的log文件，查看MySQL的连接状态。<code>central.socket</code> 与 <code>central.port</code> 虽然别的参考里都没有提，但是就是这里没有设置引起的错误困扰了我很久。参考<code>db.socket</code>与<code>db.port</code>于是新增了<code>central</code>的两个设置。</p>
+</blockquote>
+<p>然后重启Apache，试试看能否显示<code>导航栏</code>！要是不能，需要检查前面的步骤，进行排错。(因为导航栏是由可执行程序进行显示的，如果上面没设置好，是看不到导航栏的。)</p>
+<h4><a class="anchor" aria-hidden="true" id="hgconf-文件"></a><a href="#hgconf-文件" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>~/.hg.conf</code>文件</h4>
+<p>UCSC 提供了一些程序来方便的管理MySQL数据库，这些程序通过访问<code>~/.hg.conf</code>来连接MySQL。这些程序可由源代码编译，或直接从<code>linux.x86_64</code>下载得到。位于<code>cgi-bin</code>不使用该配置文件。</p>
+<p><code>.hg.conf</code>配置如下：</p>
+<pre><code class="hljs"><span class="hljs-attr">db.host</span>=<span class="hljs-number">10.10</span>.<span class="hljs-number">123.123</span>
+<span class="hljs-attr">db.socket</span>=/path/to/your/mysql.sock
+<span class="hljs-attr">db.port</span>=your_mysql_port
+
+<span class="hljs-attr">db.user</span>=ucsc_admin
+<span class="hljs-attr">db.password</span>=ucsc_admin_passwd
+</code></pre>
+<p><code>.hg.conf</code>的权限应该是<code>-rw———</code>，否则报错。</p>
+<p>现在服务器应该已经能访问MySQL了，但是MySQL里还没有任何数据，我们下载一些进行测试：</p>
+<h2><a class="anchor" aria-hidden="true" id="5-配置mysql服务器"></a><a href="#5-配置mysql服务器" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. 配置MySQL服务器</h2>
+<h4><a class="anchor" aria-hidden="true" id="ucsc需要的数据在两个位置进行存储"></a><a href="#ucsc需要的数据在两个位置进行存储" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>UCSC需要的数据在两个位置进行存储</h4>
+<ul>
+<li>大部分数据，如<code>注释</code> 存储在<strong>MySQL</strong>数据库中；</li>
+<li>有些数据，例如<code>参考基因组</code>是2bit 格式，直接存放在硬盘里，这个位置被编码进MySQL表，默认为<code>/gbdb</code>，且没有直接配置它位置的选项。后面我们可以通过更新MySQL表来修改，大部分是在<code>hgcentral.dbDB</code>中。</li>
+</ul>
+<p>MySQL数据库中的<code>hgcentral</code>: 用来存储其他数据库的信息。请参考这个图理解<code>hgcentral</code>: <img src="/Linux-best-practice/blog/assets/2018-12/genome_browser_2.png" alt=""></p>
+<pre><code class="hljs"><span class="hljs-comment"># 建立关键数据库 hgcentral</span>
+wget http:<span class="hljs-string">//hgdownload.cse.ucsc.edu/admin/hgcentral.sql</span>
+<span class="hljs-comment"># 自己修改hgcentral.sql 将 /gbdb/ 替换成你自己的 /your/path/to/gbdb/ 路径</span>
+sed 's/\<span class="hljs-string">/gbdb</span>\<span class="hljs-string">//</span>\<span class="hljs-string">/your</span>\<span class="hljs-string">/path</span>\<span class="hljs-string">/to</span>\<span class="hljs-string">/gbdb</span>\<span class="hljs-string">//g</span>' hgcentral.sql &gt; hgcentral_new.sql
+mysql  –u用户名 –p密码 -e <span class="hljs-string">"create database hgcentral"</span>
+mysql  –u用户名 –p密码 hgcentral &lt; hgcentral_new.sql
+<span class="hljs-comment"># 给你自己的MySQL用户操作这个数据库的权限</span>
+</code></pre>
+<blockquote>
+<p>这里通过修改<code>hgcentral.sql</code>，来解决它的<code>gbdb</code>设置都是在根目录的问题。</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="mysql数据库的作用"></a><a href="#mysql数据库的作用" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MySQL数据库的作用</h4>
+<ul>
+<li>hgcentral</li>
+<li>hg19</li>
+</ul>
+<p>数据库<code>hgcentral</code>包含其他数据库的信息，<code>hgcentral.dbDb.nibPath</code> (hgcentral的dbDb表的nibPath字段)，它相当于网关火地址簿；另一个表<code>hgcentral.genomeClade</code>控制基因组浏览器上一些信息。</p>
+<p><code>hgcentral</code>看起来像是这样：</p>
+<pre><code class="hljs">+---------------------+
+|<span class="hljs-string"> Tables_in_hgcentral </span>|
++---------------------+
+|<span class="hljs-string"> blatServers         </span>|
+|<span class="hljs-string"> clade               </span>|
+|<span class="hljs-string"> dbDb                </span>|
+|<span class="hljs-string"> dbDbArch            </span>|
+|<span class="hljs-string"> defaultDb           </span>|
+|<span class="hljs-string"> gbMembers           </span>|
+|<span class="hljs-string"> genomeClade         </span>|
+|<span class="hljs-string"> hubPublic           </span>|
+|<span class="hljs-string"> hubStatus           </span>|
+|<span class="hljs-string"> liftOverChain       </span>|
+|<span class="hljs-string"> namedSessionDb      </span>|
+|<span class="hljs-string"> sessionDb           </span>|
+|<span class="hljs-string"> targetDb            </span>|
+|<span class="hljs-string"> userDb              </span>|
++---------------------+
+14 rows in set (0.01 sec)
+</code></pre>
+<p>MySQL 中每个参考基因组都有自己的数据库，在每个基因组数据库中，都有一些必要的特定名称的表格。<code>annotation</code>表是上传track创建的，后面讨论。对于你的基因组，数据库看起来应该像这样：</p>
+<pre><code class="hljs">+------------------------+
+|<span class="hljs-string"> Tables_in_abcDef1      </span>|
++------------------------+
+|<span class="hljs-string"> Custom_Annotation_1    </span>|
+|<span class="hljs-string"> Custom_Annotation_2    </span>|
+|<span class="hljs-string"> chromInfo              </span>|
+|<span class="hljs-string"> gap                    </span>|
+|<span class="hljs-string"> gc5Base                </span>|
+|<span class="hljs-string"> gold                   </span>|
+|<span class="hljs-string"> grp                    </span>|
+|<span class="hljs-string"> hgFindSpec             </span>|
+|<span class="hljs-string"> history                </span>|
+|<span class="hljs-string"> trackDb                </span>|
++------------------------+
+</code></pre>
+<p><code>trackDb</code>包含<code>Custom_Annotation_1</code>, <code>Custom_Annotation_2</code>和其他你自己制作的track的信息。</p>
+<p>上面简要说明了MySQL中的数据库，下面还需要<code>/gbdb/</code>后面再说。</p>
+<h4><a class="anchor" aria-hidden="true" id="一个例子"></a><a href="#一个例子" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>一个例子</h4>
+<p>为了节省时间出来进行排错，这里选取一个小数据集(dm3)，首先下载一些MySQL数据表：</p>
+<pre><code class="hljs">cd <span class="hljs-regexp">/path/</span>to<span class="hljs-regexp">/mysql/</span>data
+mkdir dm3
+rsync -avzP  rsync:<span class="hljs-regexp">//</span>hgdownload.cse.ucsc.edu<span class="hljs-regexp">/mysql/</span>dm3<span class="hljs-regexp">/chromInfo.MYD /</span>home<span class="hljs-regexp">/mysql/</span>dm3
+rsync -avzP  rsync:<span class="hljs-regexp">//</span>hgdownload.cse.ucsc.edu<span class="hljs-regexp">/mysql/</span>dm3<span class="hljs-regexp">/chromInfo.MYI /</span>home<span class="hljs-regexp">/mysql/</span>dm3
+rsync -avzP  rsync:<span class="hljs-regexp">//</span>hgdownload.cse.ucsc.edu<span class="hljs-regexp">/mysql/</span>dm3<span class="hljs-regexp">/chromInfo.frm /</span>home<span class="hljs-regexp">/mysql/</span>dm3
+
+rsync -avzP  rsync:<span class="hljs-regexp">//</span>hgdownload.cse.ucsc.edu<span class="hljs-regexp">/mysql/</span>dm3<span class="hljs-regexp">/cytoBandIdeo.MYD /</span>home<span class="hljs-regexp">/mysql/</span>dm3
+rsync -avzP  rsync:<span class="hljs-regexp">//</span>hgdownload.cse.ucsc.edu<span class="hljs-regexp">/mysql/</span>dm3<span class="hljs-regexp">/cytoBandIdeo.MYI /</span>home<span class="hljs-regexp">/mysql/</span>dm3
+rsync -avzP  rsync:<span class="hljs-regexp">//</span>hgdownload.cse.ucsc.edu<span class="hljs-regexp">/mysql/</span>dm3<span class="hljs-regexp">/cytoBandIdeo.frm /</span>home<span class="hljs-regexp">/mysql/</span>dm3
+
+rsync -avzP  rsync:<span class="hljs-regexp">//</span>hgdownload.cse.ucsc.edu<span class="hljs-regexp">/mysql/</span>dm3<span class="hljs-regexp">/grp.MYD /</span>home<span class="hljs-regexp">/mysql/</span>dm3
+rsync -avzP  rsync:<span class="hljs-regexp">//</span>hgdownload.cse.ucsc.edu<span class="hljs-regexp">/mysql/</span>dm3<span class="hljs-regexp">/grp.MYI /</span>home<span class="hljs-regexp">/mysql/</span>dm3
+rsync -avzP  rsync:<span class="hljs-regexp">//</span>hgdownload.cse.ucsc.edu<span class="hljs-regexp">/mysql/</span>dm3<span class="hljs-regexp">/grp.frm /</span>home<span class="hljs-regexp">/mysql/</span>dm3
+
+rsync -avzP  rsync:<span class="hljs-regexp">//</span>hgdownload.cse.ucsc.edu<span class="hljs-regexp">/mysql/</span>dm3<span class="hljs-regexp">/hgFindSpec.MYD /</span>home<span class="hljs-regexp">/mysql/</span>dm3
+rsync -avzP  rsync:<span class="hljs-regexp">//</span>hgdownload.cse.ucsc.edu<span class="hljs-regexp">/mysql/</span>dm3<span class="hljs-regexp">/hgFindSpec.MYI /</span>home<span class="hljs-regexp">/mysql/</span>dm3
+rsync -avzP  rsync:<span class="hljs-regexp">//</span>hgdownload.cse.ucsc.edu<span class="hljs-regexp">/mysql/</span>dm3<span class="hljs-regexp">/hgFindSpec.frm /</span>home<span class="hljs-regexp">/mysql/</span>dm3
+
+rsync -avzP  rsync:<span class="hljs-regexp">//</span>hgdownload.cse.ucsc.edu<span class="hljs-regexp">/mysql/</span>dm3<span class="hljs-regexp">/trackDb.MYD /</span>home<span class="hljs-regexp">/mysql/</span>dm3
+rsync -avzP  rsync:<span class="hljs-regexp">//</span>hgdownload.cse.ucsc.edu<span class="hljs-regexp">/mysql/</span>dm3<span class="hljs-regexp">/trackDb.MYI /</span>home<span class="hljs-regexp">/mysql/</span>dm3
+rsync -avzP  rsync:<span class="hljs-regexp">//</span>hgdownload.cse.ucsc.edu<span class="hljs-regexp">/mysql/</span>dm3<span class="hljs-regexp">/trackDb.frm /</span>home<span class="hljs-regexp">/mysql/</span>dm3
+
+<span class="hljs-comment"># dm3文件夹是个数据库，每三个文件是一个表，具体后缀的含义，自己查。</span>
+</code></pre>
+<p>重启MySQL，你将能看到<code>dm3</code> 这个<strong>数据库</strong>已经存在在MySQL里了(我用Navicat软件可视化操作的)。</p>
+<p>本来按照教程，我们应该准备<code>gbdb</code>文件了(是不能或者不适合保存在MySQL数据库的文件，如二进制的基因组、bigwig文件等。)：</p>
+<pre><code class="hljs"><span class="hljs-comment"># 下载gbdb数据: (大概6 G) 在这个位置创建的 /gbdb 无法直接在浏览器里显示，需要修改MySQL里的hgcentral数据库的相关表，其中存储的有比如基因组位置;默认是/gbdb/dm3/??.2bit 这样的格式，是在根目录的。因为是非Root，所以还是老实修改表吧。我上面创建 hgcentral 数据库时已经修改了表。</span>
+mkdir -p genomebrowser<span class="hljs-regexp">/gbdb/</span>dm3
+rsync -avzP --<span class="hljs-keyword">delete</span> --max-<span class="hljs-keyword">delete</span>=<span class="hljs-number">20</span> rsync:<span class="hljs-regexp">//</span>hgdownload.cse.ucsc.edu<span class="hljs-regexp">/gbdb/</span>dm3<span class="hljs-regexp">/ /</span>home<span class="hljs-regexp">/genomebrowser/g</span>bdb<span class="hljs-regexp">/dm3/</span>
+</code></pre>
+<blockquote>
+<p>建议下载之前看看有多大，命令在后面。</p>
+</blockquote>
+<p>但是因为网速问题，这就不下了。但为了看看前面做的怎么样，还是看下效果：在你的浏览器里打开 <a href="http://your/url:port/genomebrows/cgi-bin/hgGateway?db=dm3">http://your/url:port/genomebrows/cgi-bin/hgGateway?db=dm3</a></p>
+<p>和 <a href="http://your/url:port/genomebrows/cgi-bin/hgTracks?db=dm3">http://your/url:port/genomebrows/cgi-bin/hgTracks?db=dm3</a></p>
+<blockquote>
+<p>这个URL 透漏了很多信息：就是执行cgi-bin下的hgGateway 文件，进行查询，看数据库里有没有dm3这个东西！</p>
+</blockquote>
+<p>最后开始添加<code>Custom Track</code> !这个步骤，对于理解整个流程至关重要，如果前面一头雾水，这里要实际操作一下！</p>
+<blockquote>
+<p><code>gbdb</code>文件夹 这个文件夹我花了很长时间才搞懂(主要是前面各种错误用了了很多时间)。这个文件夹是为了存储一些二进制文件，不方便存储在MySQL的文件。应用程序如何找到这些二进制文件呢？其实，这些文件的位置是作为数据存放在<code>hgcentral</code>数据库的表里的。对于默认的基因组，比如hg19，它们的位置(也就是MySQL表里存放的hg19基因组的位置)是<code>/gbdb/hg19/hg19.2bit</code>，是从根目录开始的，对于你自己的<code>custom track</code>来说，因为上传track时需要指定路径，则不需要修改MySQL表格，就能正确显示。</p>
+<p>这个直接把数据位置写进到MySQL的做法，被下面一个引用称为猴子才会做的事情。这篇文章还被UCSC官方推荐为参考之一。。</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="6-trash-文件夹"></a><a href="#6-trash-文件夹" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. trash 文件夹</h2>
+<p>这里主要用来存放临时数据、临时track的，对我来说没什么用，就没配置。同样需要在<code>hg.conf</code>中配置其位置。详细看后面的参考链接。</p>
+<h2><a class="anchor" aria-hidden="true" id="7-mysql的ssl配置"></a><a href="#7-mysql的ssl配置" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. MySQL的SSL配置</h2>
+<p>UCSC教程里有，我没有做</p>
+<h2><a class="anchor" aria-hidden="true" id="8-添加custom-track"></a><a href="#8-添加custom-track" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8. 添加Custom Track</h2>
+<p>其实非常简单:最简单只需要三步，但前面还是要做很多事情：</p>
+<p>首先下载一些程序：这些程序能读取<code>~/.hg.conf</code> 来访问我们的MySQL数据库，从而方便将track数据写到MySQL表中。其中大部分程序用不上，但是还是都下了吧：</p>
+<pre><code class="hljs">git clone <span class="hljs-symbol">git:</span>/<span class="hljs-regexp">/genome-source.cse.ucsc.edu/kent</span>.git <span class="hljs-comment"># 这个其实是cgi-bin的源代码，一会会用到里面的sql语句</span>
+rsync -azvP <span class="hljs-symbol">rsync:</span>/<span class="hljs-regexp">/hgdownload.soe.ucsc.edu/genome</span><span class="hljs-regexp">/admin/exe</span><span class="hljs-regexp">/linux.x86_64/</span> ./
+</code></pre>
+<p>修改了配置文件，才能正确访问MySQL：(这个配置文件一定要在<code>~/</code>也就是主目录下，没找到如何自定义它的位置的参数。)</p>
+<p><code>~/.hg.conf</code> 如下配置：</p>
+<pre><code class="hljs"><span class="hljs-attr">db.host</span>=<span class="hljs-number">10.10</span>.<span class="hljs-number">123.123</span>
+<span class="hljs-attr">db.socket</span>=/mysqlPath/mysql_5/mysql.sock
+<span class="hljs-attr">db.port</span>=yourPort
+
+<span class="hljs-attr">db.user</span>=your_mysql_user
+<span class="hljs-attr">db.password</span>=your_mysql_password
+
+<span class="hljs-attr">central.host</span>=<span class="hljs-number">10.10</span>.<span class="hljs-number">123.123</span>
+<span class="hljs-attr">central.socket</span>=/mysqlPath/mysql_5/mysql.sock
+<span class="hljs-attr">central.port</span>=your_port
+
+<span class="hljs-attr">central.user</span>=your_mysql_user
+<span class="hljs-attr">central.password</span>=your_mysql_password
+
+<span class="hljs-attr">central.db</span>=hgcentral
+</code></pre>
+<p>这样，UCSC提前写好的程序就能通过<code>~/.hg.conf</code> 访问我们的数据库了。</p>
+<blockquote>
+<p>本来按照教程，<code>linux.x86_64</code> 里有个<code>hgsql</code>，能让我们<code>hgsql -e &quot;show databases;&quot; mysql</code> 这样优雅的，不用输密码的访问MySQL数据的，但是我的有问题，只好把教程里的类似步骤都换成MySQL语法，手动去做了。</p>
+</blockquote>
+<p>然后，比如有个bigwig文件，放在<code>gbd/hg38/bw/a.bw</code>这里，我们想把它上传上去，需要修改<code>/gbdb/hg38</code>下的<code>track.ra</code>文件，</p>
+<p><code>track.ra</code></p>
+<pre><code class="hljs"> track bw2
+ shortLabel bw2_short
+ longLabel bw2_long
+ visibility dense
+<span class="hljs-built_in"> group </span>map
+ autoScale on
+ priority 20
+ color 62, 62, 62
+<span class="hljs-built_in"> type </span>bigwig
+</code></pre>
+<pre><code class="hljs">linux.x86_64/hgTrackDb . hg38 trackDb kent/src/hg/<span class="hljs-class"><span class="hljs-keyword">lib</span>/<span class="hljs-title">trackDb</span>.<span class="hljs-title">sql</span> /<span class="hljs-title">picb</span>/<span class="hljs-title">rnomics2</span>/<span class="hljs-title">RBP_database</span>/<span class="hljs-title">dbweb</span>/<span class="hljs-title">Softwares</span>/<span class="hljs-title">apache_2</span>.4.37/<span class="hljs-title">htdocs</span>/<span class="hljs-title">genomebrowser</span>/<span class="hljs-title">gbdb</span>/<span class="hljs-title">hg38</span></span>
+linux.x86_64/hgBbiDbLink hg38 bw1 /picb/rnomics2/RBP_database/dbweb/Softwares/apache_2.<span class="hljs-number">4.37</span>/htdocs/genomebrowser/gbdb/hg38/bw/test/ENCFF100HQU.bw
+linux.x86_64/hgFindSpec . hg38 hgFindSpec kent/src/hg/<span class="hljs-class"><span class="hljs-keyword">lib</span>/<span class="hljs-title">hgFindSpec</span>.<span class="hljs-title">sql</span> /<span class="hljs-title">picb</span>/<span class="hljs-title">rnomics2</span>/<span class="hljs-title">RBP_database</span>/<span class="hljs-title">dbweb</span>/<span class="hljs-title">Softwares</span>/<span class="hljs-title">apache_2</span>.4.37/<span class="hljs-title">htdocs</span>/<span class="hljs-title">genomebrowser</span>/<span class="hljs-title">gbdb</span>/<span class="hljs-title">hg38</span></span>
+</code></pre>
+<p>第一行意思是，从<code>gbdb/hg38</code>文件的<code>track.ra</code>读取track信息，并插入到hg38数据库的trackDB表格里。第二行是把<code>track.ra</code> 里的<code>bw2</code>这个track的实际路径添加进表格，第三行大概是刷新一下。</p>
+<p>其他类型的数据上传，如bed，如2bit，以后再写。</p>
+<ul>
+<li><p><code>rsync</code>查看大小</p>
+<pre><code class="hljs">rsync -hna --stats rsync:<span class="hljs-regexp">//</span>hgdownload.soe.ucsc.edu<span class="hljs-regexp">/gbdb/</span> | egrep <span class="hljs-string">"Number of files:|total size is"</span>
+</code></pre></li>
+</ul>
+<blockquote>
+<p>MySQL配置过程中，可能要加载很多的模块，后面补充。</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="参考"></a><a href="#参考" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参考</h2>
+<ul>
+<li><a href="https://genome.ucsc.edu/goldenpath/help/mirrorManual.html">https://genome.ucsc.edu/goldenpath/help/mirrorManual.html</a></li>
+<li><a href="http://oliverelliott.org/article/bioinformatics/tut_genomebrowser/">http://oliverelliott.org/article/bioinformatics/tut_genomebrowser/</a></li>
+<li><a href="http://blog.sciencenet.cn/blog-723745-569746.html">http://blog.sciencenet.cn/blog-723745-569746.html</a></li>
+<li><a href="http://emb-bioinfo.fsaa.ulaval.ca/bioinfo/html/admin/mirror.html">http://emb-bioinfo.fsaa.ulaval.ca/bioinfo/html/admin/mirror.html</a></li>
+<li>file:///Users/kaigedong/Desktop/UCSC%20Genome%20Browser%E5%AE%89%E8%A3%85.pdf</li>
+<li><a href="http://genome.ucsc.edu/goldenPath/help/mirror.html#manual-installation-instructions">Installation of a UCSC Genome Browser on a local machine (&quot;mirror&quot;)</a></li>
+<li><a href="https://genome-store.ucsc.edu/">Genome Browser source code</a></li>
+</ul>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/Linux-best-practice/blog">Recent posts</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#1-安装必要的软件">1. 安装必要的软件</a></li><li><a href="#2-请确保一下事情已经做好">2. 请确保一下事情已经做好：</a></li><li><a href="#3-几个目录的说明">3. 几个目录的说明：</a></li><li><a href="#4-下载静态文件-让ucsc主页显示出来">4. 下载静态文件，让UCSC主页显示出来!</a></li><li><a href="#5-配置mysql服务器">5. 配置MySQL服务器</a></li><li><a href="#6-trash-文件夹">6. trash 文件夹</a></li><li><a href="#7-mysql的ssl配置">7. MySQL的SSL配置</a></li><li><a href="#8-添加custom-track">8. 添加Custom Track</a></li><li><a href="#参考">参考</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Linux-best-practice/" class="nav-home"><img src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Linux-best-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Linux-best-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/Linux-best-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Linux-best-practice/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Linux-best-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Linux-best-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Kaige Dong</section></footer></div></body></html>

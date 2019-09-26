@@ -1,0 +1,318 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Adapter and quality trimming of illumina data · Kaige Dong&#x27;s Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="闲着翻译一个[文章]"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Adapter and quality trimming of illumina data · Kaige Dong&#x27;s Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kaigedong.github.io/Linux-best-practice/blog/2017/09/25/Adapter-and-quality-trimming-of-illumina-data"/><meta property="og:description" content="闲着翻译一个[文章]"/><meta property="og:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Linux-best-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/atom.xml" title="Kaige Dong&#x27;s Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/feed.xml" title="Kaige Dong&#x27;s Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Linux-best-practice/js/scrollSpy.js"></script><link rel="stylesheet" href="/Linux-best-practice/css/main.css"/><script src="/Linux-best-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Linux-best-practice/"><img class="logo" src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site"/><h2 class="headerTitleWithLogo">Kaige Dong&#x27;s Site</h2></a><a href="/Linux-best-practice/versions"><h3>0.1.5</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/Linux-best-practice/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/Linux-best-practice/docs/doc4" target="_self">API</a></li><li class=""><a href="/Linux-best-practice/help" target="_self">Help</a></li><li class="siteNavGroupActive"><a href="/Linux-best-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>All blog posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All blog posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/09/20/scrapy_to_search_engine_Introduction">1.爬虫课程的介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Python_sorting">Python排序算法</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Learn_make_Donot_starve_mods">学习制作饥荒mod</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Donot_starve_mod1">饥荒mod1</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/python_virtual_env">virtualenv 和 pyenv的使用</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/16/Wuenda_machine_learning">吴恩达机器学习笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/13/Django-Apache-wsgi-_deploy">Django+Apache wsgi 部署</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/12/Apache-deploy-Django">Apache 部署 Django</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09/pytorch-60min">PyTorch 60min教程</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09/no_root_install_Apache">无root安装Apache</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/07/GIVEinstall">GIVE安装笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/06/wali_v2ray">搬瓦工2: v2ray</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/16/Curses-python3-7">Curses_python3.7</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/05/12/wali_note">搬瓦工笔记1：ssr</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/19/DQN_5">强化学习实战：从零开始下五子棋</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17/DQN_Sarsa">强化学习之Sarsa</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17/DQN_Sarsa-lambda">增强学习之Sarsa(lambda)</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/16/DQN_Q-learning">深度学习02之Q-learning介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/16/DQN">强化学习介绍与分类01</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/07_shadowsocks_settings">shadowsocks配置</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/19_shell_env_set/env-export">shell变量及进程及set,env,export</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/12_Perl/install_models">Perl安装模块与卸载</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/11_python_convert_exe_videos">python批量转换exe视频</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09_no_root_install_MySQL">服务器无root安装MySQL</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/05/08_Macinstall_MySQL">Mac安装MySQL &amp; Ubuntu下安装MySQL记录</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/tmus">tmus指南</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17_DQN_DQN">增强学习之DQN介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17_DQN2/Algo">增强学习之DQN算法</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/17python的decode/encode-与-r-b-u">python的decode/encode 与 r/b/u</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/17_golang_notes">golang笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09_unroot_install_UCSC_genome_browser">modele_name</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/13_Acer中Arch安装Secure/boot-EFI-设置">Acer中Arch安装Secure boot EFI 设置</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13_HTMLandCSS_basic_03">HTML与CSS基础03-Web框架与表单设计</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/08/20_Linux_crontab">Linux crontab定时任务</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/learn-git">learn-git</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/items2">items2技巧</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_gene_A07-A09">陈巍学基因A07-A09</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_gene_A01-A03">陈巍学基因A01-A03</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_geneA04-A06">陈巍学基因A04-A06</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/boxplot">数据可视化之柱状图</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/begin_building_sites">开始建站Hexo+NexT</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/Hexo-NexT404pages">Hexo-NexT主题的404页面</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/HTMLandCSS_basic_01">HTML和CSS基础01-html的语法和基本结构文档设置标记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/HTML_CSS_basic2">HTML和CSS基础02-图像超链接和表格</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/pig_exons">modele_name</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/Counting-known-microRNAs-in-five-easy-steps">Counting known microRNAs in five easy steps</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/R_214">R极客的情人节</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/blog/2017/09/25/Adapter-and-quality-trimming-of-illumina-data">Adapter and quality trimming of illumina data</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch_bach">pytorch批训练</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch-Optimizer">pytorch:Optimizer优化器</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch-CNN">pytorch:CNN卷积神经网络</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/sync_server_files">同步服务器文件夹</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch07">pytorch07</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch06">pytorch06</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch05">pytorch05</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/Affymetrix">Affymetrix芯片原理</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch03">pytorch03</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch02">pytorch02</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch01">pytorch 学习笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab04">matlab04图像的增强处理</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab03">matlab03图像的几何变换</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab02">matlab02图像的点运算</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab">matlab学习笔记01</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/WEB_frame">WEB框架</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/ChIP-seq-masc">ChIP-seq-macs</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/CSS">CSS层叠样式表</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch04">pytorch04</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/Linux-best-practice/blog/2017/09/25/Adapter-and-quality-trimming-of-illumina-data">Adapter and quality trimming of illumina data</a></h1><p class="post-meta">September 25, 2017</p><div class="authorBlock"><p class="post-authorName"><a href="" target="_blank" rel="noreferrer noopener">woobamboo</a></p></div></header><div><span><p>闲着翻译一个[文章]
+FastQC报告的adapter
+更深入了解一下adapter
+究竟何去除掉adapter污染呢？</p>
+<!--truncate-->
+<h1><a class="anchor" aria-hidden="true" id="adapter-and-quality-trimming-of-illumina-data"></a><a href="#adapter-and-quality-trimming-of-illumina-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adapter and quality trimming of illumina data</h1>
+<p>闲着翻译一个<a href="http://www.ark-genomics.org/events-online-training-eu-training-course/adapter-and-quality-trimming-illumina-data">文章</a></p>
+<h2><a class="anchor" aria-hidden="true" id="part1-fastqc报告的adapter"></a><a href="#part1-fastqc报告的adapter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>part1 : FastQC报告的adapter</h2>
+<blockquote>
+<p>从之前的结果，查看过表达的序列，可以看到<code>fastqc</code>认为我们数据中存在下面的：</p>
+</blockquote>
+<ul>
+<li>Illumina PCR Primer Index 1</li>
+<li>RNA PCR Primer, Index 47</li>
+<li>Illumina Single End Adapter 2</li>
+<li>Illumina Paired End PCR Primer 2</li>
+</ul>
+<p>这些序列是啥？Illumina 以PDF文件的形式提供这些序列，<a href="http://你必须注册www.illumina.com并获取它">你必须注册www.illumina.com并获取它</a>。我在这里提供如下：</p>
+<pre><code class="hljs">&gt;PCRPrimerIndex1
+<span class="hljs-built_in">CAAGCAGAAGACGGCATACGAGATCGTGATGTGACTGGAGTTC</span>
+&gt;RNAPCRPrimerIndex47
+<span class="hljs-built_in">CAAGCAGAAGACGGCATACGAGATCTTCGAGTGACTGGAGTTCCTTGGCACCCGAGAATTCCA</span>
+&gt;IlluminaSingleEndAdapter2
+<span class="hljs-built_in">CAAGCAGAAGACGGCATACGAGCTCTTCCGATCT</span>
+&gt;PEPCRPrimer2<span class="hljs-number">.0</span>
+<span class="hljs-built_in">CAAGCAGAAGACGGCATACGAGATCGGTCTCGGCATTCCTGCTGAACCGCTCTTCCGATCT</span>
+</code></pre>
+<p>可以看到，这些序列之间有很多共同点。</p>
+<p>FastQC实际使用的列表存放在<strong><code>/usr/share/java/fastqc-0.10.1/Contaminants/contaminant_list.txt</code></strong></p>
+<p>我们也应该考虑反向互补的序列，因为FastQC会同样查找它们。</p>
+<pre><code class="hljs"><span class="hljs-meta">&gt;</span><span class="bash">PCRPrimerIndex1_RC</span>
+GAACTCCAGTCACATCACGATCTCGTATGCCGTCTTCTGCTTG
+<span class="hljs-meta">&gt;</span><span class="bash">RNAPCRPrimerIndex47_RC</span>
+TGGAATTCTCGGGTGCCAAGGAACTCCAGTCACTCGAAGATCTCGTATGCCGTCTTCTGCTTG
+<span class="hljs-meta">&gt;</span><span class="bash">IlluminaSingleEndAdapter2_RC</span>
+AGATCGGAAGAGCTCGTATGCCGTCTTCTGCTTG
+<span class="hljs-meta">&gt;</span><span class="bash">PEPCRPrimer2.0_RC</span>
+AGATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATCTCGTATGCCGTCTTCTGCTTG
+</code></pre>
+<p>现在我透露给你一个小秘密——</p>
+<blockquote>
+<p>这个数据集<strong>实际</strong>使用的adapter 是：</p>
+</blockquote>
+<pre><code class="hljs">&gt;SmallRNA3pAdapter_1<span class="hljs-number">.5</span>
+ATCTCGTATGCCGTCTTCTGCTTG
+</code></pre>
+<p>如果我们再看FastQ报的反向互补的adapter,我们可以看到(空格分开的后面是adapter)：</p>
+<pre><code class="hljs"><span class="hljs-meta">&gt;</span><span class="bash">PCRPrimerIndex1_RC</span>
+GAACTCCAGTCACATCACG   ATCTCGTATGCCGTCTTCTGCTTG
+<span class="hljs-meta">&gt;</span><span class="bash">RNAPCRPrimerIndex47_RC</span>
+TGGAATTCTCGGGTGCCAAGGAACTCCAGTCACTCGAAG   ATCTCGTATGCCGTCTTCTGCTTG
+<span class="hljs-meta">&gt;</span><span class="bash">IlluminaSingleEndAdapter2_RC</span>
+AGATCGGAAGAGCTCGTATGCCGTCTTCTGCTTG
+<span class="hljs-meta">&gt;</span><span class="bash">PEPCRPrimer2.0_RC</span>
+AGATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCG   ATCTCGTATGCCGTCTTCTGCTTG
+</code></pre>
+<p>所以，我们需要了解：</p>
+<ul>
+<li>FastQC可以告诉我们adapter 的污染，但 可能不会告诉我们正确的adapter</li>
+<li>确定我们数据中出现的adapter可能需要更深入的工作</li>
+</ul>
+<p>一个策略即是问产生这些数据的科学家，但有时他们也不知道。</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="更深入了解一下adapter"></a><a href="#更深入了解一下adapter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>更深入了解一下adapter：</h2>
+<p>我们看一下adapter:</p>
+<pre><code class="hljs css language-shell">cd
+
+zcat SRR026762.fastq.gz | head -n 20000 | grep ATCTCGTATGCCGTCTTCTGCTTG
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-09/figure_15.png" alt=""></p>
+<p>如果你够敏感，你将会注意到，我们adapter 边上也是一个重复序列：</p>
+<pre><code class="hljs"><span class="hljs-attr">TACAGTCCGACG</span>   <span class="hljs-string">ATCTCGTATGCCGTCTTCTGCTTG</span>
+<span class="hljs-attr">TACAGTCCGACG</span>   <span class="hljs-string">ATCTCGTATGCCGTCTTCTGCTTG</span>
+<span class="hljs-attr">TACAGTCCGACG</span>   <span class="hljs-string">ATCTCGTATGCCGTCTTCTGCTTG</span>
+<span class="hljs-attr">TACAGTCCGACG</span>   <span class="hljs-string">ATCTCGTATGCCGTCTTCTGCTTG</span>
+</code></pre>
+<p>结果证明是这事Small RNA sequencing primmer 的一部分：</p>
+<pre><code class="hljs">&gt;SmallRNASequencingPrimer
+<span class="hljs-built_in">CGACAGGTTCAGAGTTCTACAGTCCGACGATC</span>
+</code></pre>
+<p>我们把两个结合起来，得到：</p>
+<pre><code class="hljs"><span class="hljs-type">CGACAGGTTCAGAGTTCTACAGTCCGACGATC</span>                             &lt;- <span class="hljs-type">Small</span> <span class="hljs-type">RNA</span> <span class="hljs-type">Primer</span>
+                 <span class="hljs-type">TACAGTCCGACGATCTCGTATGCCGTCTTCTGCTTG</span>        &lt;- <span class="hljs-type">Our</span> read(s)
+                             <span class="hljs-type">ATCTCGTATGCCGTCTTCTGCTTG</span>        &lt;- <span class="hljs-type">Small</span> <span class="hljs-type">RNA</span> <span class="hljs-number">5</span>' adapter
+</code></pre>
+<p>(原文解释很清楚)Essentially, what is happening here, is that **during the small RNA library prep stage, small RNA fragments are selected. ** This inevitable ends up with a huge amount of &quot;primer-dimer&quot; i.e. where the Illumina primers/adapters have no actual product between them.</p>
+<h2><a class="anchor" aria-hidden="true" id="究竟何去除掉adapter污染呢"></a><a href="#究竟何去除掉adapter污染呢" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>究竟何去除掉adapter污染呢？</h2>
+<h3><a class="anchor" aria-hidden="true" id="1-使用cutadapt-去除adapter"></a><a href="#1-使用cutadapt-去除adapter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1）使用cutadapt 去除adapter</h3>
+<p>cutadapt 是一个专门去除NGS数据adapter的工具。查看详细帮组，输入<code>cutadapt -h</code></p>
+<p>因为我们数据中有很多接头，我们运行cutadapt 来去除它们。命令是：</p>
+<pre><code class="hljs css language-shell">cutadapt -a CGACAGGTTCAGAGTTCTACAGTCCGACGATC \
+         -a TACAGTCCGACGATC \
+         -a ATCTCGTATGCCGTCTTCTGCTTG \
+         -e 0.1 -O 5 -m 15 \
+         -o SRR026762_adaprm.fastq SRR026762.fastq.gz 
+</code></pre>
+<p>参数意义：</p>
+<ul>
+<li><code>-a CGACAGGTTCAGAGTTCTACAGTCCGACGATC</code>  : 第一个去除的adapter , 这是一个small RNA primer.</li>
+<li><code>-a TACAGTCCGACGATC</code>: 第二个去除的adapter，这是我们观察到的Small RNA primer</li>
+<li><code>-a ATCTCGTATGCCGTCTTCTGCTTG</code>: 第三个去除的adapter, 这是全长的Small RNA 5' adapter</li>
+<li><code>-e 0.1</code>: 允许read 和 adapter之间，每10个允许一个错配。</li>
+<li><code>-O 5</code>:  至少有5个碱基的重叠</li>
+<li><code>-m 15</code>: trimming 之后，小于15bp的reads将被扔掉</li>
+<li><code>-o SRR026762_adaprm.fastq</code>： 把trimmer data 放到这个文件里。</li>
+</ul>
+<p>程序的输出是这样的：</p>
+<pre><code class="hljs">Maximum error rate: <span class="hljs-number">10.00</span>%
+   Processed reads: <span class="hljs-number">5677631</span>
+     Trimmed reads: <span class="hljs-number">1927223</span> ( <span class="hljs-number">33.9</span>%)
+   Total basepairs:    <span class="hljs-number">204394716</span> (<span class="hljs-number">204.4</span> Mbp)
+ Trimmed basepairs:     <span class="hljs-number">41594144</span> (<span class="hljs-number">41.6</span> Mbp) (<span class="hljs-number">20.35</span>% of total)
+   Too short reads: <span class="hljs-number">1016544</span> ( <span class="hljs-number">17.9</span>% of processed reads)
+    Too long reads: <span class="hljs-number">0</span> (  <span class="hljs-number">0.0</span>% of processed reads)
+        Total time:    <span class="hljs-number">287.36</span> s
+     Time per read:      <span class="hljs-number">0.05</span> ms
+
+=== Adapter <span class="hljs-number">1</span> ===
+
+Adapter <span class="hljs-string">'CGACAGGTTCAGAGTTCTACAGTCCGACGATC'</span>, length <span class="hljs-number">32</span>, was trimmed <span class="hljs-number">333</span> times.
+
+Lengths of removed sequences
+length  count   expected
+<span class="hljs-number">5</span>       <span class="hljs-number">331</span>     <span class="hljs-number">5544.6</span>
+<span class="hljs-number">7</span>       <span class="hljs-number">1</span>       <span class="hljs-number">346.5</span>
+<span class="hljs-number">10</span>      <span class="hljs-number">1</span>       <span class="hljs-number">5.4</span>
+
+=== Adapter <span class="hljs-number">2</span> ===
+
+Adapter <span class="hljs-string">'TACAGTCCGACGATC'</span>, length <span class="hljs-number">15</span>, was trimmed <span class="hljs-number">52873</span> times.
+
+Lengths of removed sequences
+length  count   expected
+<span class="hljs-number">5</span>       <span class="hljs-number">93</span>      <span class="hljs-number">5544.6</span>
+<span class="hljs-number">6</span>       <span class="hljs-number">1121</span>    <span class="hljs-number">1386.1</span>
+<span class="hljs-number">7</span>       <span class="hljs-number">1082</span>    <span class="hljs-number">346.5</span>
+<span class="hljs-number">8</span>       <span class="hljs-number">7</span>       <span class="hljs-number">86.6</span>
+<span class="hljs-number">9</span>       <span class="hljs-number">2</span>       <span class="hljs-number">21.7</span>
+<span class="hljs-number">10</span>      <span class="hljs-number">3</span>       <span class="hljs-number">5.4</span>
+<span class="hljs-number">11</span>      <span class="hljs-number">2</span>       <span class="hljs-number">1.4</span>
+&gt;=<span class="hljs-number">17</span>    <span class="hljs-number">50563</span>   <span class="hljs-number">0.1</span>
+
+=== Adapter <span class="hljs-number">3</span> ===
+
+Adapter <span class="hljs-string">'ATCTCGTATGCCGTCTTCTGCTTG'</span>, length <span class="hljs-number">24</span>, was trimmed <span class="hljs-number">1874017</span> times.
+
+Lengths of removed sequences
+length  count   expected
+<span class="hljs-number">5</span>       <span class="hljs-number">322</span>     <span class="hljs-number">5544.6</span>
+<span class="hljs-number">6</span>       <span class="hljs-number">90</span>      <span class="hljs-number">1386.1</span>
+<span class="hljs-number">7</span>       <span class="hljs-number">162</span>     <span class="hljs-number">346.5</span>
+<span class="hljs-number">8</span>       <span class="hljs-number">20</span>      <span class="hljs-number">86.6</span>
+<span class="hljs-number">9</span>       <span class="hljs-number">132</span>     <span class="hljs-number">21.7</span>
+<span class="hljs-number">10</span>      <span class="hljs-number">384</span>     <span class="hljs-number">5.4</span>
+<span class="hljs-number">11</span>      <span class="hljs-number">1257</span>    <span class="hljs-number">1.4</span>
+<span class="hljs-number">12</span>      <span class="hljs-number">4026</span>    <span class="hljs-number">0.3</span>
+<span class="hljs-number">13</span>      <span class="hljs-number">10585</span>   <span class="hljs-number">0.1</span>
+<span class="hljs-number">14</span>      <span class="hljs-number">33836</span>   <span class="hljs-number">0.0</span>
+<span class="hljs-number">15</span>      <span class="hljs-number">84695</span>   <span class="hljs-number">0.0</span>
+<span class="hljs-number">16</span>      <span class="hljs-number">104889</span>  <span class="hljs-number">0.0</span>
+<span class="hljs-number">17</span>      <span class="hljs-number">86715</span>   <span class="hljs-number">0.0</span>
+<span class="hljs-number">18</span>      <span class="hljs-number">77590</span>   <span class="hljs-number">0.0</span>
+<span class="hljs-number">19</span>      <span class="hljs-number">121253</span>  <span class="hljs-number">0.0</span>
+<span class="hljs-number">20</span>      <span class="hljs-number">199881</span>  <span class="hljs-number">0.0</span>
+<span class="hljs-number">21</span>      <span class="hljs-number">182110</span>  <span class="hljs-number">0.0</span>
+<span class="hljs-number">22</span>      <span class="hljs-number">205659</span>  <span class="hljs-number">0.0</span>
+<span class="hljs-number">23</span>      <span class="hljs-number">184010</span>  <span class="hljs-number">0.0</span>
+<span class="hljs-number">24</span>      <span class="hljs-number">232069</span>  <span class="hljs-number">0.0</span>
+<span class="hljs-number">25</span>      <span class="hljs-number">137080</span>  <span class="hljs-number">0.0</span>
+&gt;=<span class="hljs-number">26</span>    <span class="hljs-number">207252</span>  <span class="hljs-number">0.0</span>
+</code></pre>
+<p>可以看到，超过33% 的reads有某种形式的adapter.  之后超过17% 的reads 小于15bp被丢弃了。结果在<strong>SRR026762_adaprm.fastq</strong>中。</p>
+<blockquote>
+<p>作业问题：</p>
+</blockquote>
+<p>How many reads are in SRR026762_adaprm.fastq?</p>
+<p>Can you think of a combination of <strong>cat</strong>, **paste **and **awk **that would print out a column of sequence lengths?</p>
+<p>Can you think of how you might add <strong>sort</strong>, and <strong>uniq -c</strong> to count how many there are of each length?</p>
+<h3><a class="anchor" aria-hidden="true" id="2-使用sickle-基于quality-来trim-reads"></a><a href="#2-使用sickle-基于quality-来trim-reads" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2）使用sickle 基于quality 来trim reads</h3>
+<p>如我们所见，Illumina reads (别的其他技术同样如此)的质量到reads结束逐渐下降。当我们错误的把它们组装进基因组，或者用它们call SNP， 将需要将这些低质量的bases 去除。我们推荐使用<code>sickle</code>，一个quality trimmer, 并支持paired-end 模式。</p>
+<blockquote>
+<p>支持paired-end 模式是什么意思</p>
+</blockquote>
+<p>双端测序是我们对一个长的DNA片段进行从两端进行测序。所以我们知道这些paired-reads 来自同一个片段，另外他们应该离得多远，这当我们来比对和组装它们时非常有用。最常见的表现是是有两个区域，第一个包含<code>read 1</code>, 第二个包含<code>read 2</code>. 因此，第一个文件中的第一个read 和 第二个文件中的第一个read 是成对的，第二个reads 和 第二个成对等。</p>
+<blockquote>
+<p>这有什么用</p>
+</blockquote>
+<p>需要维持在每个文件中的reads 的顺序。如果我们从一个文件中去除了一个read，因为它低质量或者包含adapter, 我们也必须去除另一个文件中对应的read. <code>Sickle</code>这样做的很好，但不幸的是<code>cutadapt</code>不这样干。</p>
+<blockquote>
+<p>输入</p>
+</blockquote>
+<p><code>sickle</code></p>
+<p><code>sickle se</code></p>
+<p><code>sickle pe</code></p>
+<p>这将显示每个命令的帮助信息。 我们trimmed adapters 的这个microRNA 数据是单端的测序文件，因此我们可以通过下面命令trim:</p>
+<pre><code class="hljs css language-shell">sickle se -f SRR026762_adaprm.fastq -t sanger -o SRR026762_adaprm_trim.fastq -q 30 -l 15
+</code></pre>
+<blockquote>
+<p>参数的含义</p>
+</blockquote>
+<ul>
+<li><code>se</code>: 使用单端模式</li>
+<li><code>-f SRR026762_adaprm.fastq</code> : 这事输入的fastq文件</li>
+<li><code>-t sanger</code>: 质量编码方式。所有从EBI 或者 NCBI 下载的应该是<code>sanger</code>编码的。 可通过下面检查解释：<a href="http://en.wikipedia.org/wiki/FASTQ_format#Encoding">http://en.wikipedia.org/wiki/FASTQ_format#Encoding</a></li>
+<li><code>-o SRR026762_adaprm_trim.fastq</code> : 输出文件</li>
+<li><code>-q 30</code> : 使用的质量值。低于这个分数的reads将会被trimmed 掉，使用一个滑动窗口</li>
+<li><code>-l 15</code>: 在trim之后允许的最小长度，这里我们去除小于15bp的reads</li>
+</ul>
+<blockquote>
+<p>输出会像这个：</p>
+</blockquote>
+<pre><code class="hljs">FastQ records kept: <span class="hljs-number">2622021</span>
+FastQ records discarded: <span class="hljs-number">2039066</span>
+</code></pre>
+<p>如你所见，丢弃了很多reads.</p>
+<p><em>Try trimming using a lower quality value (e.g. 20) - how many reads are kept then?</em></p>
+<p><em>Try allowing shorter reads to be kept (e.g. 10bp) - how many reads are kept then?</em></p>
+<blockquote>
+<p>那trim paired reads 会怎么样？我们在<strong>training</strong>文件夹下有：</p>
+</blockquote>
+<pre><code class="hljs css language-shell">ubuntu@domU-12-31-39-10-6D-92:~$ ls -l training/rnaseq/*.fastq.gz
+-rw-rw-r-- 1 ubuntu ubuntu 65721000 Oct  5  2011 training/rnaseq/ERR022486_chr22_read1.fastq.gz
+-rw-rw-r-- 1 ubuntu ubuntu 62899231 Oct  5  2011 training/rnaseq/ERR022486_chr22_read2.fastq.gz
+-rw-rw-r-- 1 ubuntu ubuntu 41417843 Oct  5  2011 training/rnaseq/ERR022488_chr22_read1.fastq.gz
+-rw-rw-r-- 1 ubuntu ubuntu 39405527 Oct  5  2011 training/rnaseq/ERR022488_chr22_read2.fastq.gz
+</code></pre>
+<p>我们trim 这些reads的命令是：</p>
+<pre><code class="hljs css language-shell">sickle pe -f training/rnaseq/ERR022486_chr22_read1.fastq.gz \
+          -r training/rnaseq/ERR022486_chr22_read2.fastq.gz \
+          -t sanger \
+          -o ERR022486_chr22_read1_trim.fastq \
+          -p ERR022486_chr22_read2_trim.fastq \
+          -s ERR022486_chr22_single_trim.fastq \
+          -q 30 -l 15
+</code></pre>
+<blockquote>
+<p>参数的解释</p>
+</blockquote>
+<ul>
+<li><code>pe</code>: 使用双端模式</li>
+<li><code>-f training/rnaseq/ERR022486_chr22_read1.fastq.gz</code> : read1 的fastq文件</li>
+<li><code>-r training/rnaseq/ERR022486_chr22_read2.fastq.gz</code>： read2 de fastq 文件</li>
+<li><code>-t sanger</code>：质量编码方式。所有从EBI 或者 NCBI 下载的应该是<code>sanger</code>编码的。 可通过下面检查解释：<a href="http://en.wikipedia.org/wiki/FASTQ_format#Encoding">http://en.wikipedia.org/wiki/FASTQ_format#Encoding</a></li>
+<li><code>-o ERR022486_chr22_read1_trim.fastq</code>： 从read1 的文件中trimmed之后的输出文件</li>
+<li><code>-p ERR022486_chr22_read2_trim.fastq</code>：从read2 的文件中trimmed之后的输出文件</li>
+<li><code>-s ERR022486_chr22_single_trim.fastq</code>： 不符合质量检测或长度检测的成对的reads.</li>
+<li><code>-q 30</code>trimming 之后，小于15bp的reads将被扔掉</li>
+<li><code>-l 15</code>在trim之后允许的最小长度，这里我们去除小于15bp的reads</li>
+</ul>
+<blockquote>
+<p>输出结果看起来是这样：</p>
+</blockquote>
+<pre><code class="hljs">FastQ paired records kept: <span class="hljs-number">1357006</span> (<span class="hljs-number">678503</span> pairs)
+FastQ single records kept: <span class="hljs-number">118391</span> (<span class="hljs-keyword">from</span> PE1: <span class="hljs-number">89173</span>, <span class="hljs-keyword">from</span> PE2: <span class="hljs-number">29218</span>)
+FastQ paired records discarded: <span class="hljs-number">106702</span> (<span class="hljs-number">53351</span> pairs)
+FastQ single records discarded: <span class="hljs-number">118391</span> (<span class="hljs-keyword">from</span> PE1: <span class="hljs-number">29218</span>, <span class="hljs-keyword">from</span> PE2: <span class="hljs-number">89173</span>)
+</code></pre>
+<p><em>What happens if you set a quality threshold of 20?</em></p>
+<p><em>What happens if you set the length threshold at 10?  At 0?</em></p>
+<p>现在我们完成了！现在你可以trim adapters 并评估单端或双端的Illumina data 的质量。</p>
+<p>如果你有更多的空闲时间，你可以登录EBI European Nucleotide Archive, 下载并练习你的新技能(<a href="http://www.ebi.ac.uk/ena/data/view/SRP008449">http://www.ebi.ac.uk/ena/data/view/SRP008449</a>)</p>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/Linux-best-practice/blog">Recent posts</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#part1-fastqc报告的adapter">part1 : FastQC报告的adapter</a></li><li><a href="#更深入了解一下adapter">更深入了解一下adapter：</a></li><li><a href="#究竟何去除掉adapter污染呢">究竟何去除掉adapter污染呢？</a><ul class="toc-headings"><li><a href="#1-使用cutadapt-去除adapter">1）使用cutadapt 去除adapter</a></li><li><a href="#2-使用sickle-基于quality-来trim-reads">2）使用sickle 基于quality 来trim reads</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Linux-best-practice/" class="nav-home"><img src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Linux-best-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Linux-best-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/Linux-best-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Linux-best-practice/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Linux-best-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Linux-best-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Kaige Dong</section></footer></div></body></html>

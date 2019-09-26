@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>738单调递增的数字 · Kaige Dong&#x27;s Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## 题目类型"/><meta name="docsearch:version" content="0.1.4"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="738单调递增的数字 · Kaige Dong&#x27;s Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kaigedong.github.io/Linux-best-practice/"/><meta property="og:description" content="## 题目类型"/><meta property="og:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Linux-best-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/atom.xml" title="Kaige Dong&#x27;s Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/feed.xml" title="Kaige Dong&#x27;s Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Linux-best-practice/js/scrollSpy.js"></script><link rel="stylesheet" href="/Linux-best-practice/css/main.css"/><script src="/Linux-best-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Linux-best-practice/"><img class="logo" src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site"/><h2 class="headerTitleWithLogo">Kaige Dong&#x27;s Site</h2></a><a href="/Linux-best-practice/versions"><h3>0.1.4</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/Linux-best-practice/docs/0.1.4/doc1" target="_self">Docs</a></li><li class=""><a href="/Linux-best-practice/docs/0.1.4/doc4" target="_self">API</a></li><li class=""><a href="/Linux-best-practice/help" target="_self">Help</a></li><li class=""><a href="/Linux-best-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Algorithm</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Docusaurus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/0.1.4/doc1">Docusaurus 构建网站</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/0.1.4/doc2">Manjaro的安装、配置到GPU</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">First Category<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/0.1.4/doc9">This is Doc 9</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Second Category<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/0.1.4/doc3">This is document number 3</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Algorithm<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/0.1.4/doc100">01两数之和</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/0.1.4/doc101">232用栈实现队列</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/docs/0.1.4/doc102">738单调递增的数字</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">738单调递增的数字</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="题目类型"></a><a href="#题目类型" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>题目类型</h2>
+<p><code>贪心算法</code></p>
+<h2><a class="anchor" aria-hidden="true" id="思路"></a><a href="#思路" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>思路</h2>
+<ol>
+<li>暴力递减：时间超出限制。写一个判断是否为单调递增的函数，如果是，返回，如果不是，原数字减1：</li>
+</ol>
+<p>结果时间太久了，测试用例有很多大数字。</p>
+<p>时间复杂度：??</p>
+<pre><code class="hljs css language-rust"><span class="hljs-keyword">impl</span> Solution {
+    <span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">monotone_increasing_digits</span></span>(n: <span class="hljs-built_in">i32</span>) -&gt; <span class="hljs-built_in">i32</span> {
+        <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> t = n;
+        <span class="hljs-keyword">while</span> ! Self::is_good(t) {
+            t -= <span class="hljs-number">1</span>;
+        }
+        <span class="hljs-keyword">return</span> t;
+    }
+
+    <span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">is_good</span></span>(n: <span class="hljs-built_in">i32</span>) -&gt; <span class="hljs-built_in">bool</span> {
+        <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> remainder = n % <span class="hljs-number">10</span>; <span class="hljs-comment">// 余数</span>
+        <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> rest = n / <span class="hljs-number">10</span>; <span class="hljs-comment">// 去掉余数的数</span>
+
+        <span class="hljs-keyword">while</span> rest &gt; <span class="hljs-number">0</span> {
+            <span class="hljs-keyword">if</span> remainder &lt; rest % <span class="hljs-number">10</span> {
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+            }
+            remainder = rest % <span class="hljs-number">10</span>;
+            rest = rest / <span class="hljs-number">10</span> ;
+        }
+    
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+    }
+}
+</code></pre>
+<ol start="2">
+<li>因为要找最大的符合条件的数，直观上要依次递减，判断是否符合。从前往后判断，找到第一个不满足的位置。</li>
+</ol>
+<p>例如数字<code>4554321</code>, 很容易找到，中间的<code>54</code>开始不满足，则从<code>4554321</code> 直到<code>4550000</code> 都不满足。这一部分不用判断，可以直接将数字变成<code>4550000</code>，这样就跳过了很多次判断。</p>
+<p>然后，<code>4550000</code> 再递减，减去 1高位退位，为 <code>4549999</code>，不满足，还要一直递减。直到减去1不退位，即最后的数字大于前一个数字退位才不会比前一个数小 (相比之下<code>450000</code>减去1 为<code>449999</code>满足)。这一段相当于，出现<code>4550000</code> 则直接变成<code>4500000</code>即可，这样减去1刚好是最大的符合条件的数。</p>
+<p>上面两步的例子：</p>
+<pre><code class="hljs">例<span class="hljs-number">1</span>：
+对于<span class="hljs-number">123454321</span>：
+从前往后遍历<span class="hljs-number">1</span>：找到<span class="hljs-number">54</span>中的<span class="hljs-number">4</span>不满足，将<span class="hljs-number">4</span>及后面变成<span class="hljs-number">0</span>；结果为 <span class="hljs-number">123450000</span>
+从最后一个<span class="hljs-number">5</span>往前遍历：找是否前面有等于<span class="hljs-number">5</span>的数，如果有将<span class="hljs-number">5</span>变成<span class="hljs-number">0</span>：发现没有，结果为 <span class="hljs-number">123450000</span>
+然后减<span class="hljs-number">1</span>，即为结果：<span class="hljs-number">123449999</span>
+
+例<span class="hljs-number">2</span>：
+对于数字
+<span class="hljs-number">1234554321</span>：
+从前往后遍历<span class="hljs-number">1</span>：找到<span class="hljs-number">54</span>中的<span class="hljs-number">4</span>不满足，将<span class="hljs-number">4</span>及后面变成<span class="hljs-number">0</span>；结果为 <span class="hljs-number">1234550000</span>
+从最后一个<span class="hljs-number">5</span>往前遍历：找是否前面有等于<span class="hljs-number">5</span>的数，如果有将<span class="hljs-number">5</span>变成<span class="hljs-number">0</span>：结果为：<span class="hljs-number">1234500000</span>
+然后减去<span class="hljs-number">1</span>，即为结果：<span class="hljs-number">1234499999</span>
+
+</code></pre>
+<p>时间复杂度：与数字的位数有关??。O(len(n))</p>
+<pre><code class="hljs css language-rust"><span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">is_good</span></span>(n: <span class="hljs-built_in">i32</span>) -&gt; <span class="hljs-built_in">bool</span> {
+    <span class="hljs-keyword">let</span> n_char_vec: <span class="hljs-built_in">Vec</span>&lt;<span class="hljs-built_in">char</span>&gt; = n.to_string().chars().collect();
+
+    <span class="hljs-comment">// 是一位数</span>
+    <span class="hljs-keyword">if</span> n_char_vec.len() == <span class="hljs-number">1</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+    }
+    <span class="hljs-comment">// 两位数及以上</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>..n_char_vec.len()-<span class="hljs-number">1</span> {
+        <span class="hljs-keyword">if</span> n_char_vec[i+<span class="hljs-number">1</span>] &lt; n_char_vec[i] {
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}
+
+<span class="hljs-keyword">pub</span> <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">monotone_increasing_digits</span></span>(n: <span class="hljs-built_in">i32</span>) -&gt; <span class="hljs-built_in">i32</span> {
+
+    <span class="hljs-keyword">if</span> Self::is_good(n) { <span class="hljs-keyword">return</span> n; }     <span class="hljs-comment">// 符合要求，直接返回：</span>
+
+    <span class="hljs-comment">// 否则转为Vec&lt;char&gt;进行迭代</span>
+    <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> num_vec: <span class="hljs-built_in">Vec</span>&lt;<span class="hljs-built_in">char</span>&gt; = n.to_string().chars().collect();
+    <span class="hljs-keyword">let</span> vec_len = num_vec.len();
+
+    <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> i: <span class="hljs-built_in">usize</span> = <span class="hljs-number">0</span>; <span class="hljs-comment">// 指针，从数字的第0位开始</span>
+
+    <span class="hljs-keyword">while</span> i &lt; vec_len - <span class="hljs-number">1</span> {
+        <span class="hljs-keyword">if</span> num_vec[i] &gt; num_vec[i+<span class="hljs-number">1</span>] {
+            <span class="hljs-comment">// 找到一个数字后的数字比它小的，并将该数字之后的全变成0</span>
+            <span class="hljs-keyword">for</span> index <span class="hljs-keyword">in</span> (i + <span class="hljs-number">1</span>)..vec_len {
+                num_vec[index] = <span class="hljs-string">'0'</span>;
+            }
+
+            <span class="hljs-comment">// 然后倒着查看，i之前的是否与i相同，如果相同，将i变为0. i == 0 时是满足的，即10000</span>
+            <span class="hljs-keyword">while</span> i &gt;= <span class="hljs-number">1</span> &amp;&amp; num_vec[i] == num_vec[i-<span class="hljs-number">1</span>] {
+                num_vec[i] = <span class="hljs-string">'0'</span>;
+                i -= <span class="hljs-number">1</span>;
+            }
+        }
+        i += <span class="hljs-number">1</span>; <span class="hljs-comment">// i位置小于等于i+1时，i往后移一位</span>
+    }
+
+    <span class="hljs-comment">// 转为数字并减1返回</span>
+    <span class="hljs-keyword">let</span> out: <span class="hljs-built_in">String</span> = num_vec.into_iter().collect();
+    <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> out: <span class="hljs-built_in">i32</span> = out.parse().unwrap();
+    <span class="hljs-keyword">return</span> out-<span class="hljs-number">1</span>;
+}
+</code></pre>
+<pre><code class="hljs css language-rust"><span class="hljs-comment">// 测试</span>
+<span class="hljs-built_in">assert_eq!</span>( monotone_increasing_digits(<span class="hljs-number">10</span>), <span class="hljs-number">9</span>);
+<span class="hljs-built_in">assert_eq!</span>( monotone_increasing_digits(<span class="hljs-number">1234</span>), <span class="hljs-number">1234</span>);
+<span class="hljs-built_in">assert_eq!</span>( monotone_increasing_digits(<span class="hljs-number">332</span>), <span class="hljs-number">299</span>);
+<span class="hljs-built_in">assert_eq!</span>( monotone_increasing_digits(<span class="hljs-number">614031667</span>), <span class="hljs-number">599999999</span>);
+</code></pre>
+<p>Leetcode 结果：</p>
+<table>
+<thead>
+<tr><th style="text-align:left">执行用时</th><th style="text-align:left">内存消耗</th><th style="text-align:left">语言</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left">0 ms</td><td style="text-align:left">1.9 MB</td><td style="text-align:left">Rust</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="tips"></a><a href="#tips" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tips</h2>
+<p>Vec<char>转String，String转i32：</p>
+<pre><code class="hljs"><span class="hljs-keyword">let</span> <span class="hljs-keyword">out</span>: String = num<span class="hljs-number">_</span>vec.into<span class="hljs-number">_</span>iter().collect();
+<span class="hljs-keyword">let</span> mut <span class="hljs-keyword">out</span>: i<span class="hljs-number">32</span> = <span class="hljs-keyword">out</span>.parse().unwrap();
+</code></pre>
+<p><code>break 'outer</code> 标记的使用：跳出指定位置</p>
+<h2><a class="anchor" aria-hidden="true" id="leetcode-中相似的题型"></a><a href="#leetcode-中相似的题型" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Leetcode 中相似的题型</h2>
+<p>122.买卖股票的最佳时机II</p>
+<p>860.柠檬水找零</p>
+<p>874.模拟行走机器人</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-9-23</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/Linux-best-practice/docs/0.1.4/doc101"><span class="arrow-prev">← </span><span>232用栈实现队列</span></a><a class="docs-next button" href="/Linux-best-practice/docs/0.1.4/doc103"><span>doc103</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#题目类型">题目类型</a></li><li><a href="#思路">思路</a></li><li><a href="#tips">Tips</a></li><li><a href="#leetcode-中相似的题型">Leetcode 中相似的题型</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Linux-best-practice/" class="nav-home"><img src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Linux-best-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Linux-best-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/Linux-best-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Linux-best-practice/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Linux-best-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Linux-best-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Kaige Dong</section></footer></div></body></html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>搬瓦工笔记1：ssr · Kaige Dong&#x27;s Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="搬瓦工搭建自由上网、多用户管理平台"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="搬瓦工笔记1：ssr · Kaige Dong&#x27;s Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kaigedong.github.io/Linux-best-practice/blog/2018/05/12/wali_note"/><meta property="og:description" content="搬瓦工搭建自由上网、多用户管理平台"/><meta property="og:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Linux-best-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/atom.xml" title="Kaige Dong&#x27;s Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/feed.xml" title="Kaige Dong&#x27;s Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Linux-best-practice/js/scrollSpy.js"></script><link rel="stylesheet" href="/Linux-best-practice/css/main.css"/><script src="/Linux-best-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Linux-best-practice/"><img class="logo" src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site"/><h2 class="headerTitleWithLogo">Kaige Dong&#x27;s Site</h2></a><a href="/Linux-best-practice/versions"><h3>0.1.5</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/Linux-best-practice/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/Linux-best-practice/docs/doc4" target="_self">API</a></li><li class=""><a href="/Linux-best-practice/help" target="_self">Help</a></li><li class="siteNavGroupActive"><a href="/Linux-best-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>All blog posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All blog posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/09/20/scrapy_to_search_engine_Introduction">1.爬虫课程的介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Python_sorting">Python排序算法</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Learn_make_Donot_starve_mods">学习制作饥荒mod</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Donot_starve_mod1">饥荒mod1</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/python_virtual_env">virtualenv 和 pyenv的使用</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/16/Wuenda_machine_learning">吴恩达机器学习笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/13/Django-Apache-wsgi-_deploy">Django+Apache wsgi 部署</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/12/Apache-deploy-Django">Apache 部署 Django</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09/pytorch-60min">PyTorch 60min教程</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09/no_root_install_Apache">无root安装Apache</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/07/GIVEinstall">GIVE安装笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/06/wali_v2ray">搬瓦工2: v2ray</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/16/Curses-python3-7">Curses_python3.7</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/blog/2018/05/12/wali_note">搬瓦工笔记1：ssr</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/19/DQN_5">强化学习实战：从零开始下五子棋</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17/DQN_Sarsa">强化学习之Sarsa</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17/DQN_Sarsa-lambda">增强学习之Sarsa(lambda)</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/16/DQN_Q-learning">深度学习02之Q-learning介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/16/DQN">强化学习介绍与分类01</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/07_shadowsocks_settings">shadowsocks配置</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/19_shell_env_set/env-export">shell变量及进程及set,env,export</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/12_Perl/install_models">Perl安装模块与卸载</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/11_python_convert_exe_videos">python批量转换exe视频</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09_no_root_install_MySQL">服务器无root安装MySQL</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/05/08_Macinstall_MySQL">Mac安装MySQL &amp; Ubuntu下安装MySQL记录</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/tmus">tmus指南</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17_DQN_DQN">增强学习之DQN介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17_DQN2/Algo">增强学习之DQN算法</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/17python的decode/encode-与-r-b-u">python的decode/encode 与 r/b/u</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/17_golang_notes">golang笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09_unroot_install_UCSC_genome_browser">modele_name</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/13_Acer中Arch安装Secure/boot-EFI-设置">Acer中Arch安装Secure boot EFI 设置</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13_HTMLandCSS_basic_03">HTML与CSS基础03-Web框架与表单设计</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/08/20_Linux_crontab">Linux crontab定时任务</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/learn-git">learn-git</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/items2">items2技巧</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_gene_A07-A09">陈巍学基因A07-A09</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_gene_A01-A03">陈巍学基因A01-A03</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_geneA04-A06">陈巍学基因A04-A06</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/boxplot">数据可视化之柱状图</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/begin_building_sites">开始建站Hexo+NexT</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/Hexo-NexT404pages">Hexo-NexT主题的404页面</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/HTMLandCSS_basic_01">HTML和CSS基础01-html的语法和基本结构文档设置标记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/HTML_CSS_basic2">HTML和CSS基础02-图像超链接和表格</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/pig_exons">modele_name</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/Counting-known-microRNAs-in-five-easy-steps">Counting known microRNAs in five easy steps</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/R_214">R极客的情人节</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/25/Adapter-and-quality-trimming-of-illumina-data">Adapter and quality trimming of illumina data</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch_bach">pytorch批训练</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch-Optimizer">pytorch:Optimizer优化器</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch-CNN">pytorch:CNN卷积神经网络</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/sync_server_files">同步服务器文件夹</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch07">pytorch07</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch06">pytorch06</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch05">pytorch05</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/Affymetrix">Affymetrix芯片原理</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch03">pytorch03</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch02">pytorch02</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch01">pytorch 学习笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab04">matlab04图像的增强处理</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab03">matlab03图像的几何变换</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab02">matlab02图像的点运算</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab">matlab学习笔记01</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/WEB_frame">WEB框架</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/ChIP-seq-masc">ChIP-seq-macs</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/CSS">CSS层叠样式表</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch04">pytorch04</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/Linux-best-practice/blog/2018/05/12/wali_note">搬瓦工笔记1：ssr</a></h1><p class="post-meta">May 12, 2018</p><div class="authorBlock"><p class="post-authorName"><a href="" target="_blank" rel="noreferrer noopener">woobamboo</a></p></div></header><div><span><p>搬瓦工搭建自由上网、多用户管理平台</p>
+<!--truncate-->
+<p>搬瓦工注册教程自行百度。</p>
+<ol>
+<li><p>注册安装：注册完<a href="https://kiwivm.64clouds.com/main.php">登录并安装新系统</a>，点击<code>Install new OS</code>，我这里安装的是 <code>ubuntu-18.04-x86_64</code>,等待五分钟，转到<code>Main controls</code>，即可看到新系统安装成功了。</p></li>
+<li><p>初始化密码：点击<code>stop</code>，然后转到<code>Root password modification</code>，即可生成root密码，这里记下来。然后到<code>Main controls</code>打开服务器。（似乎重建虚拟机的时候，会给，但是我忘了。）</p></li>
+<li><p>登录服务器，并配置：端口,IP信息在<code>Main controls</code></p>
+<pre><code class="hljs">ssh -p <span class="hljs-number">26791</span> <span class="hljs-symbol">root@</span><span class="hljs-number">66.78</span>.xxx<span class="hljs-number">.356</span> # 登录到服务器
+</code></pre></li>
+<li><p>搭建shadowsocks</p>
+<blockquote>
+<p>** pip install --upgrade pip #pip安装完之后，不要运行这个命令。**</p>
+</blockquote>
+<pre><code class="hljs">❌ 错误经过：
+&gt;apt-<span class="hljs-keyword">get</span> update
+&gt;apt install python-pip # v9<span class="hljs-number">.0</span><span class="hljs-number">.1</span>
+&gt;pip install --upgrade pip # <span class="hljs-number">10.0</span><span class="hljs-number">.1</span>
+&gt;pip --version
+Traceback (most recent call last):
+  File <span class="hljs-string">"/usr/bin/pip"</span>, line <span class="hljs-number">9</span>, <span class="hljs-keyword">in</span> &lt;module&gt;
+    <span class="hljs-keyword">from</span> pip <span class="hljs-keyword">import</span> main
+ImportError: cannot <span class="hljs-keyword">import</span> name main
+
+&gt;apt uninstall python-pip
+&gt;apt install python-pip # 又是<span class="hljs-number">9.0</span><span class="hljs-number">.1</span>
+&gt;pip --version 错误信息同上。
+🏡 在之前，我只好重新安装了虚拟机，重新安装上面的pip <span class="hljs-number">9.0</span><span class="hljs-number">.1</span>； 这次我只是点了reset；结果pip竟然变成了新版<span class="hljs-number">10.0</span><span class="hljs-number">.1</span>，pip的位置似乎变了。不管他
+🏡 reset 之后：
+&gt;which pip
+/usr/local/bin/pip
+&gt;pip --version
+pip <span class="hljs-number">10.0</span><span class="hljs-number">.1</span> <span class="hljs-keyword">from</span> /usr/local/lib/python2<span class="hljs-number">.7</span>/dist-packages/pip (python <span class="hljs-number">2.7</span>）
+&gt;pip install setuptools
+&gt;pip install shadowsocks
+&gt;apt install npm #准备安装shadowsocks-manager，进行多用户管理，一步到位。
+&gt;npm i -g shadowsocks-manager
+&gt;apt-<span class="hljs-keyword">get</span> install shadowsocks-libev #安装这个来启动shadowsocks-manager；还可以安装shadowsocks-python
+
+# 启动服务：
+&gt;ss-manager -m aes<span class="hljs-number">-256</span>-cfb -u --manager-address <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6001</span>
+# 或者：
+&gt;ssserver -m aes<span class="hljs-number">-256</span>-cfb -p <span class="hljs-number">12345</span> -k abcedf --manager-address <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">6001</span> # 出错
+# 解决错误：看下面的参考链接: Kali <span class="hljs-number">2.0</span> update...
+</code></pre></li>
+<li><p><a href="https://github.com/shadowsocks/shadowsocks-manager/wiki/WebGUI">多用户管理设置</a>！参考链接，说的非常清楚。</p>
+<p>注意，先要启动shadowsocks；然后启动ssmgr；然后启动ssmgr运行webgui界面。</p>
+<p>也就是说，要启动三次！</p>
+<p>最后打开<a href="http://66.98.118.143:8090">http://66.98.118.143:8090</a> （这个端口是）<code>webgui:port</code> 中定义的端口。</p>
+<p>需要修改的地方：</p>
+<ul>
+<li><p><code>ss.yml</code>和<code>webgui.yml</code>中的password，修改成自己的。</p></li>
+<li><pre><code class="hljs"><span class="hljs-meta"># 这部分的邮箱和密码是用于发送注册验证邮件，重置密码邮件；设置成自己的。</span>
+username: <span class="hljs-string">'username'</span>
+password: <span class="hljs-string">'password'</span>
+host: <span class="hljs-string">'smtp.your-email.com'</span>
+</code></pre></li>
+<li><p>配置支付宝信息</p></li>
+</ul></li>
+<li><p>后续：</p>
+<p>配置mysql；配置中文支持(后两个,配置完重启服务器)；配置默认流量等</p>
+<blockquote>
+<pre><code class="hljs">后面两个配置文件都配置成这样：<span class="hljs-comment">#我首先用Navicat创建了ssmgr数据库。这样也可以检测远程连接是否有问题。</span>
+<span class="hljs-symbol">db:</span>
+  <span class="hljs-symbol">host:</span> <span class="hljs-string">'1.1.1.1'</span>
+  <span class="hljs-symbol">user:</span> <span class="hljs-string">'root'</span>
+  <span class="hljs-symbol">password:</span> <span class="hljs-string">'abcdefg'</span>
+  <span class="hljs-symbol">database:</span> <span class="hljs-string">'ssmgr'</span>
+
+
+使用mysql时，需要关闭only_full_group_by <span class="hljs-comment"># 当MySQL 版本大于5.7时。</span>
+mysql&gt; show session variables like <span class="hljs-string">'%sql_mode%'</span>;
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+<span class="hljs-params">| Variable_name |</span> Value                                                                                                                                     <span class="hljs-params">|
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+|</span> sql_mode      <span class="hljs-params">| ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION |</span>
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+<span class="hljs-number">1</span> row <span class="hljs-keyword">in</span> set (<span class="hljs-number">0</span>.<span class="hljs-number">00</span> sec)
+
+mysql &gt; SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,<span class="hljs-string">'ONLY_FULL_GROUP_BY'</span>,<span class="hljs-string">''</span>));
+mysql &gt; flush privileges; <span class="hljs-comment">#重启mysql之后还要重新进行设置。</span>
+重启服务：service mysql restart <span class="hljs-comment"># 没事不要重启。</span>
+</code></pre>
+</blockquote></li>
+</ol>
+<blockquote>
+<p>参考：</p>
+</blockquote>
+<ul>
+<li><a href="https://www.flyzy2005.com/fan-qiang/shadowsocks/build-shadowsocks-on-vps/">科学上网：VPS上搭建shadowsocks</a></li>
+</ul>
+<ul>
+<li><a href="https://www.flyzy2005.com/fan-qiang/shadowsocks/ubuntu-bbr-shadowsocks/">Ubuntu开启BBR加速Shadowsocks</a></li>
+</ul>
+<ul>
+<li><a href="http://bijizhan.com/post/shadowsocks-manager">shadowsocks-manager 管理工具部署</a></li>
+</ul>
+<ul>
+<li><a href="https://blog.csdn.net/blackfrog_unique/article/details/60320737">Kali2.0 update到最新版本后安装shadowsocks服务报错问题</a></li>
+<li><a href="https://blog.csdn.net/zhoucheng05_13/article/details/53375161">云服务器Ubuntu系统下中文乱码问题解决方案</a></li>
+<li><a href="https://askubuntu.com/questions/599808/cannot-set-lc-ctype-to-default-locale-no-such-file-or-directory">Cannot set LC_CTYPE to default locale: No such file or director</a></li>
+</ul>
+<blockquote>
+<p>备忘：我的最终配置 xx.xx.xx.xx为我的IP地址，aaaabbbb 为我的密码</p>
+</blockquote>
+<pre><code class="hljs">$ cat /root/.ssmgr/ss<span class="hljs-selector-class">.yml</span>
+type: s
+
+shadowsocks:
+  <span class="hljs-selector-tag">address</span>: <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">4000</span>
+manager:
+  <span class="hljs-selector-tag">address</span>: <span class="hljs-number">0.0</span>.<span class="hljs-number">0.0</span>:<span class="hljs-number">4001</span>
+  password: <span class="hljs-string">'jingyue949'</span>
+db:
+  host:  xx<span class="hljs-selector-class">.xx</span><span class="hljs-selector-class">.xx</span><span class="hljs-selector-class">.xx</span>
+  user: <span class="hljs-string">'root'</span>
+  password: <span class="hljs-string">'aaaabbbb'</span>
+  database: <span class="hljs-string">'ssmgr'</span>
+</code></pre>
+<pre><code class="hljs"><span class="hljs-attribute">type</span>: m
+
+<span class="less"><span class="hljs-attribute">manager</span>:
+  <span class="hljs-attribute">address</span>: xx.xx.xx.<span class="hljs-attribute">xx</span>:<span class="hljs-number">4001</span>
+  <span class="hljs-attribute">password</span>: <span class="hljs-string">'aaaabbbb'</span>
+
+<span class="hljs-attribute">plugins</span>:
+  <span class="hljs-attribute">flowSaver</span>:
+    <span class="hljs-attribute">use</span>: true
+  <span class="hljs-attribute">user</span>:
+    <span class="hljs-attribute">use</span>: true
+  <span class="hljs-attribute">account</span>:
+    <span class="hljs-attribute">use</span>: true
+  <span class="hljs-attribute">macAccount</span>:
+    <span class="hljs-attribute">use</span>: true
+  <span class="hljs-attribute">group</span>:
+    <span class="hljs-attribute">use</span>: true
+  <span class="hljs-attribute">email</span>:
+    <span class="hljs-attribute">use</span>: true
+    <span class="hljs-attribute">username</span>: <span class="hljs-string">'158855945@qq.com'</span>
+    <span class="hljs-attribute">password</span>: <span class="hljs-string">'xx.xx.xx.xx'</span>
+    <span class="hljs-attribute">host</span>: <span class="hljs-string">'smtp.qq.com'</span>
+  <span class="hljs-attribute">webgui</span>:
+    <span class="hljs-attribute">use</span>: true
+    <span class="hljs-attribute">host</span>: <span class="hljs-string">'0.0.0.0'</span>
+    <span class="hljs-attribute">port</span>: <span class="hljs-string">'8090'</span>
+    <span class="hljs-attribute">site</span>: <span class="hljs-string">'http://yourwebsite.com'</span>
+    # <span class="hljs-attribute">googleAnalytics</span>: <span class="hljs-string">'UA-xxxxxxxx-x'</span>
+    <span class="hljs-attribute">gcmSenderId</span>: <span class="hljs-string">'456102641793'</span>
+    <span class="hljs-attribute">gcmAPIKey</span>: <span class="hljs-string">'AAAAGzzdqrE:XXXXXXXXXXXXXX'</span>
+
+<span class="hljs-attribute">db</span>:
+  <span class="hljs-attribute">host</span>: xx.xx.xx.xx
+  <span class="hljs-attribute">user</span>: <span class="hljs-string">'root'</span>
+  <span class="hljs-attribute">password</span>: <span class="hljs-string">'aaaabbbb'</span>
+  <span class="hljs-attribute">database</span>: <span class="hljs-string">'ssmgr'</span>
+</span></code></pre>
+<pre><code class="hljs">$ cat start_ss.sh 运行脚本，开启服务
+<span class="hljs-meta">#用来执行网络代理服务！全部执行完之后，网页访问http:<span class="hljs-comment">//xx.xx.xx.xx:8090/</span></span>
+echo <span class="hljs-string">"</span>
+ss-manager -m aes-<span class="hljs-number">256</span>-cfb -u --manager-address <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">4000</span> <span class="hljs-meta">&amp;</span>
+ssmgr -c /root/.ssmgr/ss.yml <span class="hljs-meta">&amp;</span>
+ssmgr -c /root/.ssmgr/webgui.yml <span class="hljs-meta">&amp;</span>
+<span class="hljs-string">"</span>
+</code></pre>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/Linux-best-practice/blog">Recent posts</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Linux-best-practice/" class="nav-home"><img src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Linux-best-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Linux-best-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/Linux-best-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Linux-best-practice/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Linux-best-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Linux-best-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Kaige Dong</section></footer></div></body></html>

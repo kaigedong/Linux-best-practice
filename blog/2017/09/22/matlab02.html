@@ -1,0 +1,387 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>matlab02图像的点运算 · Kaige Dong&#x27;s Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# MATLAB 图像的点运算"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="matlab02图像的点运算 · Kaige Dong&#x27;s Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/matlab02"/><meta property="og:description" content="# MATLAB 图像的点运算"/><meta property="og:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Linux-best-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/atom.xml" title="Kaige Dong&#x27;s Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/feed.xml" title="Kaige Dong&#x27;s Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Linux-best-practice/js/scrollSpy.js"></script><link rel="stylesheet" href="/Linux-best-practice/css/main.css"/><script src="/Linux-best-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Linux-best-practice/"><img class="logo" src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site"/><h2 class="headerTitleWithLogo">Kaige Dong&#x27;s Site</h2></a><a href="/Linux-best-practice/versions"><h3>0.1.5</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/Linux-best-practice/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/Linux-best-practice/docs/doc4" target="_self">API</a></li><li class=""><a href="/Linux-best-practice/help" target="_self">Help</a></li><li class="siteNavGroupActive"><a href="/Linux-best-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>All blog posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All blog posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/09/20/scrapy_to_search_engine_Introduction">1.爬虫课程的介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Python_sorting">Python排序算法</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Learn_make_Donot_starve_mods">学习制作饥荒mod</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Donot_starve_mod1">饥荒mod1</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/python_virtual_env">virtualenv 和 pyenv的使用</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/16/Wuenda_machine_learning">吴恩达机器学习笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/13/Django-Apache-wsgi-_deploy">Django+Apache wsgi 部署</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/12/Apache-deploy-Django">Apache 部署 Django</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09/pytorch-60min">PyTorch 60min教程</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09/no_root_install_Apache">无root安装Apache</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/07/GIVEinstall">GIVE安装笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/06/wali_v2ray">搬瓦工2: v2ray</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/16/Curses-python3-7">Curses_python3.7</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/05/12/wali_note">搬瓦工笔记1：ssr</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/19/DQN_5">强化学习实战：从零开始下五子棋</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17/DQN_Sarsa">强化学习之Sarsa</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17/DQN_Sarsa-lambda">增强学习之Sarsa(lambda)</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/16/DQN_Q-learning">深度学习02之Q-learning介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/16/DQN">强化学习介绍与分类01</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/07_shadowsocks_settings">shadowsocks配置</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/19_shell_env_set/env-export">shell变量及进程及set,env,export</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/12_Perl/install_models">Perl安装模块与卸载</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/11_python_convert_exe_videos">python批量转换exe视频</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09_no_root_install_MySQL">服务器无root安装MySQL</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/05/08_Macinstall_MySQL">Mac安装MySQL &amp; Ubuntu下安装MySQL记录</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/tmus">tmus指南</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17_DQN_DQN">增强学习之DQN介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17_DQN2/Algo">增强学习之DQN算法</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/17python的decode/encode-与-r-b-u">python的decode/encode 与 r/b/u</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/17_golang_notes">golang笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09_unroot_install_UCSC_genome_browser">modele_name</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/13_Acer中Arch安装Secure/boot-EFI-设置">Acer中Arch安装Secure boot EFI 设置</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13_HTMLandCSS_basic_03">HTML与CSS基础03-Web框架与表单设计</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/08/20_Linux_crontab">Linux crontab定时任务</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/learn-git">learn-git</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/items2">items2技巧</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_gene_A07-A09">陈巍学基因A07-A09</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_gene_A01-A03">陈巍学基因A01-A03</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_geneA04-A06">陈巍学基因A04-A06</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/boxplot">数据可视化之柱状图</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/begin_building_sites">开始建站Hexo+NexT</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/Hexo-NexT404pages">Hexo-NexT主题的404页面</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/HTMLandCSS_basic_01">HTML和CSS基础01-html的语法和基本结构文档设置标记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/HTML_CSS_basic2">HTML和CSS基础02-图像超链接和表格</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/pig_exons">modele_name</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/Counting-known-microRNAs-in-five-easy-steps">Counting known microRNAs in five easy steps</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/R_214">R极客的情人节</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/25/Adapter-and-quality-trimming-of-illumina-data">Adapter and quality trimming of illumina data</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch_bach">pytorch批训练</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch-Optimizer">pytorch:Optimizer优化器</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch-CNN">pytorch:CNN卷积神经网络</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/sync_server_files">同步服务器文件夹</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch07">pytorch07</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch06">pytorch06</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch05">pytorch05</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/Affymetrix">Affymetrix芯片原理</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch03">pytorch03</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch02">pytorch02</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch01">pytorch 学习笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab04">matlab04图像的增强处理</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab03">matlab03图像的几何变换</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab02">matlab02图像的点运算</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab">matlab学习笔记01</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/WEB_frame">WEB框架</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/ChIP-seq-masc">ChIP-seq-macs</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/CSS">CSS层叠样式表</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch04">pytorch04</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/Linux-best-practice/blog/2017/09/22/matlab02">matlab02图像的点运算</a></h1><p class="post-meta">September 22, 2017</p><div class="authorBlock"><p class="post-authorName"><a href="" target="_blank" rel="noreferrer noopener">woobamboo</a></p></div></header><div><span><h1><a class="anchor" aria-hidden="true" id="matlab-图像的点运算"></a><a href="#matlab-图像的点运算" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MATLAB 图像的点运算</h1>
+<h2><a class="anchor" aria-hidden="true" id="灰度直方图"></a><a href="#灰度直方图" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>灰度直方图</h2>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-16-1.jpg" alt=""></p>
+<!--truncate-->
+<ol>
+<li><p>原理：对不同灰度的点进行数量统计</p></li>
+<li><p>编码实现:<code>imhist()</code>函数</p>
+<ul>
+<li>绘制直方图的一般方法</li>
+</ul>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">imhist</span><span class="hljs-params">(I)</span></span>
+<span class="hljs-function"><span class="hljs-title">imhist</span><span class="hljs-params">(I,n)</span></span>
+[counts, x]=imhist(...)
+</code></pre>
+<blockquote>
+<p>I 是需要计算灰度图像的图像。</p>
+<p>参数n是指定的灰度级数目，默认n等于256，也就是0~255。对于二值图像，n等于2</p>
+<p>返回值counts为直方图的数据向量。counts(i)也就是第i个灰度区间中的像素数目，x是保存了对应的灰度小区间的向量。若采用第三种形式，需要配合stem()函数手动绘制直方图。</p>
+</blockquote>
+<pre><code class="hljs">i = imread('<span class="hljs-number">2017</span><span class="hljs-number">-03</span><span class="hljs-number">-16</span><span class="hljs-number">-1.</span>jpg')
+g = rgb2gray(i)
+figure
+subplot(<span class="hljs-number">121</span>),imhist(g);
+subplot(<span class="hljs-number">122</span>),imhist(g,<span class="hljs-number">64</span>);
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-16-2.png" alt=""></p>
+<ul>
+<li><p>绘制归一化灰度直方图：像素出现的概率</p>
+<pre><code class="hljs">i = imread(<span class="hljs-string">'2017-03-16-1.jpg'</span>)<span class="hljs-comment">;</span>
+i = rgb2gray(i)<span class="hljs-comment">;</span>
+[m,n]=size(i)<span class="hljs-comment">;</span>
+[<span class="hljs-keyword">counts1,x] </span>= imhist(i,<span class="hljs-number">32</span>)
+<span class="hljs-keyword">subplot(121),stem(x,counts1);
+</span><span class="hljs-keyword">counts2 </span>= <span class="hljs-keyword">counts1/m/n;
+</span><span class="hljs-keyword">subplot(122), </span>stem(x,<span class="hljs-keyword">counts2);
+</span></code></pre>
+<p><img src="pic/2017-03/2017-03-16-3.png" alt=""></p>
+<blockquote>
+<p>stem()是用来绘制针线图的函数</p>
+<p>易知，归一化直方图所有取值之和为1</p>
+<p>可用<code>sum(counts2)</code>进行查看</p>
+</blockquote></li>
+</ul></li>
+<li><p>彩色图像的分量直方图</p>
+<pre><code class="hljs">i = imread<span class="hljs-comment">('2017-03-16-4.jpeg')</span>;
+[x,y,z]=size<span class="hljs-comment">(i)</span>;
+
+figure
+subplot<span class="hljs-comment">(221)</span>,imshow<span class="hljs-comment">(i)</span>;
+title<span class="hljs-comment">('original image')</span>
+
+<span class="hljs-meta">%</span>提取红色分量
+r=i;
+<span class="hljs-meta">%</span>r<span class="hljs-comment">(:,:,1)</span>=a<span class="hljs-comment">(:,:,1)</span>;
+r<span class="hljs-comment">(:,:,2)</span>=zeros<span class="hljs-comment">(x,y)</span>;
+r<span class="hljs-comment">(:,:,3)</span>=zeros<span class="hljs-comment">(x,y)</span>;
+r=ui<span class="hljs-symbol">nt8</span><span class="hljs-comment">(r)</span>;
+subplot<span class="hljs-comment">(222)</span>,imshow<span class="hljs-comment">(r)</span>;
+title<span class="hljs-comment">('R-component-image')</span>
+
+<span class="hljs-meta">%</span>提取绿色分量
+g=i;
+g<span class="hljs-comment">(:,:,1)</span>=zeros<span class="hljs-comment">(x,y)</span>;
+<span class="hljs-meta">%</span>g<span class="hljs-comment">(:,:,2)</span>=a<span class="hljs-comment">(:,:,2)</span>;
+g<span class="hljs-comment">(:,:,3)</span>=zeros<span class="hljs-comment">(x,y)</span>;
+g=ui<span class="hljs-symbol">nt8</span><span class="hljs-comment">(g)</span>;
+subplot<span class="hljs-comment">(223)</span>,imshow<span class="hljs-comment">(g)</span>;
+title<span class="hljs-comment">('G-component-image')</span>
+
+<span class="hljs-meta">%</span>提取蓝色分量
+b=i;
+b<span class="hljs-comment">(:,:,1)</span>=zeros<span class="hljs-comment">(x,y)</span>;
+b<span class="hljs-comment">(:,:,2)</span>=zeros<span class="hljs-comment">(x,y)</span>;
+<span class="hljs-meta">%</span>b<span class="hljs-comment">(:,:,3)</span>=a<span class="hljs-comment">(:,:,3)</span>;
+b=ui<span class="hljs-symbol">nt8</span><span class="hljs-comment">(b)</span>;
+subplot<span class="hljs-comment">(224)</span>,imshow<span class="hljs-comment">(b)</span>;
+title<span class="hljs-comment">('B-component-image')</span>
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-16-5.png" alt=""></p></li>
+</ol>
+<p>彩色图像灰度化的方法：</p>
+<ul>
+<li><p>平均值法：每个像素的三原色值等于红、绿、蓝3个分量的平均值</p></li>
+<li><p>最大值法</p></li>
+<li><p>加权平均值法</p>
+<p>人眼对三原色的敏感度从高到低为绿、红、蓝。所以三原色权值取值关系也是这样。</p></li>
+</ul>
+<p><code>R=G=B=0.299R+0.587G+0.114B</code>时，能够得到最合理的灰度图像。</p>
+<pre><code class="hljs">i = imread<span class="hljs-comment">('2017-03-16-4.jpeg')</span>;
+r=i<span class="hljs-comment">(:,:,1)</span>;
+g=i<span class="hljs-comment">(:,:,2)</span>;
+b=i<span class="hljs-comment">(:,:,3)</span>;
+subplot<span class="hljs-comment">(1,3,1)</span>,imhist<span class="hljs-comment">(r)</span>,title<span class="hljs-comment">('R component')</span>;
+subplot<span class="hljs-comment">(1,3,2)</span>,imhist<span class="hljs-comment">(g)</span>,title<span class="hljs-comment">('G component')</span>;
+subplot<span class="hljs-comment">(1,3,3)</span>,imhist<span class="hljs-comment">(b)</span>,title<span class="hljs-comment">('B component')</span>;
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-17-4.jpg" alt=""></p>
+<h2><a class="anchor" aria-hidden="true" id="灰度线性变换"></a><a href="#灰度线性变换" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>灰度线性变换</h2>
+<p>利用线性公式进行一维变换：</p>
+<p><code>y=kx+d</code>(0&lt;=y&lt;=255)</p>
+<ol>
+<li><p>当k&gt;1时</p>
+<p>可用于增加图像对比度。在直方图中表现就是灰度分布被拉伸了。</p></li>
+<li><p>当K=1时</p>
+<p>用于调节图像亮度。就是将图像的各个像素值都增加或者减少一定量。</p>
+<p>通过改变d值，达到增加或者减少图像亮度的目的。</p></li>
+<li><p>当K&lt;1时</p>
+<p>图像的对比度和整体效果都被削弱了。K值越小，图像的灰度分布越窄，图像看起来越暗。</p></li>
+<li><p>K&lt;0时</p>
+<p>图像较亮的地方区域会变暗，较暗的区域会变亮。k=-1，d=255时，可以让图像实现反色效果(或底片效果)</p></li>
+</ol>
+<pre><code class="hljs">i=imread('<span class="hljs-number">2017</span><span class="hljs-number">-03</span><span class="hljs-number">-16</span><span class="hljs-number">-4.</span>jpeg');
+i = im2double(rgb2gray(i));
+[m,n]=size(i);
+
+%增加对比对
+Fa=<span class="hljs-number">1.25</span>;Fb=<span class="hljs-number">0</span>;
+O = Fa.*i + Fb/<span class="hljs-number">255</span>;
+figure(<span class="hljs-number">1</span>),subplot(<span class="hljs-number">221</span>),imshow(O);
+title('Fa = <span class="hljs-number">1.25</span>,Fb=<span class="hljs-number">0</span>,Contrast increasing');
+figure(<span class="hljs-number">2</span>),subplot(<span class="hljs-number">221</span>),[H,x]=imhist(O,<span class="hljs-number">64</span>);
+stem(x,(H/m/n),'.');
+title('Fa=<span class="hljs-number">1.25</span>,Fb=<span class="hljs-number">0</span>,contrast increasing');
+
+%减小对比度
+Fa = <span class="hljs-number">0.5</span>;Fb=<span class="hljs-number">0</span>;
+O=Fa.*i + Fb/<span class="hljs-number">255</span>;
+figure(<span class="hljs-number">1</span>),subplot(<span class="hljs-number">222</span>),imshow(O);
+title('Fa = <span class="hljs-number">0.5</span>, Fb = <span class="hljs-number">0</span>, contrast decreasing');
+figure(<span class="hljs-number">2</span>),subplot(<span class="hljs-number">222</span>),[H,x]=imhist(O,<span class="hljs-number">64</span>);
+stem(x,(H/m/n),'.');
+title('Fa = <span class="hljs-number">0.5</span>,Fb=<span class="hljs-number">0</span>,contrast decreasing');
+
+%线性亮度增加
+Fa=<span class="hljs-number">0.5</span>;Fb=<span class="hljs-number">50</span>;
+O=Fa.*i + Fb/<span class="hljs-number">255</span>;
+figure(<span class="hljs-number">1</span>),subplot(<span class="hljs-number">223</span>),imshow(O);
+title('Fa=<span class="hljs-number">0.5</span>,Fb=<span class="hljs-number">50</span>,brightness <span class="hljs-section">control</span>');
+figure(<span class="hljs-number">2</span>),subplot(<span class="hljs-number">223</span>),[H,x]=imhist(O,<span class="hljs-number">64</span>);
+stem(x,(H/m/n),'.');
+title('Fa=<span class="hljs-number">0.5</span>,Fb=<span class="hljs-number">50</span>,brightness <span class="hljs-section">control</span>');
+
+%反相显示
+Fa = <span class="hljs-number">-1</span>;Fb=<span class="hljs-number">255</span>;
+O=Fa.*i+Fb/<span class="hljs-number">255</span>;
+figure(<span class="hljs-number">1</span>),subplot(<span class="hljs-number">224</span>),imshow(O);
+title('Fa=<span class="hljs-number">-1</span>,Fb=<span class="hljs-number">255</span>,reversal processing');
+figure(<span class="hljs-number">2</span>),subplot(<span class="hljs-number">224</span>),[H,x]=imhist(O,<span class="hljs-number">64</span>);
+stem(x,(H/m/n),'.');
+title('Fa=<span class="hljs-number">-1</span>,Fb=<span class="hljs-number">255</span>,reversal processing');
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-18-1.jpg" alt=""></p>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-18-2.jpg" alt=""></p>
+<blockquote>
+<p>用其他软件进行线性变换：可以将256种灰度都先进性一次变换运算，结果保存在一个大小为256的数组中。这种方法对于任意图像都只进行了256次运算，大大提高了效率。</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="灰度非线性变换"></a><a href="#灰度非线性变换" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>灰度非线性变换</h2>
+<h3><a class="anchor" aria-hidden="true" id="1-灰度对数变换"></a><a href="#1-灰度对数变换" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. 灰度对数变换</h3>
+<p>对数变换的基本形式为：y=(log(1+x))/b</p>
+<blockquote>
+<p>b为一个正常数，用以控制曲线的弯曲程度，b值越大，弯曲程度越小。x是原始灰度值，y是变换后的目标灰度值。在对数函数的曲线上，函数自变量较低时，曲线斜率很大；自变量较高时，曲线斜率变得很小。</p>
+<p>对数变换实现了图像灰度的拓展和压缩功能。拓展了低灰度值而压缩了高灰度值，让图像的灰度分布更加符合人的视觉特征。</p>
+</blockquote>
+<ul>
+<li>重要应用：用来增强图像中较暗部分的细节。</li>
+</ul>
+<pre><code class="hljs">i = imread<span class="hljs-comment">('2017-03-16-4.jpeg')</span>;
+i = rgb<span class="hljs-number">2</span>gray<span class="hljs-comment">(i)</span>;
+i = double<span class="hljs-comment">(i)</span>;
+
+out<span class="hljs-number">1</span> = log<span class="hljs-comment">(1+i)</span>/<span class="hljs-number">0.065</span>;
+out<span class="hljs-number">2</span> = log<span class="hljs-comment">(1+i)</span>/<span class="hljs-number">0.035</span>;
+out<span class="hljs-number">1</span><span class="hljs-comment">(find(out1&gt;255)</span>) = <span class="hljs-number">255</span>;
+out<span class="hljs-number">2</span><span class="hljs-comment">(find(out2&gt;255)</span>) = <span class="hljs-number">255</span>;
+out<span class="hljs-number">1</span> = ui<span class="hljs-symbol">nt8</span><span class="hljs-comment">(out1)</span>;
+out<span class="hljs-number">2</span> = ui<span class="hljs-symbol">nt8</span><span class="hljs-comment">(out2)</span>;
+
+subplot<span class="hljs-comment">(221)</span>, imshow<span class="hljs-comment">(out1)</span>,title<span class="hljs-comment">('image, p = 0.065')</span>;
+subplot<span class="hljs-comment">(222)</span>,imhist<span class="hljs-comment">(out1)</span>,title<span class="hljs-comment">('histgram p = 0.065')</span>;
+subplot<span class="hljs-comment">(223)</span>,imshow<span class="hljs-comment">(out2)</span>,title<span class="hljs-comment">('image, p = 0.035')</span>;
+subplot<span class="hljs-comment">(224)</span>,imhist<span class="hljs-comment">(out2)</span>,title<span class="hljs-comment">('histgram,p = 0.035')</span>;
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-18-4.jpg" alt=""></p>
+<blockquote>
+<p>亮的部分收缩在很小一部分区域，而暗的部分扩散的比较开。</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="2-灰度幂次变换"></a><a href="#2-灰度幂次变换" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 灰度幂次变换</h3>
+<ol>
+<li><p>基本理论</p>
+<p>y = c(x的r次方)</p>
+<blockquote>
+<p>其中c、r均为正数。幂次变换将部分灰度变换映射到更宽的区域中。当r为1，幂次变换转变为线性变换。</p>
+<p>输出灰度会随着指数的增加迅速扩大。指数稍大时(r&gt;=2)整个变换曲线接近一条直线。就失去了变换的意义。</p>
+<p>在实际运用中对x和y进行约束，让他们的值在0~1之间。</p>
+</blockquote>
+<p><code>y=255c[(x/255)的r次方]</code></p>
+<pre><code class="hljs">i = rgb<span class="hljs-number">2</span>gray<span class="hljs-comment">(imread('2017-03-16-4.jpeg')</span>);
+i = double<span class="hljs-comment">(i)</span>;
+y<span class="hljs-number">1</span> = <span class="hljs-number">255</span>*<span class="hljs-comment">(i/255)</span>.^<span class="hljs-number">2.5</span>;
+y<span class="hljs-number">2</span> = <span class="hljs-number">255</span>*<span class="hljs-comment">(i/255)</span>.^<span class="hljs-number">0.4</span>;
+y<span class="hljs-number">1</span> = ui<span class="hljs-symbol">nt8</span><span class="hljs-comment">(y1)</span>;
+y<span class="hljs-number">2</span> = ui<span class="hljs-symbol">nt8</span><span class="hljs-comment">(y2)</span>;
+subplot<span class="hljs-comment">(221)</span>,imshow<span class="hljs-comment">(y1)</span>,title<span class="hljs-comment">('p=2.5')</span>;
+subplot<span class="hljs-comment">(222)</span>,imhist<span class="hljs-comment">(y1)</span>,title<span class="hljs-comment">('p=2.5')</span>;
+subplot<span class="hljs-comment">(223)</span>,imshow<span class="hljs-comment">(y2)</span>,title<span class="hljs-comment">('p=0.4')</span>;
+subplot<span class="hljs-comment">(224)</span>,imhist<span class="hljs-comment">(y2)</span>,title<span class="hljs-comment">('p=0.4')</span>;
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-18-5.jpg" alt=""></p>
+<blockquote>
+<p>上述变换互为伽马校正。</p>
+<p>在MATLAB中还提供了实现灰度变换的基本函数<code>imadjust()</code>.借助该函数，我们也可以进行伽马校正：</p>
+</blockquote>
+<pre><code class="hljs">J = imadjust(I,[low<span class="hljs-number">_</span><span class="hljs-keyword">in</span>;high<span class="hljs-number">_</span><span class="hljs-keyword">in</span>],[low<span class="hljs-number">_</span><span class="hljs-keyword">out</span>;high<span class="hljs-number">_</span><span class="hljs-keyword">out</span>])
+J = imadjust(I,[low<span class="hljs-number">_</span><span class="hljs-keyword">in</span>;high<span class="hljs-number">_</span><span class="hljs-keyword">in</span>],[low<span class="hljs-number">_</span><span class="hljs-keyword">out</span>;high<span class="hljs-number">_</span><span class="hljs-keyword">out</span>],gamma)
+</code></pre>
+<blockquote>
+<p>该函数将图像I中的亮度值映射到J中的新值，即将low_in和high_in之间的值映射到low_out和high_out之间的值。而low_in之下，high_in之上被剪切掉。</p>
+<p>第二种语法，同样是将I中的亮度映射到J中的新值，但gamma制定了描述值I和J关系的曲线。如果gamma小于1，则映射被加权到更高的输出值，此时偏重更高数值(明亮)输出；如果gamma大于1，则映射被加权到更低输出值，此时偏重更低数值(灰暗)输出；省略参数则为线性映射。如果采用默认映射值对应范围，也就实现了伽马校正。</p>
+</blockquote>
+<pre><code class="hljs">i = rgb<span class="hljs-number">2</span>gray<span class="hljs-comment">(imread('2017-03-16-4.jpeg')</span>);
+y<span class="hljs-number">1</span> = double<span class="hljs-comment">(i)</span>;
+y<span class="hljs-number">1</span> = <span class="hljs-number">255</span>*<span class="hljs-comment">(y1/255)</span>.^<span class="hljs-number">2.5</span>;
+y<span class="hljs-number">2</span> = ui<span class="hljs-symbol">nt8</span><span class="hljs-comment">(y1)</span>;
+y<span class="hljs-number">3</span> = imadjust<span class="hljs-comment">(y2,[],[],0.4)</span>;
+subplot<span class="hljs-comment">(131)</span>,imshow<span class="hljs-comment">(i)</span>,title<span class="hljs-comment">('original image')</span>;
+subplot<span class="hljs-comment">(132)</span>,imshow<span class="hljs-comment">(y2)</span>,title<span class="hljs-comment">('power=2.5')</span>;
+subplot<span class="hljs-comment">(133)</span>,imshow<span class="hljs-comment">(y3)</span>,title<span class="hljs-comment">('gamma=0.4')</span>;
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-18-6.jpg" alt=""></p>
+<blockquote>
+<p>可以看出，通过伽马校正，图像已经基本得到了复原。(图3在图2的基础上进行了校正，得到了原图)</p>
+</blockquote></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="3-灰度指数变换"></a><a href="#3-灰度指数变换" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. 灰度指数变换</h3>
+<ol>
+<li><p>基本理论</p>
+<p><code>y=b[c(x-a) - 1</code> (b的c(x-a)次方)</p>
+<blockquote>
+<p>b、c控制曲线形状，a控制曲线左、右位置。</p>
+<p>指数变换作用是拓展图像的高级灰度，同时压缩低灰度级。</p>
+</blockquote>
+<pre><code class="hljs">i = rgb<span class="hljs-number">2</span>gray<span class="hljs-comment">(imread('2017-03-16-4.jpeg')</span>);
+i = double<span class="hljs-comment">(i)</span>;
+
+y<span class="hljs-number">1</span> = <span class="hljs-number">1.5.</span>^<span class="hljs-comment">(i*0.070)</span><span class="hljs-number">-1</span>;
+y<span class="hljs-number">2</span> = <span class="hljs-number">1.5.</span>^<span class="hljs-comment">(i*0.050)</span><span class="hljs-number">-1</span>;
+y<span class="hljs-number">1</span><span class="hljs-comment">(find(y1&gt;255)</span>) = <span class="hljs-number">255</span>;
+y<span class="hljs-number">2</span><span class="hljs-comment">(find(y2&gt;255)</span>) = <span class="hljs-number">255</span>;
+y<span class="hljs-number">1</span> = ui<span class="hljs-symbol">nt8</span><span class="hljs-comment">(y1)</span>;
+y<span class="hljs-number">2</span> = ui<span class="hljs-symbol">nt8</span><span class="hljs-comment">(y2)</span>;
+
+subplot<span class="hljs-comment">(221)</span>,imshow<span class="hljs-comment">(y1)</span>,title<span class="hljs-comment">('c=0.070')</span>;
+subplot<span class="hljs-comment">(222)</span>,imhist<span class="hljs-comment">(y1)</span>,title<span class="hljs-comment">('c=0.070')</span>;
+subplot<span class="hljs-comment">(223)</span>,imshow<span class="hljs-comment">(y2)</span>,title<span class="hljs-comment">('c=0.050')</span>;
+subplot<span class="hljs-comment">(224)</span>,imhist<span class="hljs-comment">(y2)</span>,title<span class="hljs-comment">('c=0.050')</span>;
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-18-7.jpg" alt=""></p></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="灰度拉伸"></a><a href="#灰度拉伸" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>灰度拉伸</h2>
+<h3><a class="anchor" aria-hidden="true" id="1-基本原理"></a><a href="#1-基本原理" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. 基本原理</h3>
+<p>利用线性变换曲线建立映射，使集中于一较小区间的灰度拉伸至较大取值区间。</p>
+<p>灰度拉伸又叫做对比度拉伸，与线性变换类似，不同点在于灰度拉伸使用分段线性变换。</p>
+<p>y = {</p>
+<p>​     f1(x);(x&lt;x1)</p>
+<p>​     f2(x);(x1&lt;x&lt;x2)</p>
+<p>​     f3(x);(x&gt;x2)</p>
+<p>}</p>
+<ul>
+<li>中间线段斜率大于1：可以利用这类控制点进行灰度拉伸，增加图像对比度，加强整体显示效果</li>
+<li>中间线段斜率小于1：降低图像的对比度。</li>
+<li>中间线段斜率等于1：此时变换函数化为一个线性函数，将产生一个没有变化的图像。</li>
+<li>x2=x1,y1=0,y2=255：此时变换函数变成阈值函数，产生二值图像。</li>
+</ul>
+<pre><code class="hljs">i = imread('<span class="hljs-number">2017</span><span class="hljs-number">-03</span><span class="hljs-number">-16</span><span class="hljs-number">-4</span>.jpeg')<span class="hljs-comment">;</span>
+i = rgb2gray(<span class="hljs-name">i</span>)<span class="hljs-comment">;</span>
+L = imadjust(<span class="hljs-name">i</span>,[],[<span class="hljs-number">50/255</span><span class="hljs-comment">;150/255]);</span>
+J = imadjust(<span class="hljs-name">L</span>,[<span class="hljs-number">50/255</span><span class="hljs-comment">;150/255],[20/255;230/255]);</span>
+subplot(<span class="hljs-number">221</span>),imshow(<span class="hljs-name">L</span>),title('low contrast')<span class="hljs-comment">;</span>
+subplot(<span class="hljs-number">222</span>),imhist(<span class="hljs-name">L</span>),title('low contrast')<span class="hljs-comment">;</span>
+subplot(<span class="hljs-number">223</span>),imshow(<span class="hljs-name">J</span>),title('high contrast')<span class="hljs-comment">;</span>
+subplot(<span class="hljs-number">224</span>),imhist(<span class="hljs-name">J</span>),title('high contrast')<span class="hljs-comment">;</span>
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-18-8.jpg" alt=""></p>
+<h2><a class="anchor" aria-hidden="true" id="灰度均衡"></a><a href="#灰度均衡" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>灰度均衡</h2>
+<p>灰度均衡又称直方图均衡化。以累计分布函数为基础的直方图修正法，可以产生一副灰度级分布概率均匀的图像。</p>
+<p>变换后，每一级灰度上像素点的数量相差不大，对应灰度直方图每一级灰度高度也差不多。</p>
+<p>可使用灰度均衡算法函数<code>histeq()</code>:</p>
+<pre><code class="hljs">[J,T] = histe<span class="hljs-string">q(I,n)</span>
+J = histe<span class="hljs-string">q(I,n)</span>
+</code></pre>
+<blockquote>
+<p>I 表示原始图像，J是灰度均衡变化之后的输出图像，T是变换矩阵(即能将图像I的直方图变换成图像J的直方图的变换T)。参数n指定直方图均衡后的灰度级数，默认值为64</p>
+</blockquote>
+<pre><code class="hljs">i = rgb2gray(<span class="hljs-name">imread</span>('<span class="hljs-number">2017</span><span class="hljs-number">-03</span><span class="hljs-number">-16</span><span class="hljs-number">-4</span>.jpeg'))<span class="hljs-comment">;</span>
+LC = imadjust(<span class="hljs-name">i</span>,[],[<span class="hljs-number">50/255</span><span class="hljs-comment">;150/255]);</span>
+figure(<span class="hljs-number">1</span>),subplot(<span class="hljs-number">221</span>),imshow(<span class="hljs-name">LC</span>)<span class="hljs-comment">;</span>
+title('low contrast')<span class="hljs-comment">;</span>
+figure(<span class="hljs-number">1</span>),subplot(<span class="hljs-number">222</span>),imhist(<span class="hljs-name">LC</span>)<span class="hljs-comment">;</span>
+title('low contrast')<span class="hljs-comment">;</span>
+HE1 = histeq(<span class="hljs-name">LC</span>)<span class="hljs-comment">;</span>
+figure(<span class="hljs-number">1</span>),subplot(<span class="hljs-number">223</span>),imshow(<span class="hljs-name">HE1</span>)<span class="hljs-comment">;</span>
+title('histogram equalization')<span class="hljs-comment">;</span>
+figure(<span class="hljs-number">1</span>),subplot(<span class="hljs-number">224</span>),imhist(<span class="hljs-name">HE1</span>)<span class="hljs-comment">;</span>
+title('histogram equalization')<span class="hljs-comment">;</span>
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-18-9.jpg" alt=""></p>
+<blockquote>
+<p>直方图均衡化是图像增强的有效手段。</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="直方图规定化"></a><a href="#直方图规定化" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>直方图规定化</h2>
+<p>灰度均衡化可以自动确定灰度变换函数，从而获得拥有均匀直方图的输出图像。如果我们希望获得指定直方图的输出图像，就需要用到<code>直方图规定化</code>，又称为<code>直方图匹配</code>。</p>
+<p>需要用到函数<code>histeq()</code></p>
+<pre><code class="hljs">[J,T] = histe<span class="hljs-string">q(I,hgram)</span>
+J = histe<span class="hljs-string">q(I,hgram)</span>
+</code></pre>
+<blockquote>
+<p>此时函数会讲原始图像I的直方图编程用户指定的hgram(也就是参考图像的直方图)。参数hgram的分量数目就是直方图的收集箱数目，对于double类型的图像，hgram中各元素的值域是[0,1]；对于uint8类型的图像，hgram中各元素取值范围为[0,255].</p>
+</blockquote>
+<pre><code class="hljs">img = rgb2gray(imread('<span class="hljs-number">2017</span><span class="hljs-number">-03</span><span class="hljs-number">-16</span><span class="hljs-number">-4.</span>jpeg'));
+img_ref = rgb2gray(imread('<span class="hljs-number">2017</span><span class="hljs-number">-03</span><span class="hljs-number">-18</span><span class="hljs-number">-10.</span>jpg'));
+[hgram,x] = imhist(img_ref);
+J = histeq(img,hgram);
+subplot(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>),imshow(img),title('original image');
+subplot(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>),imhist(img),title('original image');
+subplot(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>),imshow(img_ref),title('reference image');
+subplot(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>),imhist(img_ref),title('reference image');
+subplot(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">3</span>),imshow(J),title('output image');
+subplot(<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">6</span>),imhist(J),title('output image');
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-18-11.jpg" alt=""></p>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/Linux-best-practice/blog">Recent posts</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#灰度直方图">灰度直方图</a></li><li><a href="#灰度线性变换">灰度线性变换</a></li><li><a href="#灰度非线性变换">灰度非线性变换</a><ul class="toc-headings"><li><a href="#1-灰度对数变换">1. 灰度对数变换</a></li><li><a href="#2-灰度幂次变换">2. 灰度幂次变换</a></li><li><a href="#3-灰度指数变换">3. 灰度指数变换</a></li></ul></li><li><a href="#灰度拉伸">灰度拉伸</a><ul class="toc-headings"><li><a href="#1-基本原理">1. 基本原理</a></li></ul></li><li><a href="#灰度均衡">灰度均衡</a></li><li><a href="#直方图规定化">直方图规定化</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Linux-best-practice/" class="nav-home"><img src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Linux-best-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Linux-best-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/Linux-best-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Linux-best-practice/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Linux-best-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Linux-best-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Kaige Dong</section></footer></div></body></html>

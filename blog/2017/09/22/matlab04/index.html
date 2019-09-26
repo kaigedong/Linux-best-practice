@@ -1,0 +1,371 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>matlab04图像的增强处理 · Kaige Dong&#x27;s Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# MATLAB04图像的增强处理"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="matlab04图像的增强处理 · Kaige Dong&#x27;s Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/matlab04"/><meta property="og:description" content="# MATLAB04图像的增强处理"/><meta property="og:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Linux-best-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/atom.xml" title="Kaige Dong&#x27;s Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/feed.xml" title="Kaige Dong&#x27;s Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Linux-best-practice/js/scrollSpy.js"></script><link rel="stylesheet" href="/Linux-best-practice/css/main.css"/><script src="/Linux-best-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Linux-best-practice/"><img class="logo" src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site"/><h2 class="headerTitleWithLogo">Kaige Dong&#x27;s Site</h2></a><a href="/Linux-best-practice/versions"><h3>0.1.5</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/Linux-best-practice/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/Linux-best-practice/docs/doc4" target="_self">API</a></li><li class=""><a href="/Linux-best-practice/help" target="_self">Help</a></li><li class="siteNavGroupActive"><a href="/Linux-best-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>All blog posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All blog posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/09/20/scrapy_to_search_engine_Introduction">1.爬虫课程的介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Python_sorting">Python排序算法</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Learn_make_Donot_starve_mods">学习制作饥荒mod</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Donot_starve_mod1">饥荒mod1</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/python_virtual_env">virtualenv 和 pyenv的使用</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/16/Wuenda_machine_learning">吴恩达机器学习笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/13/Django-Apache-wsgi-_deploy">Django+Apache wsgi 部署</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/12/Apache-deploy-Django">Apache 部署 Django</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09/pytorch-60min">PyTorch 60min教程</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09/no_root_install_Apache">无root安装Apache</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/07/GIVEinstall">GIVE安装笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/06/wali_v2ray">搬瓦工2: v2ray</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/16/Curses-python3-7">Curses_python3.7</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/05/12/wali_note">搬瓦工笔记1：ssr</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/19/DQN_5">强化学习实战：从零开始下五子棋</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17/DQN_Sarsa">强化学习之Sarsa</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17/DQN_Sarsa-lambda">增强学习之Sarsa(lambda)</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/16/DQN_Q-learning">深度学习02之Q-learning介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/16/DQN">强化学习介绍与分类01</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/07_shadowsocks_settings">shadowsocks配置</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/19_shell_env_set/env-export">shell变量及进程及set,env,export</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/12_Perl/install_models">Perl安装模块与卸载</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/11_python_convert_exe_videos">python批量转换exe视频</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09_no_root_install_MySQL">服务器无root安装MySQL</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/05/08_Macinstall_MySQL">Mac安装MySQL &amp; Ubuntu下安装MySQL记录</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/tmus">tmus指南</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17_DQN_DQN">增强学习之DQN介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17_DQN2/Algo">增强学习之DQN算法</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/17python的decode/encode-与-r-b-u">python的decode/encode 与 r/b/u</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/17_golang_notes">golang笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09_unroot_install_UCSC_genome_browser">modele_name</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/13_Acer中Arch安装Secure/boot-EFI-设置">Acer中Arch安装Secure boot EFI 设置</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13_HTMLandCSS_basic_03">HTML与CSS基础03-Web框架与表单设计</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/08/20_Linux_crontab">Linux crontab定时任务</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/learn-git">learn-git</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/items2">items2技巧</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_gene_A07-A09">陈巍学基因A07-A09</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_gene_A01-A03">陈巍学基因A01-A03</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_geneA04-A06">陈巍学基因A04-A06</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/boxplot">数据可视化之柱状图</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/begin_building_sites">开始建站Hexo+NexT</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/Hexo-NexT404pages">Hexo-NexT主题的404页面</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/HTMLandCSS_basic_01">HTML和CSS基础01-html的语法和基本结构文档设置标记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/HTML_CSS_basic2">HTML和CSS基础02-图像超链接和表格</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/pig_exons">modele_name</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/Counting-known-microRNAs-in-five-easy-steps">Counting known microRNAs in five easy steps</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/R_214">R极客的情人节</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/25/Adapter-and-quality-trimming-of-illumina-data">Adapter and quality trimming of illumina data</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch_bach">pytorch批训练</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch-Optimizer">pytorch:Optimizer优化器</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch-CNN">pytorch:CNN卷积神经网络</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/sync_server_files">同步服务器文件夹</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch07">pytorch07</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch06">pytorch06</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch05">pytorch05</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/Affymetrix">Affymetrix芯片原理</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch03">pytorch03</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch02">pytorch02</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch01">pytorch 学习笔记</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab04">matlab04图像的增强处理</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab03">matlab03图像的几何变换</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab02">matlab02图像的点运算</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab">matlab学习笔记01</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/WEB_frame">WEB框架</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/ChIP-seq-masc">ChIP-seq-macs</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/CSS">CSS层叠样式表</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch04">pytorch04</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/Linux-best-practice/blog/2017/09/22/matlab04">matlab04图像的增强处理</a></h1><p class="post-meta">September 22, 2017</p><div class="authorBlock"><p class="post-authorName"><a href="" target="_blank" rel="noreferrer noopener">woobamboo</a></p></div></header><div><span><h1><a class="anchor" aria-hidden="true" id="matlab04图像的增强处理"></a><a href="#matlab04图像的增强处理" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MATLAB04图像的增强处理</h1>
+<p>两函数的傅里叶变换的乘积等于它们卷积后的傅里叶变换。</p>
+<!--truncate-->
+<p>图像增强的基本方法有空域处理和频域处理两种。图像的平滑处理是图像增强的典型应用，其主要任务是既平滑掉噪声，又尽量保持图像的细节；在频域处理中，噪声和图像的细节部分都位于高频，所以如何在低通滤波的同时保持高频细节是处理时要考虑的问题。</p>
+<h2><a class="anchor" aria-hidden="true" id="卷积积分与邻域处理"></a><a href="#卷积积分与邻域处理" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>卷积积分与邻域处理</h2>
+<h3><a class="anchor" aria-hidden="true" id="邻点和邻域"></a><a href="#邻点和邻域" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>邻点和邻域</h3>
+<ol>
+<li><p>图像是由像素构成的，图像中的相邻像素构成邻域，邻域中的像素点互为邻点。对于任意像素，处于上下左右四个方向的像素点称为它的4邻点；加上角里的4个像素，就称为它的8邻点。同样的也能定义它的24邻点。</p>
+<p>像素的邻域可以看做是像素邻点的集合，在图像处理中也将中心像素和它的特定邻点合称为邻域。一般划定使用正方形。如3x3邻域、5x5邻域等。</p></li>
+<li><p>邻域处理</p>
+<p>以包含中心像素的邻域为分析对象，处理得到的像素灰度来源于对邻域内像素灰度的计算。常用的邻域处理包括图像的平滑、图像的锐化、边缘检测。</p></li>
+<li><p>卷积和模板</p>
+<p>在对图像进行卷积运算时，原始数据与结果数据分开保存，对原始数据分块处理，在处理过程中保持原始数据不变，最终得到完整的结果数据。用卷积对图像进行处理时，改变对原始图像各部分的处理顺序不会对处理结果造成影响。</p></li>
+<li><p>卷积运算在处理中的使用</p>
+<p>图像的卷积运算实际上是通过模板在图像上的移动完成的。在图像处理中，不断在图像上移动模板的位置，每当模板中心对准一个像素时，就对此像素所在邻域内的像素灰度根据模板进行加权求和，得到的结果通常远大于原像素灰度，这就需要将球和结果除以一个比例因子(衰减因子)。最后将结果限制在0~255之间作为中心像素的灰度保存在结果中。</p></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="运用模板实现邻域处理"></a><a href="#运用模板实现邻域处理" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>运用模板实现邻域处理</h3>
+<p>在图像处理中，使用模板进行邻域处理，本质上就是执行二维卷积计算。MATLAB中已经提供了执行二维卷积计算的函数<code>conv2()</code>,还有基于卷积的图像滤波函数<code>filter()</code>，两者是等价的。还有一个<code>imfilter()</code>直接对多维矩阵(RGB图像)进行空间滤波，而<code>filter2</code>只能处理二维矩阵(灰度图像)。另外<code>conv2</code>所得图像大小将会发生改变，<code>imfilter()</code>系统会自动执行对于图像四边像素的处理而保持大小不变。</p>
+<pre><code class="hljs"><span class="hljs-attr">g</span>=imfilter(f,w,option1,option2,...)
+</code></pre>
+<blockquote>
+<p>f是要进行滤波操作的图像，w是滤波操作所使用的模板。</p>
+</blockquote>
+<ul>
+<li>参数表</li>
+</ul>
+<p>1、边界选项</p>
+<table>
+<thead>
+<tr><th>合法值</th><th>含义</th></tr>
+</thead>
+<tbody>
+<tr><td><code>X</code>(X代表一个具体的数值)</td><td>用固定数值X填充虚拟边界，在默认情况下用0填充</td></tr>
+<tr><td><code>'symmetric'</code></td><td>填充虚拟边界的内容是通过对靠近原始图像边缘的像素相对于原始图像边缘镜像得到的</td></tr>
+<tr><td><code>'replicate'</code></td><td>填充虚拟边界的内容总是重复它最近的边缘像素</td></tr>
+<tr><td><code>'circular'</code></td><td>认为原始图像模式具有周期性，从而周期性地填充虚拟边界的内容</td></tr>
+</tbody>
+</table>
+<p>2、尺寸选项</p>
+<table>
+<thead>
+<tr><th>合法取值</th><th>含义</th></tr>
+</thead>
+<tbody>
+<tr><td><code>'same'</code></td><td>输出图像g与输入图像f尺寸相同</td></tr>
+<tr><td><code>'full'</code></td><td>输出图像g的尺寸为填充虚拟边界后图像f的尺寸</td></tr>
+</tbody>
+</table>
+<p>3、模式选项</p>
+<table>
+<thead>
+<tr><th>合法取值</th><th>含义</th></tr>
+</thead>
+<tbody>
+<tr><td><code>'corr'</code></td><td>滤波过程为相关</td></tr>
+<tr><td><code>'conv'</code></td><td>滤波过程为卷积</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>用于滤波的模板可以自定义，也可以使用系统预设的模板。此时与imfilter()相配合的另一个函数是<code>fspecial()</code> ,该函数用于创建一些预定义的二维滤波器(模板)来供imfilter()使用语法如下：</p>
+</blockquote>
+<pre><code class="hljs"><span class="hljs-title">h</span> = fspecial(<span class="hljs-keyword">type</span>,parameters)
+</code></pre>
+<blockquote>
+<p>type用于指定模板的类型，合法取值如下</p>
+</blockquote>
+<p>参数取值表：</p>
+<table>
+<thead>
+<tr><th>合法取值</th><th>功能描述</th></tr>
+</thead>
+<tbody>
+<tr><td><code>'average'</code></td><td>平均模板</td></tr>
+<tr><td><code>'disk'</code></td><td>圆形邻域的平均模板</td></tr>
+<tr><td><code>'gaussian'</code></td><td>高斯模板</td></tr>
+<tr><td><code>'laplacian'</code></td><td>拉普拉斯模板</td></tr>
+<tr><td><code>'log'</code></td><td>高斯-拉普拉斯模板</td></tr>
+<tr><td><code>'prewitt'</code></td><td>prewitt水平边缘检测滤波器</td></tr>
+<tr><td><code>'sobel'</code></td><td>sobel水平边缘检测滤波器</td></tr>
+<tr><td><code>'unsharp'</code></td><td>unsharp对比度增强滤波器</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>参数parameters为可选选项，是和指定的模板相关的配置参数，如尺寸大小或者标准差等。该函数的返回值h为一个特定的模板。</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="图像的简单平滑"></a><a href="#图像的简单平滑" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>图像的简单平滑</h2>
+<p>图像的简单平滑是指通过邻域简单平均对图像进行平滑处理的方法，可以在一定程度上消除原始图像中的噪声、降低原始图像对比度的作用。</p>
+<p>简单平滑模板：</p>
+<table>
+<thead>
+<tr><th>1</th><th>1</th><th>1</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>选取9作为衰减因子，就可以很容易的实现图像的简单平滑。</p>
+</blockquote>
+<pre><code class="hljs">i = imread('<span class="hljs-number">2017</span><span class="hljs-number">-03</span><span class="hljs-number">-20</span><span class="hljs-number">-1.</span>jpg')
+%注意w和h1这两个模板是等价的
+w = [<span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>;<span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>;<span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>]/<span class="hljs-number">9</span>;
+h1 = fspecial('average',[<span class="hljs-number">3</span>,<span class="hljs-number">3</span>]);
+h2 = fspecial('average',[<span class="hljs-number">5</span>,<span class="hljs-number">5</span>]);
+h3 = fspecial('average',[<span class="hljs-number">7</span>,<span class="hljs-number">7</span>]);
+%执行图像的简单平滑
+g1 = imfilter(i,w,'conv','replicate');
+g2 = imfilter(i,h2,'conv','replicate');
+g3 = imfilter(i,h3,'conv','replicate');
+
+subplot(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">1</span>),imshow(g1),title('A');
+subplot(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>),imshow(g2),title('B');
+subplot(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">3</span>),imshow(g3),title('C');
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-20-2.jpg" alt=""></p>
+<blockquote>
+<p>增大平滑临边长的方法可以消除更多的噪声影响，同时图像的对比度也下降很多。使用简单平滑的方法进行噪声下消除往往以大幅降低图像清晰度为代价。</p>
+<p>简单平滑处理实质上并不能真正消除噪点，只是尽可能使人眼不易察觉到噪声的影响。</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="图像的高斯平滑"></a><a href="#图像的高斯平滑" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>图像的高斯平滑</h2>
+<p>在图像的高斯平滑中，在对图像邻域进行平均时，不同位置的像素被赋予了不同的权值。</p>
+<p>在图像处理中把对邻域像素逐一处理的算法过程称为滤波器。</p>
+<p>平滑线性滤波器的工作原理是利用模板对邻域内像素灰度进行加权平均，因此平滑线性滤波器也被称为均值滤波器。平滑线性滤波器的衰减因子一般选用模板中所有权值的和，这样可以避免处理对图像整体属性的影响。</p>
+<p>高斯模板上的权值是由高斯分布函数确定的。</p>
+<pre><code class="hljs">i = imread<span class="hljs-comment">('2017-03-20-3.jpg')</span>;
+h = fspecial<span class="hljs-comment">('gaussian',7,2)</span>;
+g = imfilter<span class="hljs-comment">(i,h,'conv')</span>;
+subplot<span class="hljs-comment">(121)</span>,imshow<span class="hljs-comment">(i)</span>,title<span class="hljs-comment">('original image')</span>;
+subplot<span class="hljs-comment">(122)</span>,imshow<span class="hljs-comment">(g)</span>,title<span class="hljs-comment">('gaussian smooth')</span>;
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-20-4.jpg" alt=""></p>
+<blockquote>
+<p>图像进行了7X7邻域高斯平滑处理的效果。标准差为2</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="图像的中值滤波"></a><a href="#图像的中值滤波" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>图像的中值滤波</h2>
+<p>是一种非线性的图像处理方法，通过对邻域内像素按灰度排序的结果决定中心像素的灰度。</p>
+<p>通过对采样窗口内的<code>奇数个像素</code>的灰度数值进行排序，并取出序列中位于中间位置的灰度作为中心像素的灰度。</p>
+<p>简单平滑和高斯平滑都是讲噪声分摊到整个邻域中的每个像素，以此来减小噪声点的影响，然而代价是图像清晰度的大量损失。</p>
+<p>中值滤波对消除离散型噪声点效果显著。</p>
+<p>MATLAB中提供了用以实现中值滤波的函数medfilt2(),该函数 <strong>只适用于处理灰度图片</strong></p>
+<pre><code class="hljs"><span class="hljs-attr">I2</span> = medfilt2(I1,[m n])
+</code></pre>
+<blockquote>
+<p>I1是待处理图像的像素矩阵，m和n给出了中值滤波处理模板的大小，默认3x3。</p>
+<p>中值滤波在处理某些噪声有很大优势：如椒盐噪声(脉冲噪声)，常由图像传感器、传输信道、解码处理产生的黑白相间的亮暗点噪声。</p>
+</blockquote>
+<p>函数<code>imnoise()</code>来模拟图像受到噪声污染的过程：</p>
+<pre><code class="hljs"><span class="hljs-attr">J</span> = imnoise(I,type,parameters)<span class="hljs-comment">;</span>
+</code></pre>
+<blockquote>
+<p>I 是原始图像，type指定了噪声的类型，合法取值是<code>gaussian</code> (高斯白噪声)或者<code>salt &amp; papper</code>（椒盐噪声）.</p>
+<p>高斯白噪声：如果噪声幅度服从高斯分布，就是高斯噪声，如果噪声功率谱密度是均匀分布的，则它是高斯白噪声。</p>
+<p>parameters控制噪声被加入的程度。如</p>
+<pre><code class="hljs"><span class="hljs-attr">J</span> = imnoise(I,<span class="hljs-string">'gaussian'</span>,m,v)
+</code></pre>
+<blockquote>
+<p>表示对原始图像中每个像素叠加一个服从均值为m方差为v的高斯分布产生的随机噪声。</p>
+</blockquote>
+</blockquote>
+<pre><code class="hljs">i = rgb2gray(imread('<span class="hljs-number">2017</span><span class="hljs-number">-03</span><span class="hljs-number">-20</span><span class="hljs-number">-3.</span>jpg'));
+i_noise = imnoise(i,'salt &amp; pepper');
+w1 = [<span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span>;<span class="hljs-number">2</span> <span class="hljs-number">4</span> <span class="hljs-number">2</span>;<span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">1</span>]/<span class="hljs-number">16</span>;
+output1 = imfilter(i_noise,w1,'conv','replicate');
+w2 = [<span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>;<span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>;<span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>]/<span class="hljs-number">9</span>;
+output2 = imfilter(i_noise,w2,'conv','replicate');
+output3 = medfilt2(i_noise,[<span class="hljs-number">3</span>,<span class="hljs-number">3</span>]);
+
+subplot(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>),imshow(i_noise),title('noise image');
+subplot(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>),imshow(output1),title('gaussian filter');
+subplot(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>),imshow(output2),title('average filter');
+subplot(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>),imshow(output3),title('med filter');
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-20-5.jpg" alt=""></p>
+<blockquote>
+<p>中值滤波很好的解决了图像降噪的问题，然而对于细节较多的图像，中值滤波处理常常导致图像信息丢失。</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="图像的双边滤波"></a><a href="#图像的双边滤波" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>图像的双边滤波</h2>
+<p>双边滤波是一种非线性滤波方法，是结合图像的空间邻近度和像素值相似度的一种折中处理，同时考虑了空域信息和灰度相似性，从而力求在保持图像中边缘信息的同时，又实现降噪效果。</p>
+<p>在像素灰度过度和缓的区域，双边滤波有类似于高斯滤波的效果，而在图像边缘等梯度较大的地方，则有保持效果。</p>
+<p>对彩色图像和灰色图像在计算灰度差距时计算方法不同。</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">B</span> = <span class="hljs-title">bfilter2</span><span class="hljs-params">(A,w,sigma)</span></span>
+
+<span class="hljs-comment">%针对灰度图像或彩色图像选择应用不同的处理函数</span>
+<span class="hljs-keyword">if</span> <span class="hljs-built_in">size</span>(A,<span class="hljs-number">3</span>) == <span class="hljs-number">1</span>
+    B = bfltGray(A,w,sigma(<span class="hljs-number">1</span>),sigma(<span class="hljs-number">2</span>));
+<span class="hljs-keyword">else</span>
+    B = bfltColor(A,w,sigma(<span class="hljs-number">1</span>),sigma(<span class="hljs-number">2</span>));
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment">%对灰度图像进行双边滤波处理的函数</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">B</span> = <span class="hljs-title">bfltGray</span><span class="hljs-params">(A,w,sigma_d,sigma_r)</span></span>
+
+<span class="hljs-comment">%计算高斯模板</span>
+[X,Y] = <span class="hljs-built_in">meshgrid</span>(-w:w,-w:w);
+G = <span class="hljs-built_in">exp</span>(-(X.^<span class="hljs-number">2</span>+Y.^<span class="hljs-number">2</span>)/(<span class="hljs-number">2</span>*sigma_d^<span class="hljs-number">2</span>));
+
+<span class="hljs-comment">%进行双边滤波</span>
+dim = <span class="hljs-built_in">size</span>(A);
+B = <span class="hljs-built_in">zeros</span>(dim);
+<span class="hljs-keyword">for</span> <span class="hljs-built_in">i</span> = <span class="hljs-number">1</span>:dim(<span class="hljs-number">1</span>)
+    <span class="hljs-keyword">for</span> <span class="hljs-built_in">j</span> = <span class="hljs-number">1</span>:dim(<span class="hljs-number">2</span>)
+        <span class="hljs-comment">%抽取一块局部区域，这与值域的大小相对应</span>
+        iMin = <span class="hljs-built_in">max</span>(<span class="hljs-built_in">i</span>-w,<span class="hljs-number">1</span>);
+        iMax = <span class="hljs-built_in">min</span>(<span class="hljs-built_in">i</span>+w,dim(<span class="hljs-number">1</span>));
+        jMin = <span class="hljs-built_in">max</span>(<span class="hljs-built_in">j</span>-w,<span class="hljs-number">1</span>);
+        jMax = <span class="hljs-built_in">min</span>(<span class="hljs-built_in">j</span>+w,dim(<span class="hljs-number">2</span>));
+        I = A(iMin:iMax,jMin:jMax);
+        <span class="hljs-comment">%计算该值域核，也就是灰度值的权值模板</span>
+        H = <span class="hljs-built_in">exp</span>(-(I-A(<span class="hljs-built_in">i</span>,<span class="hljs-built_in">j</span>)).^<span class="hljs-number">2</span>/(<span class="hljs-number">2</span>*sigma_r^<span class="hljs-number">2</span>));
+
+        <span class="hljs-comment">%计算双边滤波响应</span>
+        F = H.*G((iMin:iMax)-<span class="hljs-built_in">i</span>+w+<span class="hljs-number">1</span>,(jMin:jMax)-<span class="hljs-built_in">j</span>+w+<span class="hljs-number">1</span>);
+        B(<span class="hljs-built_in">i</span>,<span class="hljs-built_in">j</span>) = sum(F(:).*I(:))/sum(F(:));
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment">%对彩色图像进行双边滤波处理的函数</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">B</span> = <span class="hljs-title">bfltColor</span><span class="hljs-params">(A,w,sigma_d,sigma_r)</span></span>
+
+<span class="hljs-comment">%将输入的RGB图像转换到CIE颜色空间中</span>
+<span class="hljs-keyword">if</span> exist(<span class="hljs-string">'applycform'</span>,<span class="hljs-string">'file'</span>)
+    A = applycform(A,makecform(<span class="hljs-string">'srgb2lab'</span>));
+<span class="hljs-keyword">else</span>
+    A = colorspace(<span class="hljs-string">'Lab&lt;-RGB'</span>,A);
+<span class="hljs-keyword">end</span>
+
+[X,Y] = <span class="hljs-built_in">meshgrid</span>(-w:w,-w:w);
+G = <span class="hljs-built_in">exp</span>(-(X.^<span class="hljs-number">2</span>+Y.^<span class="hljs-number">2</span>)/(<span class="hljs-number">2</span>*sigma_d^<span class="hljs-number">2</span>));
+sigma_r = <span class="hljs-number">100</span>*sigma_r;
+
+<span class="hljs-comment">%进行滤波处理</span>
+dim = <span class="hljs-built_in">size</span>(A);
+B = <span class="hljs-built_in">zeros</span>(dim);
+<span class="hljs-keyword">for</span> <span class="hljs-built_in">i</span> = <span class="hljs-number">1</span>:dim(<span class="hljs-number">1</span>)
+    <span class="hljs-keyword">for</span> <span class="hljs-built_in">j</span> = <span class="hljs-number">1</span>:dim(<span class="hljs-number">2</span>)
+        iMin = <span class="hljs-built_in">max</span>(<span class="hljs-built_in">i</span>-w,<span class="hljs-number">1</span>);
+        iMax = <span class="hljs-built_in">min</span>(<span class="hljs-built_in">i</span>+w,dim(<span class="hljs-number">1</span>));
+        jMin = <span class="hljs-built_in">max</span>(<span class="hljs-built_in">j</span>-w,<span class="hljs-number">1</span>);
+        jMax = <span class="hljs-built_in">min</span>(<span class="hljs-built_in">j</span>+w,dim(<span class="hljs-number">2</span>))
+        I = A(iMin:iMax,jMin:jMax,:);
+
+        dL = I(:,:,<span class="hljs-number">1</span>)-A(<span class="hljs-built_in">i</span>,<span class="hljs-built_in">j</span>,<span class="hljs-number">1</span>);
+        da = I(:,:,<span class="hljs-number">2</span>)-A(<span class="hljs-built_in">i</span>,<span class="hljs-built_in">j</span>,<span class="hljs-number">2</span>);
+        db = I(:,:,<span class="hljs-number">3</span>)-A(<span class="hljs-built_in">i</span>,<span class="hljs-built_in">j</span>,<span class="hljs-number">3</span>);
+        H = <span class="hljs-built_in">exp</span>(-(dL.^<span class="hljs-number">2</span>+da.^<span class="hljs-number">2</span>+db.^<span class="hljs-number">2</span>)/(<span class="hljs-number">2</span>*sigma_r^<span class="hljs-number">2</span>));
+
+        F = H.*G((iMin:iMax)-<span class="hljs-built_in">i</span>+w+<span class="hljs-number">1</span>,(jMin:jMax)-<span class="hljs-built_in">j</span>+w+<span class="hljs-number">1</span>);
+        norm_F = sum(F(:));
+        B(<span class="hljs-built_in">i</span>,<span class="hljs-built_in">j</span>,<span class="hljs-number">1</span>) = sum(sum(F.*I(:,:,<span class="hljs-number">1</span>)))/norm_F;
+        B(<span class="hljs-built_in">i</span>,<span class="hljs-built_in">j</span>,<span class="hljs-number">2</span>) = sum(sum(F.*I(:,:,<span class="hljs-number">2</span>)))/norm_F;
+        B(<span class="hljs-built_in">i</span>,<span class="hljs-built_in">j</span>,<span class="hljs-number">2</span>) = sum(sum(F.*I(:,:,<span class="hljs-number">3</span>)))/norm_F;
+
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment">% 将滤波结果转回RGB色彩空间</span>
+<span class="hljs-keyword">if</span> exist(<span class="hljs-string">'applycform'</span>,<span class="hljs-string">'file'</span>)
+    B = applycform(B,makecform(<span class="hljs-string">'lab2srgb'</span>));
+<span class="hljs-keyword">else</span>
+    B = colorspace(<span class="hljs-string">'RGB&lt;-Lab'</span>,B);
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>调用上面的函数，对一副灰度图像进行双边滤波处理：</p>
+<pre><code class="hljs"><span class="hljs-attr">I</span> = imread(<span class="hljs-string">'2017-03-20-3.jpg'</span>)<span class="hljs-comment">;</span>
+<span class="hljs-attr">I</span> = double(I)/<span class="hljs-number">255</span><span class="hljs-comment">;</span>
+
+<span class="hljs-attr">w</span> = <span class="hljs-number">5</span><span class="hljs-comment">;</span>
+<span class="hljs-attr">sigma</span> = [<span class="hljs-number">3</span> <span class="hljs-number">0.1</span>]<span class="hljs-comment">;</span>
+<span class="hljs-attr">B</span> = bfilter2(I,w,sigma)<span class="hljs-comment">;</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="图像的拉普拉斯锐化"></a><a href="#图像的拉普拉斯锐化" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>图像的拉普拉斯锐化</h2>
+<p>图像增强中，平滑是为了消除图像中的噪声干扰或降低图像对比度，与之相反的是为了增强图像的边缘和细节，需要对图像进行锐化以提高对比度。</p>
+<p>图形的锐化：目的是提高图像的对比度。可以提高邻域内像素的会督查来提高图像的对比度。</p>
+<p>像素锐化处理中，被增强的像素点应该是与邻域内其他像素有较大差异的，因此原始图像中灰度相同的区域不应受锐化处理的影响。</p>
+<p>基本思想：当邻域的中心像素灰度值低于它所在邻域内其他像素的灰度的平均值时，此中心像素的灰度应被进一步降低；当邻域的中心像素灰度值高于它所在邻域内其他像素的平均灰度值时，此中心像素的灰度应被进一步提高，以此实现图像的锐化处理。</p>
+<pre><code class="hljs"><span class="hljs-attr">h</span> = fspecial(<span class="hljs-string">'unsharp'</span>,alpha)
+</code></pre>
+<blockquote>
+<p>以上代码返回一个3x3的unsharp对比度增强滤波器，其实就是一个Laplacian锐化模板。参数alpha用来控制拉普拉斯模板的形状，它的取值范围介于0.0和1.0之间。缺省时，alpha默认值是<code>0.2</code>.</p>
+<p>unsharp滤波器是一个用来锐化图像的算子。</p>
+</blockquote>
+<pre><code class="hljs">I = imread(<span class="hljs-string">'2017-03-20-3.jpg'</span>);
+H = fspecial(<span class="hljs-string">'unsharp'</span>);
+sharpened = imfilter(I,H,<span class="hljs-string">'replicate'</span>);
+subplot(121),imshow(I),<span class="hljs-meta">title</span>(<span class="hljs-string">'original Image'</span>)
+subplot(122),imshow(sharpened);<span class="hljs-meta">title</span>(<span class="hljs-string">'sharpened Image'</span>)
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-20-6.jpg" alt=""></p>
+<blockquote>
+<p>拉普拉斯锐化还是噪声敏感的，任何细小的噪声点都会在处理结果中清晰地显示出来。</p>
+</blockquote>
+<blockquote>
+<p>如果不使用unsharp 算子：imfilter()在识别所采用的的模板是unsharp算子时，其实所执行的操作并不仅仅是卷积，为了完成特普拉斯锐化，还需要与原始图像进行叠加，以下代码演示了其中的细小差别：</p>
+</blockquote>
+<pre><code class="hljs">I = imread('<span class="hljs-number">2017</span><span class="hljs-number">-03</span><span class="hljs-number">-20</span><span class="hljs-number">-3.</span>jpg');
+I = rgb2gray(I);
+Laplace=[<span class="hljs-number">0</span> <span class="hljs-number">-1</span> <span class="hljs-number">0</span>;<span class="hljs-number">-1</span> <span class="hljs-number">4</span> <span class="hljs-number">-1</span>;<span class="hljs-number">0</span> <span class="hljs-number">-1</span> <span class="hljs-number">0</span>];
+Data = double(I);
+LaplaceImage=conv2(Data,Laplace,'same');
+%上面这句也可以携程下面这种形式，作用是相同的。
+%LaplaceImage=imfilter(Data,Laplace,'conv','same');
+subplot(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>);imshow(uint8(LaplaceImage));title('Laplace 图像');
+
+%原始图像与拉普拉斯图像的叠加
+DataLap = imadd(Data,LaplaceImage);
+subplot(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>),imshow(uint8(DataLap));
+title('锐化增强后的图像');
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-20-7.jpg" alt=""></p>
+<blockquote>
+<p>图像的锐化是与平滑处理恰好相反的一种图像增强手段。</p>
+</blockquote>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/Linux-best-practice/blog">Recent posts</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#卷积积分与邻域处理">卷积积分与邻域处理</a><ul class="toc-headings"><li><a href="#邻点和邻域">邻点和邻域</a></li><li><a href="#运用模板实现邻域处理">运用模板实现邻域处理</a></li></ul></li><li><a href="#图像的简单平滑">图像的简单平滑</a></li><li><a href="#图像的高斯平滑">图像的高斯平滑</a></li><li><a href="#图像的中值滤波">图像的中值滤波</a></li><li><a href="#图像的双边滤波">图像的双边滤波</a></li><li><a href="#图像的拉普拉斯锐化">图像的拉普拉斯锐化</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Linux-best-practice/" class="nav-home"><img src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Linux-best-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Linux-best-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/Linux-best-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Linux-best-practice/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Linux-best-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Linux-best-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Kaige Dong</section></footer></div></body></html>

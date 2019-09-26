@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Curses_python3.7 · Kaige Dong&#x27;s Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Python curses模块：控制终端"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Curses_python3.7 · Kaige Dong&#x27;s Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kaigedong.github.io/Linux-best-practice/blog/2018/08/16/Curses-python3-7"/><meta property="og:description" content="Python curses模块：控制终端"/><meta property="og:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Linux-best-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/atom.xml" title="Kaige Dong&#x27;s Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/feed.xml" title="Kaige Dong&#x27;s Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Linux-best-practice/js/scrollSpy.js"></script><link rel="stylesheet" href="/Linux-best-practice/css/main.css"/><script src="/Linux-best-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Linux-best-practice/"><img class="logo" src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site"/><h2 class="headerTitleWithLogo">Kaige Dong&#x27;s Site</h2></a><a href="/Linux-best-practice/versions"><h3>0.1.5</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/Linux-best-practice/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/Linux-best-practice/docs/doc4" target="_self">API</a></li><li class=""><a href="/Linux-best-practice/help" target="_self">Help</a></li><li class="siteNavGroupActive"><a href="/Linux-best-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>All blog posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All blog posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/09/20/scrapy_to_search_engine_Introduction">1.爬虫课程的介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Python_sorting">Python排序算法</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Learn_make_Donot_starve_mods">学习制作饥荒mod</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Donot_starve_mod1">饥荒mod1</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/python_virtual_env">virtualenv 和 pyenv的使用</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/16/Wuenda_machine_learning">吴恩达机器学习笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/13/Django-Apache-wsgi-_deploy">Django+Apache wsgi 部署</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/12/Apache-deploy-Django">Apache 部署 Django</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09/pytorch-60min">PyTorch 60min教程</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09/no_root_install_Apache">无root安装Apache</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/07/GIVEinstall">GIVE安装笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/06/wali_v2ray">搬瓦工2: v2ray</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/blog/2018/08/16/Curses-python3-7">Curses_python3.7</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/05/12/wali_note">搬瓦工笔记1：ssr</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/19/DQN_5">强化学习实战：从零开始下五子棋</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17/DQN_Sarsa">强化学习之Sarsa</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17/DQN_Sarsa-lambda">增强学习之Sarsa(lambda)</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/16/DQN_Q-learning">深度学习02之Q-learning介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/16/DQN">强化学习介绍与分类01</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/07_shadowsocks_settings">shadowsocks配置</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/19_shell_env_set/env-export">shell变量及进程及set,env,export</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/12_Perl/install_models">Perl安装模块与卸载</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/11_python_convert_exe_videos">python批量转换exe视频</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09_no_root_install_MySQL">服务器无root安装MySQL</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/05/08_Macinstall_MySQL">Mac安装MySQL &amp; Ubuntu下安装MySQL记录</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/tmus">tmus指南</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17_DQN_DQN">增强学习之DQN介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17_DQN2/Algo">增强学习之DQN算法</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/17python的decode/encode-与-r-b-u">python的decode/encode 与 r/b/u</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/17_golang_notes">golang笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09_unroot_install_UCSC_genome_browser">modele_name</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/13_Acer中Arch安装Secure/boot-EFI-设置">Acer中Arch安装Secure boot EFI 设置</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13_HTMLandCSS_basic_03">HTML与CSS基础03-Web框架与表单设计</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/08/20_Linux_crontab">Linux crontab定时任务</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/learn-git">learn-git</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/items2">items2技巧</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_gene_A07-A09">陈巍学基因A07-A09</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_gene_A01-A03">陈巍学基因A01-A03</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_geneA04-A06">陈巍学基因A04-A06</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/boxplot">数据可视化之柱状图</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/begin_building_sites">开始建站Hexo+NexT</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/Hexo-NexT404pages">Hexo-NexT主题的404页面</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/HTMLandCSS_basic_01">HTML和CSS基础01-html的语法和基本结构文档设置标记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/HTML_CSS_basic2">HTML和CSS基础02-图像超链接和表格</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/pig_exons">modele_name</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/Counting-known-microRNAs-in-five-easy-steps">Counting known microRNAs in five easy steps</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/R_214">R极客的情人节</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/25/Adapter-and-quality-trimming-of-illumina-data">Adapter and quality trimming of illumina data</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch_bach">pytorch批训练</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch-Optimizer">pytorch:Optimizer优化器</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch-CNN">pytorch:CNN卷积神经网络</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/sync_server_files">同步服务器文件夹</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch07">pytorch07</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch06">pytorch06</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch05">pytorch05</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/Affymetrix">Affymetrix芯片原理</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch03">pytorch03</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch02">pytorch02</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch01">pytorch 学习笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab04">matlab04图像的增强处理</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab03">matlab03图像的几何变换</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab02">matlab02图像的点运算</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab">matlab学习笔记01</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/WEB_frame">WEB框架</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/ChIP-seq-masc">ChIP-seq-macs</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/CSS">CSS层叠样式表</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch04">pytorch04</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/Linux-best-practice/blog/2018/08/16/Curses-python3-7">Curses_python3.7</a></h1><p class="post-meta">August 16, 2018</p><div class="authorBlock"><p class="post-authorName"><a href="" target="_blank" rel="noreferrer noopener">woobamboo</a></p></div></header><div><span><p>Python curses模块：控制终端</p>
+<!--truncate-->
+<p>参考：<a href="https://docs.python.org/3/howto/curses.html">https://docs.python.org/3/howto/curses.html</a></p>
+<p>版本：Release 2.04</p>
+<p>Python版本：3.7.0</p>
+<h2><a class="anchor" aria-hidden="true" id="什么是curses"></a><a href="#什么是curses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>什么是curses?</h2>
+<p>curses库提供许多基本功能：更改窗口内容：添加为本，擦除文本，改变外观等。但curses不提供用户界面如按钮、复选框或对话框，如果你要使用这些，请考虑<code>Urwid</code>.</p>
+<p>curses最初是为BSD Unix编写的，AT&amp;T的第五个版本的Unix添加了很多增强和新功能。BSD curses已经被ncurses所替代。</p>
+<p>Win版本的curses不包含curses，但可使用<code>UniCurses</code>这个移植版本。</p>
+<h3><a class="anchor" aria-hidden="true" id="python-curses"></a><a href="#python-curses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Python curses</h3>
+<p>curses 的python模块是curses提供的C函数的简单包装。最大的区别是Python接口将不同的C函数（如<code>addstr()</code>,<code>mvaddstr()</code>, <code>mvwaddstr()</code>) 合并到了单个的<code>addstr()</code>方法中了。</p>
+<h2><a class="anchor" aria-hidden="true" id="开始和结束curses"></a><a href="#开始和结束curses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>开始和结束curses</h2>
+<ul>
+<li>开始之前，curses必须先调用<code>initscr</code>进行初始化，这将确定终端类型、向终端发送需要的设置代码、创建内部数据结构。如果成功，将返回一个windows 类代表整个屏幕，根据C变量这通常命名为<code>stdscr</code>。</li>
+</ul>
+<pre><code class="hljs"><span class="hljs-keyword">import</span> curses
+<span class="hljs-title">stdscr</span> = curses.initscr()
+</code></pre>
+<ul>
+<li>通常情况下，curses会关闭对屏幕对按键的自动显示(自动回显)，以便读取它们并在特定时候显示。这就需要调用<code>noecho()</code>函数。</li>
+</ul>
+<pre><code class="hljs"><span class="hljs-selector-tag">curses</span><span class="hljs-selector-class">.noecho</span>()
+</code></pre>
+<ul>
+<li>对按键立即做出回应，而不需要按下<code>Enter</code>键，这称为<code>cbreak模式</code>，与通常的缓冲输入模式(buffered input mode)相反。</li>
+</ul>
+<pre><code class="hljs"><span class="hljs-selector-tag">curses</span><span class="hljs-selector-class">.cbreak</span>()
+</code></pre>
+<ul>
+<li>终端通常返回特殊键，如光标键或导航键(如Page Up 和 Home)，作为多字节转移序列。<code>curses</code>能自动为你处理，返回一个特殊的值比如<code>curses.KEY_LEFT</code>. 为了让curses 使用这个功能，你需要开启键盘模式(keypad mode)：</li>
+</ul>
+<pre><code class="hljs">stdscr.keypad(<span class="hljs-literal">True</span>)
+</code></pre>
+<ul>
+<li>关闭curses需要调用：</li>
+</ul>
+<pre><code class="hljs">curses.nocbreak() <span class="hljs-comment"># 关闭字符终端功能</span>
+stdscr.keypad(<span class="hljs-keyword">False</span>) 
+curses.<span class="hljs-keyword">echo</span>() <span class="hljs-comment"># 打开输入回显功能</span>
+</code></pre>
+<ul>
+<li>来恢复前面的设置，并调用<code>endwin()</code>恢复终端之前的设置：</li>
+</ul>
+<pre><code class="hljs"><span class="hljs-selector-tag">curses</span><span class="hljs-selector-class">.endwin</span>()
+</code></pre>
+<ul>
+<li><strong>Python中，可能会因为bug使得终端无法恢复到初始状态，而对键盘无响应。可以通过调用<code>curses.wrapper()</code>来避免</strong>：</li>
+</ul>
+<pre><code class="hljs"><span class="hljs-keyword">from</span> curses <span class="hljs-keyword">import</span> <span class="hljs-keyword">wrapper</span>
+
+def main(stdscr):
+    # Clear screen
+    stdscr.clear()
+
+    # This raises ZeroDivisionError <span class="hljs-keyword">when</span> i == <span class="hljs-number">10.</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">11</span>):
+        v = i<span class="hljs-number">-10</span>
+        stdscr.addstr(i, <span class="hljs-number">0</span>, <span class="hljs-string">'10 divided by {} is {}'</span>.format(v, <span class="hljs-number">10</span>/v))
+
+    stdscr.<span class="hljs-keyword">refresh</span>()
+    stdscr.getkey()
+
+<span class="hljs-keyword">wrapper</span>(main)
+</code></pre>
+<p><code>wrapper()</code>函数接受一个可调用对象并进行上述初始化，如果存在颜色支持，也会初始化颜色。当可调用对象运行完毕，<code>wrapper()</code>会将终端恢复到原始状态,如果出错，会报出错误(内部通过try...except实现)，最后恢复终端。</p>
+<h2><a class="anchor" aria-hidden="true" id="windows-和-pads"></a><a href="#windows-和-pads" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>windows</code> 和 <code>pads</code></h2>
+<h3><a class="anchor" aria-hidden="true" id="window"></a><a href="#window" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>window</h3>
+<blockquote>
+<p><code>windwos</code>是curses最基本的抽象，一个<code>windw</code>类表示屏幕上的一个长方形区域，支持显示文本、释放、允许用户输入字符等。</p>
+</blockquote>
+<ul>
+<li><code>initscr()</code>方法返回的<code>stdscr</code>对象是表示整个屏幕的windows 类；你可能想要划分成更小的区域来分别制：<code>newwin()</code>方法创建给定大小的<code>window</code> 类：</li>
+</ul>
+<pre><code class="hljs"><span class="hljs-attr">begin_x</span> = <span class="hljs-number">20</span><span class="hljs-comment">; begin_y = 7</span>
+<span class="hljs-attr">height</span> = <span class="hljs-number">5</span><span class="hljs-comment">; width = 40</span>
+<span class="hljs-attr">win</span> = curses.newwin(height, width, begin_y, begin_x)
+</code></pre>
+<blockquote>
+<ul>
+<li><p>需要注意curses的<strong><em>坐标</em></strong>，坐标总是按<strong><em><code>y，x</code></em></strong>的顺序传递；左上角坐标是<code>(0,0)</code>。 它第一次就是这么写的，所以没法改了☁️</p></li>
+<li><p>可通过<code>curses.LINES</code> 和 <code>curses.COLS</code>变量来获取<code>y &amp; x</code> 的大小；合法的坐标从<code>(0，0)</code>到<code>(curses.LINES-1,curses.COLS-1)</code></p></li>
+<li><p>当调用方法显示或删除时，终端不会立即显示，需要调用<strong><code>refresh()</code></strong>方法来更新屏幕。如<code>stdscr.refresh()</code>或其他windows的<code>refersh()</code>方法。</p></li>
+</ul>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="pad"></a><a href="#pad" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>pad</code></h3>
+<blockquote>
+<p><code>pad</code>是<code>window</code>的特例，可以比实际的显示屏幕大，并且每次只显示<code>pad</code>的一部分。创建<code>pad</code>需要的<code>height</code>和<code>width</code>，更新<code>pad</code>需要给定<code>pad</code>子区域的坐标。</p>
+</blockquote>
+<pre><code class="hljs">pad = curses.newpad(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>) 
+# These loops fill the pad with letters; addch() <span class="hljs-keyword">is</span> 
+# explained <span class="hljs-keyword">in</span> the next section 
+<span class="hljs-keyword">for</span> y <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">99</span>): 
+    <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">99</span>): 
+        pad.addch(y,x, ord(<span class="hljs-string">'a'</span>) + (x*x+y*y) % <span class="hljs-number">26</span>) 
+# Displays a section of the pad <span class="hljs-keyword">in</span> the middle of the screen. 
+# (<span class="hljs-number">0</span>,<span class="hljs-number">0</span>) : coordinate of upper-left corner of pad area to display. 
+# (<span class="hljs-number">5</span>,<span class="hljs-number">5</span>) : coordinate of upper-left corner of window area to be filled with pad content. 
+# (<span class="hljs-number">20</span>, <span class="hljs-number">75</span>) : coordinate of lower-right corner of window area to be : filled with pad content. 
+pad.<span class="hljs-built_in">ref</span>resh( <span class="hljs-number">0</span>,<span class="hljs-number">0</span>, <span class="hljs-number">5</span>,<span class="hljs-number">5</span>, <span class="hljs-number">20</span>,<span class="hljs-number">75</span>)
+</code></pre>
+<blockquote>
+<p><code>refersh()</code>调用显示pad从<code>(5,5)</code> 到 <code>(20,75)</code>的区域，除了这种区别，pad 和 windows 完全相同，并支持相同的方法。</p>
+<p>如果屏幕上有多个windows和pad，则可以更有效地更新屏幕以防止闪烁。<code>refersh()</code> 实际上做了两件事情：1.调用每个窗口的<code>noutrefresh()</code>来更新表示屏幕所需的数据结构；2.调用<code>doupdate()</code>来改变物理屏幕以匹配数据结构中记录的信息</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="显示文本"></a><a href="#显示文本" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>显示文本</h2>
+<p><code>stdsccr</code>窗口的<code>addstr()</code>方法接受多个参数，</p>
+<table>
+<thead>
+<tr><th>格式</th><th>描述</th></tr>
+</thead>
+<tbody>
+<tr><td>str or ch</td><td>在当前位置显示<code>str</code>或<code>ch</code></td></tr>
+<tr><td>str or ch, attr</td><td>使用属性<code>attr</code>在当前位置显示<code>str</code>或<code>ch</code></td></tr>
+<tr><td>y,x,str or ch</td><td>移动到窗口<code>y,x</code>位置，显示<code>str</code>或<code>ch</code></td></tr>
+<tr><td>y, x , str or ch, attr</td><td>移动到窗口<code>y,x</code>位置，使用属性<code>attr</code>显示<code>str</code>或`ch</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>属性允许以突出模式显示，如<code>粗体</code>、<code>下划线</code>、<code>反向代码</code>、<code>彩色</code>。</p>
+<p><code>addstr()</code>接受<code>string</code>或<code>bytestring</code>作为输入，<code>bytestirng</code>的内容会被原样发送到终端。<code>string</code>会使用windows 的 encoding 属性，将<code>string</code>编码城<code>bytes</code>; 这个默认值是<code>locale.getpreferredencoding()</code>的返回值。</p>
+<p><code>addch()</code>方法接受一个<code>字符</code>，或<code>长度为1的string</code>，<code>长度为1的bytestring</code>，或一个整数。</p>
+<p>如果不需要闪烁光标，可调用<code>curs_set(False)</code>来使其不可见。</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="属性和颜色"></a><a href="#属性和颜色" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>属性和颜色</h3>
+<blockquote>
+<p>字符可以以不同的方式显示。在基于文本的命令行里，状态栏通常以<code>reverse video</code>的方式显示，或者一个文本查看器需要高亮一些单词。curses通过允许指定屏幕上的每个<code>cell</code>的属性。</p>
+<p>属性是整数，每个位表示不同的属性。</p>
+</blockquote>
+<table>
+<thead>
+<tr><th>Attribute</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>A_BLINK</td><td>闪烁文字</td></tr>
+<tr><td>A_BOLD</td><td>超亮或粗体文字</td></tr>
+<tr><td>A_DIM</td><td>半明亮文字</td></tr>
+<tr><td>A_REVERSE</td><td><code>reverse-video text</code> ??</td></tr>
+<tr><td>A_STANDOUT</td><td>可用的最佳高亮模式</td></tr>
+<tr><td>A_UNDERLINE</td><td>带下划线的文字</td></tr>
+</tbody>
+</table>
+<p>在屏幕上展示<code>reverse-video status line</code></p>
+<pre><code class="hljs">stdscr.addstr(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">"Current mode: Typing mode"</span>, curses.A_REVERSE) 
+stdscr.<span class="hljs-built_in">ref</span>resh()
+</code></pre>
+<blockquote>
+<p>Curses库 还支持一些终端提供的颜色。最常见的是<code>Linux console</code>, 其次是<code>color xterms</code></p>
+</blockquote>
+<p><strong>为了使用颜色，需要在调用了<code>initscr()</code>之后调用<code>start_colr()</code>方法来初始化默认颜色设置 (<code>curses.wrapper()</code>方法自动进行这些)。</strong>完成之后，如果终端能显示颜色，<code>has_colors()</code>方法返回<code>TRUE</code>。</p>
+<p>curses 维护了一些颜色对，包含前景色和背景色。可使用<code>color_pair()</code>方法获得颜色对的属性值，这可以与其他属性<code>按位或</code>如<code>A_REVERSE</code>。</p>
+<p>例如，使用color pair 1 显示一样文本：</p>
+<pre><code class="hljs"><span class="hljs-selector-tag">stdscr</span><span class="hljs-selector-class">.addstr</span>("<span class="hljs-selector-tag">Pretty</span> <span class="hljs-selector-tag">text</span>", <span class="hljs-selector-tag">curses</span><span class="hljs-selector-class">.color_pair</span>(1)) 
+<span class="hljs-selector-tag">stdscr</span><span class="hljs-selector-class">.refresh</span>()
+</code></pre>
+<blockquote>
+<p>一个颜色对包含前景色和背景色，<code>init_pair(n,f,b)</code>方法可以改变颜色对<code>n</code>的前景色<code>f</code>和背景色<code>b</code>。颜色对0被设定为<code>white on black</code>的颜色对，且无法更改。</p>
+</blockquote>
+<p>颜色被编号，<code>start_color()</code>方法在激活颜色模式时，初始化了8种基本颜色：<code>0:black</code>; <code>1:red</code>; <code>2:green</code>; <code>3:yellow</code>; <code>4:blue</code>; <code>5:magenta</code>; <code>6:cyan</code>; <code>7:white</code>;</p>
+<p>要在<strong><em>白色背景上将颜色1改为红色</em></strong>，可以：</p>
+<pre><code class="hljs"><span class="hljs-selector-tag">curses</span><span class="hljs-selector-class">.init_pair</span>(1, <span class="hljs-selector-tag">curses</span><span class="hljs-selector-class">.COLOR_RED</span>, <span class="hljs-selector-tag">curses</span><span class="hljs-selector-class">.COLOR_WHITE</span>)
+</code></pre>
+<p>当改变了一个颜色对，所有使用这个颜色对的文本将会被改为新颜色。也可以展示新文本的颜色：</p>
+<pre><code class="hljs">stdscr.addstr(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>, <span class="hljs-string">"RED ALERT!"</span>, curses.color_pair(<span class="hljs-number">1</span>))
+</code></pre>
+<blockquote>
+<p>甚至可以通过RGB值改变颜色。如果<code>can_change_colr()</code>为<code>True</code>，则可以。</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="用户输入"></a><a href="#用户输入" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>用户输入</h2>
+<p>有两个方法获取windows中的输入：</p>
+<p><code>getch()</code>: 刷新屏幕然后等待用户输入一个按键，如果<code>echo()</code>方法在之前被调用过，则会显示这个按键。</p>
+<p><code>getkey()</code>： 与上面相同，只不过是字符串。</p>
+<p>可以使用<code>nodelay()</code>方法表示不等待用户。在<code>nodelay(True)</code>之后，window中的<code>getch()</code>和<code>getkey()</code>变为非阻塞的。为了表示输入没有就绪，<code>getch()</code>会返回<code>curses.ERR</code>(值是-1)，而<code>getkey()</code>引发异常。<code>halfdelay()</code>方法，可以为每个<code>getch()</code>设定一个<code>timer</code>,如果特定延时中(以十分之一秒为单位)没有获得输入，将引发异常。</p>
+<p><code>getch()</code>方法返回一个整数，如果在<code>0</code>和<code>255</code>之间，代表按下的是<code>ASCII</code>，大于255的值是特殊键，如<code>Page Up</code>, <code>Home</code>,或<code>光标键</code>。可以将返回的值与<code>curses.KEY_PPAGE</code>,<code>curses.KEY_HOME</code>, <code>curses.KEY_LEFT</code>这些常量进行比较。主循环类似于：</p>
+<pre><code class="hljs"><span class="hljs-keywords">while</span> True:
+    c = stdscr.getch()
+    <span class="hljs-keywords">if</span> c == <span class="hljs-built_in">ord</span>(<span class="hljs-string">'p'</span>):
+        PrintDocument()
+    elif c == <span class="hljs-built_in">ord</span>(<span class="hljs-string">'q'</span>):
+        <span class="hljs-keywords">break</span>  # Exit the <span class="hljs-keywords">while</span> loop
+    elif c == curses.KEY_HOME:
+        <span class="hljs-symbol">x</span> = <span class="hljs-symbol">y</span> = <span class="hljs-number">0</span>
+</code></pre>
+<p><code>curses.ascii</code>模块提供<code>ASCII</code>类成员函数，接受整数或者1个字符的string参数；也提供转换函数，以整数或1个字符的string为参数，返回相同的类型。如<code>curses.ascii.ctrl()</code>返回与其参数对应的控制字符。</p>
+<p>还有一种方法可以检索整个字符串:<code>getstr()</code>,但不经常用，因为其功能有限，唯一可用的编辑键是退格键和Enter键。</p>
+<pre><code class="hljs">curses.echo()            # <span class="hljs-keyword">Enable</span> echoing <span class="hljs-keyword">of</span> characters
+
+# <span class="hljs-keyword">Get</span> a <span class="hljs-number">15</span>-<span class="hljs-type">character</span> string, <span class="hljs-keyword">with</span> the <span class="hljs-keyword">cursor</span> <span class="hljs-keyword">on</span> the top <span class="hljs-type">line</span>
+s = stdscr.getstr(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>, <span class="hljs-number">15</span>)
+</code></pre>
+<p><code>curses.textpad</code>模块提供了一个类似于<code>Emacs</code>的键绑定的文本框。<code>Textbox</code>类的不同方法支持使用输入验证进行编辑，并使用或不适用尾随空格获取编辑结果；例如：</p>
+<pre><code class="hljs"><span class="hljs-keyword">import</span> curses
+<span class="hljs-keyword">from</span> curses.textpad <span class="hljs-keyword">import</span> Textbox, rectangle
+
+def main(stdscr):
+    stdscr.addstr(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-string">"Enter IM message: (hit Ctrl-G to send)"</span>)
+
+    editwin = curses.newwin(<span class="hljs-number">5</span>,<span class="hljs-number">30</span>, <span class="hljs-number">2</span>,<span class="hljs-number">1</span>)
+    rectangle(stdscr, <span class="hljs-number">1</span>,<span class="hljs-number">0</span>, <span class="hljs-number">1</span>+<span class="hljs-number">5</span>+<span class="hljs-number">1</span>, <span class="hljs-number">1</span>+<span class="hljs-number">30</span>+<span class="hljs-number">1</span>)
+    stdscr.<span class="hljs-built_in">ref</span>resh()
+
+    box = Textbox(editwin)
+
+    # Let the user edit until Ctrl-G <span class="hljs-keyword">is</span> struck.
+    box.edit()
+
+    # Get resulting contents
+    message = box.gather()
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="高级特性"></a><a href="#高级特性" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>高级特性</h2>
+<p><code>curses</code> 还支持高级特性，如读取<code>屏幕的内容</code>，在<code>xterm实例中捕获鼠标事件</code>等。</p>
+<h2><a class="anchor" aria-hidden="true" id="例子"></a><a href="#例子" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例子</h2>
+<pre><code class="hljs"><span class="hljs-keyword">import</span> curses
+
+stdscr = curses.initscr() <span class="hljs-comment"># 必须先初始化；返回一个window 对象。</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">display_info</span><span class="hljs-params">(str, x, y, colorpair=<span class="hljs-number">2</span>)</span>:</span>
+    <span class="hljs-string">'''使用指定的colorpair显示文字'''</span>
+    <span class="hljs-keyword">global</span> stdscr
+    stdscr.addstr(y,x,str,curses.color_pair(colorpair))
+    stdscr.refresh()
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_ch_and_continue</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">'''演示press any key to continue'''</span>
+    <span class="hljs-keyword">global</span> stdscr
+    <span class="hljs-comment"># 设置nodeley，为False是会变成阻塞式等待</span>
+    stdscr.nodelay(<span class="hljs-literal">False</span>)
+    <span class="hljs-comment"># 输入一个字符</span>
+    ch=stdscr.getch()
+    <span class="hljs-comment"># 重置nodelay，使得控制台可以以非阻塞方式接受控制台输入，超时1秒</span>
+    stdscr.nodelay(<span class="hljs-number">1</span>)
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_win</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">'''控制台设置'''</span>
+    <span class="hljs-keyword">global</span> stdscr
+    <span class="hljs-comment"># assert curses.has_colors() == False</span>
+    <span class="hljs-comment"># 使用颜色先调用这个方法：</span>
+    curses.start_color()
+    <span class="hljs-keyword">assert</span> curses.has_colors() == <span class="hljs-literal">True</span>
+
+    <span class="hljs-comment"># 文字和背景设置，设置了连个color pair，分别是1和2；</span>
+    curses.init_pair(<span class="hljs-number">1</span>, curses.COLOR_GREEN, curses.COLOR_BLACK)
+    curses.init_pair(<span class="hljs-number">2</span>, curses.COLOR_RED, curses.COLOR_BLACK)
+    <span class="hljs-comment"># 关闭屏幕回显</span>
+    curses.noecho()
+
+    <span class="hljs-comment"># 输入时不需要回车确认</span>
+    curses.cbreak()
+
+    <span class="hljs-comment"># 设置nodelay, 使得控制台可以以非阻塞方式接受控制台输入，超时1秒</span>
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">unset_win</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-string">'''控制台重置'''</span>
+    <span class="hljs-keyword">global</span> stdscr
+    <span class="hljs-comment"># 恢复控制台默认设置（若不恢复，会导致即使程序退出了，控制台仍然是没有回显的。）</span>
+    curses.nocbreak()
+    stdscr.keypad(<span class="hljs-number">0</span>)
+    curses.echo()
+    <span class="hljs-comment"># 结束窗口</span>
+    curses.endwin()
+
+<span class="hljs-keyword">if</span> __name__==<span class="hljs-string">'__main__'</span>:
+    <span class="hljs-keyword">try</span>:
+        set_win()
+        display_info(<span class="hljs-string">'Hola, curses!'</span>, <span class="hljs-number">0</span>, <span class="hljs-number">5</span>)
+        display_info(<span class="hljs-string">'Press any key to continue...'</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>)
+        get_ch_and_continue()
+    <span class="hljs-keyword">except</span> (ValueError,TypeError) <span class="hljs-keyword">as</span> e:
+        print(<span class="hljs-string">"Error, exit..."</span>, e)
+    <span class="hljs-keyword">finally</span>:
+        unset_win()
+</code></pre>
+<ul>
+<li>例子<a href="https://www.cnblogs.com/starof/p/4703820.html">来自</a></li>
+</ul>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/Linux-best-practice/blog">Recent posts</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#什么是curses">什么是curses?</a><ul class="toc-headings"><li><a href="#python-curses">Python curses</a></li></ul></li><li><a href="#开始和结束curses">开始和结束curses</a></li><li><a href="#windows-和-pads"><code>windows</code> 和 <code>pads</code></a><ul class="toc-headings"><li><a href="#window">window</a></li><li><a href="#pad"><code>pad</code></a></li></ul></li><li><a href="#显示文本">显示文本</a><ul class="toc-headings"><li><a href="#属性和颜色">属性和颜色</a></li></ul></li><li><a href="#用户输入">用户输入</a></li><li><a href="#高级特性">高级特性</a></li><li><a href="#例子">例子</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Linux-best-practice/" class="nav-home"><img src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Linux-best-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Linux-best-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/Linux-best-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Linux-best-practice/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Linux-best-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Linux-best-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Kaige Dong</section></footer></div></body></html>

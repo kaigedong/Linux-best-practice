@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Django简明笔记 · Kaige Dong&#x27;s Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Django是一个开放源代码的Web应用框架，由Python写成。采用了MVC的软件设计模式，即模型M，视图V和控制器C。它最初是被开发来用于管理劳伦斯出版集团旗下的一些以新闻内容为主的网站的，即是CMS（内容管理系统）软件。并于2005年7月在BSD许可证下发布。"/><meta name="docsearch:version" content="0.1.5"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Django简明笔记 · Kaige Dong&#x27;s Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kaigedong.github.io/Linux-best-practice/"/><meta property="og:description" content="Django是一个开放源代码的Web应用框架，由Python写成。采用了MVC的软件设计模式，即模型M，视图V和控制器C。它最初是被开发来用于管理劳伦斯出版集团旗下的一些以新闻内容为主的网站的，即是CMS（内容管理系统）软件。并于2005年7月在BSD许可证下发布。"/><meta property="og:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Linux-best-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/atom.xml" title="Kaige Dong&#x27;s Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/feed.xml" title="Kaige Dong&#x27;s Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Linux-best-practice/js/scrollSpy.js"></script><link rel="stylesheet" href="/Linux-best-practice/css/main.css"/><script src="/Linux-best-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Linux-best-practice/"><img class="logo" src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site"/><h2 class="headerTitleWithLogo">Kaige Dong&#x27;s Site</h2></a><a href="/Linux-best-practice/versions"><h3>0.1.5</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/Linux-best-practice/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/Linux-best-practice/docs/doc4" target="_self">API</a></li><li class=""><a href="/Linux-best-practice/help" target="_self">Help</a></li><li class=""><a href="/Linux-best-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Django</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Docusaurus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc1">Docusaurus 构建网站</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc2">Manjaro的安装、配置到GPU</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">First Category<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc9">This is Doc 9</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Second Category<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc3">This is document number 3</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Algorithm<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc100">01两数之和</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc101">232用栈实现队列</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc102">738单调递增的数字</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Django<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/docs/doc200">Django简明笔记</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Nginx<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc300">Nginx教程</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Scrapy<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc400">Scrapy教程</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc401">Django RESTful系列教程一</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/doc402">Django RESTful系列教程二</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Django简明笔记</h1></header><article><div><span><p>Django是一个开放源代码的Web应用框架，由Python写成。采用了MVC的软件设计模式，即模型M，视图V和控制器C。它最初是被开发来用于管理劳伦斯出版集团旗下的一些以新闻内容为主的网站的，即是CMS（内容管理系统）软件。并于2005年7月在BSD许可证下发布。</p>
+<p><img src="/Linux-best-practice/docs/assets/2019-09-23-1.png" alt=""></p>
+<h2><a class="anchor" aria-hidden="true" id="url控制器"></a><a href="#url控制器" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>url控制器</h2>
+<p>项目中的<code>urls.py</code> 文件是路由的配置。通过匹配URL来跳转到不同的view中。</p>
+<p>可通过<code>path</code>, <code>re_path</code>将<code>url</code> 与<code>view</code>进行关联。</p>
+<p><img src="/Linux-best-practice/docs/assets/image-20190923121348734.png" alt="image-20190923121348734"></p>
+<h2><a class="anchor" aria-hidden="true" id="path-函数"></a><a href="#path-函数" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>path</code>函数</h2>
+<blockquote>
+<p>path(route, view, kwargs=None, name=None)</p>
+</blockquote>
+<p>对URL进行匹配。如果要获取URL中的数据，需要用尖括号括起来，随后这个参数将会被传递给view函数。尖括号里可以加上<code>converter</code>。比如<code>&lt;slug:title&gt;</code> 表明获取<code>url</code>字段给<code>title</code>变量，并将它转为<code>slug</code>格式。</p>
+<h3><a class="anchor" aria-hidden="true" id="django-获取url内容-converter"></a><a href="#django-获取url内容-converter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Django 获取URL内容 converter</h3>
+<ul>
+<li><code>str</code> - 匹配非空字符串，不包括'/' 这是默认模式。如果没有加入converter的话。</li>
+<li><code>int</code> - 匹配并返回int类型</li>
+<li><code>slug</code> - 匹配ASCII字母或数字，包括连字符和下划线。</li>
+<li><code>uuid</code> - Matches a formatted UUID. To prevent multiple URLs from mapping to the same page, dashes must be included and letters must be lowercase. For example, <code>075194d3-6885-417e-a8a8-6c931e272f00</code>. Returns a <a href="https://docs.python.org/3/library/uuid.html#uuid.UUID"><code>UUID</code></a> instance.</li>
+<li><code>path</code> - Matches any non-empty string, including the path separator, <code>'/'</code>. This allows you to match against a complete URL path rather than just a segment of a URL path as with <code>str</code>.</li>
+</ul>
+<blockquote>
+<p>可以注册自定义的converter，详见Django文档。</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="view获取url中数据的例子"></a><a href="#view获取url中数据的例子" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>view获取URL中数据的例子</h3>
+<pre><code class="hljs css language-python"><span class="hljs-comment"># urls.py 中的设置：</span>
+path(<span class="hljs-string">'articles/&lt;slug:title&gt;/&lt;int:section&gt;/'</span>, views.section, name=<span class="hljs-string">'article-section'</span>),
+
+<span class="hljs-comment"># 匹配的URL：</span>
+http://<span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">8000</span>/articles/this_article/<span class="hljs-number">123</span>/
+
+<span class="hljs-comment"># 调用的view：</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">section</span><span class="hljs-params">(request, **kwargs)</span>:</span>
+    print(kwargs)
+    <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">"this is section"</span>)
+
+<span class="hljs-comment"># kwargs:</span>
+{<span class="hljs-string">'title'</span>: <span class="hljs-string">'this_article'</span>, <span class="hljs-string">'section'</span>: <span class="hljs-number">123</span>}
+</code></pre>
+<p>通过修改converter，能获取处理不同的内容。</p>
+<h2><a class="anchor" aria-hidden="true" id="re_path"></a><a href="#re_path" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>re_path</h2>
+<p>与<code>path</code>用法类似，只是它第一个参数接收正则表达式。</p>
+<pre><code class="hljs"><span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> include, re_path
+
+urlpatterns = [
+    re_path(<span class="hljs-string">r'^index/$'</span>, views.index, name=<span class="hljs-string">'index'</span>),
+    re_path(<span class="hljs-string">r'^bio/(?P&lt;username&gt;\w+)/$'</span>, views.bio, name=<span class="hljs-string">'bio'</span>),
+    re_path(<span class="hljs-string">r'^weblog/'</span>, include(<span class="hljs-string">'blog.urls'</span>)),
+    ...
+]
+</code></pre>
+<blockquote>
+<p><code>?P</code>似乎就是匹配模式</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="urlspy-中的-path-与-url"></a><a href="#urlspy-中的-path-与-url" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>urls.py</code>中的 <code>path</code> 与 <code>url</code></h3>
+<p>在Django2.0 中，<code>url</code>是<code>re_path</code>的别名，将来可能会被弃用。</p>
+<h2><a class="anchor" aria-hidden="true" id="view处理函数"></a><a href="#view处理函数" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>view处理函数</h2>
+<p>Views (视图函数) 逻辑处理，最终是围绕着两个对象实现的：</p>
+<p><img src="/Linux-best-practice/docs/assets/955761-20170709165938790-737655812.png" alt="955761-20170709165938790-737655812"></p>
+<blockquote>
+<p>http请求中产生两个核心对象：http请求：HttpRequest对象  http响应：HttpResponse对象</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="httprequest对象"></a><a href="#httprequest对象" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HttpRequest对象</h3>
+<p>逻辑处理函数的第一个形式参数，接收到的就是HttpRequest对象，这个对象里封装着用户的各种请求信息，通过HttpRequest对象的方法或者属性，可以获取到响应的请求信息</p>
+<ul>
+<li><p>path属性，获取请求页面的全路径，不包括域名</p></li>
+<li><p>method属性，获取请求中使用的HTTP方式的字符串表示。全大写表示</p></li>
+<li><p>get_full_path()方法，获取HTTP GET方式请求传参的URL地址</p></li>
+<li><p>更多：POST，COOKIES，FILES，user，session等</p></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="httpresponse响应对象"></a><a href="#httpresponse响应对象" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HttpResponse响应对象</h3>
+<p>对于HttpRequest请求对象来说，是由django自动创建的，但是，HttpResponse响应对象就必须我们自己创建。每个view请求处理方法必须返回一个HttpResponse响应对象</p>
+<p>HttpResponse类在django.http.HttpResponse</p>
+<p><strong>在HttpResponse对象上扩展的常用方法：</strong></p>
+<ul>
+<li><p>render(request，'html文件和路径')方法，将指定页面渲染后返回给浏览器</p></li>
+<li><p>render_to_response('index.html')方法，将指定页面渲染后返回给浏览器</p></li>
+<li><p>redirect('baidu.com')方法，页面跳转</p></li>
+<li><p>locals(变量名称)可以直接将逻辑处理函数中的所有变量传给模板</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="models"></a><a href="#models" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>models</h2>
+<blockquote>
+<p>django默认支持sqlite，mysql, oracle,postgresql数据库</p>
+</blockquote>
+<p>数据表的设计、增删改查都比较简单。</p>
+<p>一对多、一对一、多对多、链表结构<a href="https://www.cnblogs.com/adc8868/p/7170976.html">https://www.cnblogs.com/adc8868/p/7170976.html</a></p>
+<p>F、Q() 运算符</p>
+<h2><a class="anchor" aria-hidden="true" id="centos服务器安装nginx"></a><a href="#centos服务器安装nginx" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Centos服务器安装Nginx</h2>
+<p>Nginx官网有教程，稍微记录一下：</p>
+<pre><code class="hljs">$ sudo yum install yum-utils
+
+/etc/yum.repos.d/nginx.repo # 创建这个文件，并写入下面内容
+
+[nginx-stable]
+<span class="hljs-attribute">name</span>=nginx stable repo
+<span class="hljs-attribute">baseurl</span>=http://nginx.org/packages/centos/$releasever/$basearch/
+<span class="hljs-attribute">gpgcheck</span>=1
+<span class="hljs-attribute">enabled</span>=1
+<span class="hljs-attribute">gpgkey</span>=https://nginx.org/keys/nginx_signing.key
+
+[nginx-mainline]
+<span class="hljs-attribute">name</span>=nginx mainline repo
+<span class="hljs-attribute">baseurl</span>=http://nginx.org/packages/mainline/centos/$releasever/$basearch/
+<span class="hljs-attribute">gpgcheck</span>=1
+<span class="hljs-attribute">enabled</span>=0
+<span class="hljs-attribute">gpgkey</span>=https://nginx.org/keys/nginx_signing.key
+
+$ sudo yum install nginx
+$ sudo systemctl start nginx.service
+$ sudo systemctl <span class="hljs-builtin-name">enable</span> nginx.service
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/Linux-best-practice/docs/doc104"><span class="arrow-prev">← </span><span>doc104</span></a><a class="docs-next button" href="/Linux-best-practice/docs/doc201"><span>doc201</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#url控制器">url控制器</a></li><li><a href="#path函数"><code>path</code>函数</a><ul class="toc-headings"><li><a href="#django-获取url内容-converter">Django 获取URL内容 converter</a></li><li><a href="#view获取url中数据的例子">view获取URL中数据的例子</a></li></ul></li><li><a href="#re_path">re_path</a><ul class="toc-headings"><li><a href="#urlspy中的-path-与-url"><code>urls.py</code>中的 <code>path</code> 与 <code>url</code></a></li></ul></li><li><a href="#view处理函数">view处理函数</a><ul class="toc-headings"><li><a href="#httprequest对象">HttpRequest对象</a></li><li><a href="#httpresponse响应对象">HttpResponse响应对象</a></li></ul></li><li><a href="#models">models</a></li><li><a href="#centos服务器安装nginx">Centos服务器安装Nginx</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Linux-best-practice/" class="nav-home"><img src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Linux-best-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Linux-best-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/Linux-best-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Linux-best-practice/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Linux-best-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Linux-best-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Kaige Dong</section></footer></div></body></html>

@@ -22,42 +22,635 @@
 ]]></description>
         </item>
         <item>
-            <title><![CDATA[New Version 1.0.0]]></title>
-            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/10/24/new-version-1.0.0.html</link>
-            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/10/24/new-version-1.0.0.html</guid>
-            <pubDate>Tue, 24 Oct 2017 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>This blog post will test file name parsing issues when periods are present.</p> ]]></description>
+            <title><![CDATA[Python排序算法]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2019/04/09/Python_sorting.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2019/04/09/Python_sorting.html</guid>
+            <pubDate>Tue, 09 Apr 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>python实现常见排序算法</p>
+]]></description>
         </item>
         <item>
-            <title><![CDATA[Adding RSS Support]]></title>
-            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/26/adding-rss.html</link>
-            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/26/adding-rss.html</guid>
+            <title><![CDATA[学习制作饥荒mod]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2019/04/09/Learn_make_Donot_starve_mods.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2019/04/09/Learn_make_Donot_starve_mods.html</guid>
+            <pubDate>Tue, 09 Apr 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>目标：制作个路灯mod + 无限耐久火把mod</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[饥荒mod1]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2019/04/09/Donot_starve_mod1.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2019/04/09/Donot_starve_mod1.html</guid>
+            <pubDate>Tue, 09 Apr 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>如何制作饥荒mod教程</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[virtualenv 和 pyenv的使用]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2019/04/09/python_virtual_env.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2019/04/09/python_virtual_env.html</guid>
+            <pubDate>Tue, 09 Apr 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>virtualenv 和 pyenv的使用</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[吴恩达机器学习笔记]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/16/Wuenda_machine_learning.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/16/Wuenda_machine_learning.html</guid>
+            <pubDate>Sun, 16 Dec 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>占坑，待更新。</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Django+Apache wsgi 部署]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/13/Django-Apache-wsgi-_deploy.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/13/Django-Apache-wsgi-_deploy.html</guid>
+            <pubDate>Thu, 13 Dec 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<ul>
+<li>找对了文档非常简单...</li>
+</ul>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Apache 部署 Django]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/12/Apache-deploy-Django.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/12/Apache-deploy-Django.html</guid>
+            <pubDate>Wed, 12 Dec 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Apache + uwsgi部署Django</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[PyTorch 60min教程]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/09/pytorch-60min.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/09/pytorch-60min.html</guid>
+            <pubDate>Sun, 09 Dec 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>PyTorch 60min教程</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[无root安装Apache]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/09/no_root_install_Apache.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/09/no_root_install_Apache.html</guid>
+            <pubDate>Sun, 09 Dec 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>简单的操作</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[GIVE安装笔记]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/07/GIVEinstall.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/07/GIVEinstall.html</guid>
+            <pubDate>Fri, 07 Dec 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<ul>
+<li>革命尚未成功</li>
+</ul>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[搬瓦工2: v2ray]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/06/wali_v2ray.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/06/wali_v2ray.html</guid>
+            <pubDate>Thu, 06 Dec 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>搬瓦工搭建v2ray 一键搭建wireguard (centos7)</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Curses_python3.7]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/08/16/Curses-python3-7.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/08/16/Curses-python3-7.html</guid>
+            <pubDate>Thu, 16 Aug 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Python curses模块：控制终端</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[搬瓦工笔记1：ssr]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/05/12/wali_note.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/05/12/wali_note.html</guid>
+            <pubDate>Sat, 12 May 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>搬瓦工搭建自由上网、多用户管理平台</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[强化学习实战：从零开始下五子棋]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/19/DQN_5.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/19/DQN_5.html</guid>
+            <pubDate>Thu, 19 Apr 2018 06:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[强化学习之Sarsa]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/17/DQN_Sarsa.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/17/DQN_Sarsa.html</guid>
+            <pubDate>Tue, 17 Apr 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<blockquote>
+<p>Q-learning 与 Sarsa 区别</p>
+</blockquote>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[增强学习之Sarsa(lambda)]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/17/DQN_Sarsa-lambda.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/17/DQN_Sarsa-lambda.html</guid>
+            <pubDate>Tue, 17 Apr 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<ul>
+<li>基于Sarsa的一种提速方法</li>
+<li>回合更新的优势</li>
+<li>Lambda 参数</li>
+<li>Sarsa 算法步骤</li>
+</ul>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[深度学习02之Q-learning介绍]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/16/DQN_Q-learning.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/16/DQN_Q-learning.html</guid>
+            <pubDate>Mon, 16 Apr 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<ul>
+<li>Q-learning 的概念</li>
+<li>Q-learning 例子</li>
+</ul>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[强化学习介绍与分类01]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/16/DQN.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/16/DQN.html</guid>
+            <pubDate>Mon, 16 Apr 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<ul>
+<li>强化学习概念</li>
+<li>分类</li>
+</ul>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[shadowsocks配置]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/08/07_shadowsocks_settings.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/08/07_shadowsocks_settings.html</guid>
+            <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>获取了shadowsocks账号之后的配置</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[shell变量及进程及set,env,export]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/07/19_shell_env_set/env-export.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/07/19_shell_env_set/env-export.html</guid>
+            <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>shell中，有三种变量：<code>系统变量</code>，<code>环境变量</code>，<code>用户变量</code>。</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Perl安装模块与卸载]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/07/12_Perl/install_models.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/07/12_Perl/install_models.html</guid>
+            <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
+            <description><![CDATA[<ul>
+<li>安装Perl 模块的不同方法</li>
+</ul>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[python批量转换exe视频]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/07/11_python_convert_exe_videos.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/07/11_python_convert_exe_videos.html</guid>
+            <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>如何使用python脚本在win上自动转换exe视频到MP4</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[服务器无root安装MySQL]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/09_no_root_install_MySQL.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/09_no_root_install_MySQL.html</guid>
+            <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
+            <description><![CDATA[<ul>
+<li>无root安装MySQL</li>
+</ul>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Mac安装MySQL & Ubuntu下安装MySQL记录]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/05/08_Macinstall_MySQL.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/05/08_Macinstall_MySQL.html</guid>
+            <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Mac 下安装MySQL，碰到了很多坑，这里记录一下。</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[tmus指南]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/tmus.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/tmus.html</guid>
+            <pubDate>Fri, 13 Apr 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>tmux的基本操作</p>
+<p>在 tmux 之外如何进行控制</p>
+<p>在 tmux 中直接控制</p>
+<p>高效的结对编程</p>
+<p>调整 Tmux 以增强其同 Vim 的集成度</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[增强学习之DQN介绍]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/17_DQN_DQN.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/17_DQN_DQN.html</guid>
+            <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
+            <description><![CDATA[<ul>
+<li>强化学习和深度学习结合</li>
+<li>神经网络的作用</li>
+<li>Deep Q Network(DQN算法)</li>
+<li>后续改进方法</li>
+</ul>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[增强学习之DQN算法]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/17_DQN2/Algo.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/17_DQN2/Algo.html</guid>
+            <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
+            <description><![CDATA[<blockquote>
+<p>DQN 是第一个成功地将深度学习和强化学习结合起来的模型，启发了后续一系列的工作。这些后续工作中比较有名的有 <code>Double DQN</code>, <code>Prioritized Replay</code> 和 <code>Dueling Network</code>。</p>
+</blockquote>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[python的decode/encode 与 r/b/u]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/08/17python的decode/encode-与-r-b-u.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/08/17python的decode/encode-与-r-b-u.html</guid>
+            <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>python中的decode/encode 与 r/b/u</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[golang笔记]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/08/17_golang_notes.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/08/17_golang_notes.html</guid>
+            <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>记录一些Golang</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[modele_name]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/09_unroot_install_UCSC_genome_browser.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/12/09_unroot_install_UCSC_genome_browser.html</guid>
+            <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
+            <description><![CDATA[<hr>
+<p>title: 无root安装UCSC genome browser
+author: woobamboo
+authorURL:
+authorFBID:</p>
+<hr>
+<p>如何在本地实现一个定制化的UCSC genome browser?</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Acer中Arch安装Secure boot EFI 设置]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/08/13_Acer中Arch安装Secure/boot-EFI-设置.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/08/13_Acer中Arch安装Secure/boot-EFI-设置.html</guid>
+            <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>记录一下Arch安装的心得。</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[HTML与CSS基础03-Web框架与表单设计]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13_HTMLandCSS_basic_03.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13_HTMLandCSS_basic_03.html</guid>
+            <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
+            <description><![CDATA[<ul>
+<li>框架将浏览器划分为不同的部分，每一部分加载不同的网页，实现在同一浏览器窗口中加载多个页面的效果。</li>
+</ul>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Linux crontab定时任务]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2019/08/20_Linux_crontab.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2019/08/20_Linux_crontab.html</guid>
+            <pubDate>Thu, 01 Jan 1970 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Linux crontab是用来定期执行程序的命令。</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[learn-git]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/learn-git.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/learn-git.html</guid>
+            <pubDate>Fri, 13 Apr 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="git-学习笔记ubuntu"></a><a href="#git-学习笔记ubuntu" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>git 学习笔记(ubuntu)</h1>
+<p>from 廖雪峰git笔记</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[items2技巧]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/items2.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/items2.html</guid>
+            <pubDate>Fri, 13 Apr 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<ul>
+<li>标签</li>
+<li>分屏</li>
+<li>快捷键</li>
+</ul>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[陈巍学基因A07-A09]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/chenwei_gene_A07-A09.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/chenwei_gene_A07-A09.html</guid>
+            <pubDate>Fri, 13 Apr 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<ul>
+<li>应用Boyer-Moore的规则</li>
+<li>把参考基因组做成索引</li>
+</ul>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[陈巍学基因A01-A03]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/chenwei_gene_A01-A03.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/chenwei_gene_A01-A03.html</guid>
+            <pubDate>Fri, 13 Apr 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>噬菌体基因组简单探究</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[陈巍学基因A04-A06]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/chenwei_geneA04-A06.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/chenwei_geneA04-A06.html</guid>
+            <pubDate>Fri, 13 Apr 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<ul>
+<li>简单序列比对</li>
+<li>基础Boyer-Moore算法</li>
+</ul>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[数据可视化之柱状图]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/boxplot.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/boxplot.html</guid>
+            <pubDate>Fri, 13 Apr 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<ul>
+<li>Python柱状图📊</li>
+</ul>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[开始建站Hexo+NexT]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/begin_building_sites.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/begin_building_sites.html</guid>
+            <pubDate>Fri, 13 Apr 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="从零开始建站笔记-hexo-next"></a><a href="#从零开始建站笔记-hexo-next" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>从零开始建站笔记 Hexo+NexT</h1>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Hexo-NexT主题的404页面]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/Hexo-NexT404pages.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/Hexo-NexT404pages.html</guid>
+            <pubDate>Fri, 13 Apr 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<ul>
+<li>设置hexo 下next主题的404页面</li>
+</ul>
+<blockquote>
+<p>腾讯公益404页面，寻找丢失儿童，让大家一起关注此项公益事业！</p>
+</blockquote>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[HTML和CSS基础01-html的语法和基本结构文档设置标记]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/HTMLandCSS_basic_01.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/HTMLandCSS_basic_01.html</guid>
+            <pubDate>Fri, 13 Apr 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p><strong>目标</strong></p>
+<ol>
+<li>HTML部分：掌握HTML的全部语法，它的<code>主体结构</code>，<code>超链接</code>及<code>常用标记</code>的使用</li>
+<li>CSS部分:掌握<code>CSS三种选择器</code>的使用,明白如何使用<code>DIV+CSS</code>进行网页布局，搞清楚<code>浮动问题</code>.</li>
+<li>HTML的语法、HTML的基本结构、文档设置标记</li>
+</ol>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[HTML和CSS基础02-图像超链接和表格]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/HTML_CSS_basic2.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/HTML_CSS_basic2.html</guid>
+            <pubDate>Fri, 13 Apr 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<ul>
+<li>图像标记</li>
+<li>超链接</li>
+<li>表格:可以用来进行简单网页布局</li>
+</ul>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[modele_name]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/26/pig_exons.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/26/pig_exons.html</guid>
             <pubDate>Tue, 26 Sep 2017 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>This is a test post.</p> <p>A whole bunch of other information.</p> ]]></description>
+            <description><![CDATA[<hr>
+<p>title: 猪的exon有多大(R版本)
+date: 2017-09-26 16:51:11
+tags:</p>
+<hr>
+<h1><a class="anchor" aria-hidden="true" id="how-big-are-pig-exons"></a><a href="#how-big-are-pig-exons" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How big are pig exons?</h1>
+]]></description>
         </item>
         <item>
-            <title><![CDATA[Adding RSS Support - RSS Truncation Test]]></title>
-            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/25/testing-rss.html</link>
-            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/25/testing-rss.html</guid>
+            <title><![CDATA[Counting known microRNAs in five easy steps]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/26/Counting-known-microRNAs-in-five-easy-steps.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/26/Counting-known-microRNAs-in-five-easy-steps.html</guid>
+            <pubDate>Tue, 26 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>获取一个示例的数据集</p>
+<p>获取当前miRBase 的成熟序列</p>
+<p>将尿嘧啶转为胸腺嘧啶</p>
+<p>通过一行命令搜索并计算：</p>
+<p>通过一行命令搜索并计算</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[R极客的情人节]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/26/R_214.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/26/R_214.html</guid>
+            <pubDate>Tue, 26 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p><img src="/Linux-best-practice/blog/assets/2017-09/figure_16.png" alt=""></p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Adapter and quality trimming of illumina data]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/25/Adapter-and-quality-trimming-of-illumina-data.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/25/Adapter-and-quality-trimming-of-illumina-data.html</guid>
             <pubDate>Mon, 25 Sep 2017 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890</p>
-<p>This should be truncated.</p>
+            <description><![CDATA[<p>闲着翻译一个[文章]
+FastQC报告的adapter
+更深入了解一下adapter
+究竟何去除掉adapter污染呢？</p>
 ]]></description>
         </item>
         <item>
-            <title><![CDATA[New Blog Post]]></title>
-            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/04/10/blog-post-two.html</link>
-            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/04/10/blog-post-two.html</guid>
-            <pubDate>Mon, 10 Apr 2017 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum massa eget nulla aliquet sagittis. Proin odio tortor, vulputate ut odio in, ultrices ultricies augue. Cras ornare ultrices lorem malesuada iaculis. Etiam sit amet libero tempor, pulvinar mauris sed, sollicitudin sapien.</p>
+            <title><![CDATA[pytorch批训练]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/23/pytorch_bach.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/23/pytorch_bach.html</guid>
+            <pubDate>Sat, 23 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="pytorch-的批训练"></a><a href="#pytorch-的批训练" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pytorch 的批训练</h1>
+<ul>
+<li>要点：Torch 中提供了一种帮你整理你的数据结构的好东西, 叫做 <code>DataLoader</code>, 我们能用它来<strong>包装自己的数据, 进行批训练.</strong></li>
+</ul>
 ]]></description>
         </item>
         <item>
-            <title><![CDATA[Blog Title]]></title>
-            <link>https://kaigedong.github.io/Linux-best-practice/blog/2016/03/11/blog-post.html</link>
-            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2016/03/11/blog-post.html</guid>
-            <pubDate>Fri, 11 Mar 2016 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum massa eget nulla aliquet sagittis. Proin odio tortor, vulputate ut odio in, ultrices ultricies augue. Cras ornare ultrices lorem malesuada iaculis. Etiam sit amet libero tempor, pulvinar mauris sed, sollicitudin sapien.</p>
+            <title><![CDATA[pytorch:Optimizer优化器]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/23/pytorch-Optimizer.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/23/pytorch-Optimizer.html</guid>
+            <pubDate>Sat, 23 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="optimizer-优化器"></a><a href="#optimizer-优化器" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Optimizer 优化器</h1>
+<p>这节内容主要是用Torch的几种优化器查看优化器效果。</p>
+<p><img src="/Linux-best-practice/blog/assets/2017-09/figure_7.png" alt=""></p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[pytorch:CNN卷积神经网络]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/23/pytorch-CNN.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/23/pytorch-CNN.html</guid>
+            <pubDate>Sat, 23 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>卷积神经网络目前被广泛地用在图片识别上, 已经有层出不穷的应用, 一步一步做一个分析手写数字的 CNN 吧.</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[同步服务器文件夹]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/sync_server_files.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/sync_server_files.html</guid>
+            <pubDate>Fri, 22 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>一个简单的脚本，将本地文件夹和服务器文件夹内容互相同步。</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[pytorch07]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/pytorch07.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/pytorch07.html</guid>
+            <pubDate>Fri, 22 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="模型的保存与提取"></a><a href="#模型的保存与提取" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>模型的保存与提取</h1>
+<h2><a class="anchor" aria-hidden="true" id="保存的两种方法与提取的两种方法"></a><a href="#保存的两种方法与提取的两种方法" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>保存的两种方法与提取的两种方法</h2>
+<p>我们快速地建造数据, 搭建网络:</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[pytorch06]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/pytorch06.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/pytorch06.html</guid>
+            <pubDate>Fri, 22 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="pytorch-神经层的快速构建"></a><a href="#pytorch-神经层的快速构建" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pytorch 神经层的快速构建</h1>
+<h2><a class="anchor" aria-hidden="true" id="快速搭建"></a><a href="#快速搭建" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>快速搭建</h2>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[pytorch05]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/pytorch05.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/pytorch05.html</guid>
+            <pubDate>Fri, 22 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="区分类型分类"></a><a href="#区分类型分类" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>区分类型(分类)</h1>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Affymetrix芯片原理]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/Affymetrix.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/Affymetrix.html</guid>
+            <pubDate>Fri, 22 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="affymetrix芯片原理"></a><a href="#affymetrix芯片原理" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Affymetrix芯片原理</h1>
+<p>Affymetrix芯片公司的芯片包含了<code>RNA表达量分析（表达谱芯片）</code>、<code>SNP检测(基因分型)</code>、<code>拷贝数变异(Copy Number Variation,CNV)</code>、<code>small RNA</code>、<code>甲基化</code>等多种芯片。</p>
+<p>应用最广的芯片:<code>表达谱芯片</code>和<code>SNP分型芯片</code>。</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[pytorch03]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/pytorch03.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/pytorch03.html</guid>
+            <pubDate>Fri, 22 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="激励函数"></a><a href="#激励函数" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>激励函数</h1>
+<p>$Y = AF(MX)$ ：AF即是激励函数。MX是线性函数，通过激励函数将线性函数转成非线性函数。</p>
+<p>常用的激励函数有<code>relu</code>,<code>sigmoid</code>,<code>tanh</code>,<code>softplus</code></p>
+<p>下面画出激励函数。</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[pytorch02]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/pytorch02.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/pytorch02.html</guid>
+            <pubDate>Fri, 22 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<hr>
+<h2><a class="anchor" aria-hidden="true" id="pytorch的变量"></a><a href="#pytorch的变量" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>pytorch的变量</h2>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[pytorch 学习笔记]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/pytorch01.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/pytorch01.html</guid>
+            <pubDate>Fri, 22 Sep 2017 06:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[matlab04图像的增强处理]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/matlab04.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/matlab04.html</guid>
+            <pubDate>Fri, 22 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="matlab04图像的增强处理"></a><a href="#matlab04图像的增强处理" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MATLAB04图像的增强处理</h1>
+<p>两函数的傅里叶变换的乘积等于它们卷积后的傅里叶变换。</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[matlab03图像的几何变换]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/matlab03.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/matlab03.html</guid>
+            <pubDate>Fri, 22 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="图像的几何变换"></a><a href="#图像的几何变换" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>图像的几何变换</h1>
+<p>图像的几何变换是指不改变图像像素的前提下进行相对空间位置移动的一种处理方式。主要包括：平移变换，镜像变换，图像的转置，缩放和旋转等。</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[matlab02图像的点运算]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/matlab02.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/matlab02.html</guid>
+            <pubDate>Fri, 22 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="matlab-图像的点运算"></a><a href="#matlab-图像的点运算" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MATLAB 图像的点运算</h1>
+<h2><a class="anchor" aria-hidden="true" id="灰度直方图"></a><a href="#灰度直方图" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>灰度直方图</h2>
+<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-16-1.jpg" alt=""></p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[matlab学习笔记01]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/matlab.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/matlab.html</guid>
+            <pubDate>Fri, 22 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="matlb-学习笔记-01-绪论"></a><a href="#matlb-学习笔记-01-绪论" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MATLB 学习笔记 01：绪论</h1>
+<p>数字图形是用数字信号来表示的图像。数字图像相当于一个m x n的矩阵，其中，m x n被称为图像的分辨率。</p>
+<p>每个网格颜色只能是一种，这个过程被称为图像颜色的离散化。</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[WEB框架]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/WEB_frame.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/WEB_frame.html</guid>
+            <pubDate>Fri, 22 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="web框架"></a><a href="#web框架" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>WEB框架</h1>
+<p>框架将浏览器划分为不同的部分，每一部分加载不同的网页，实现在同一浏览器窗口中加载多个页面的效果。</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[ChIP-seq-macs]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/ChIP-seq-masc.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/ChIP-seq-masc.html</guid>
+            <pubDate>Fri, 22 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>from MACS manual ：<strong><em>Identifying ChIP-seq enrichment using MACS</em></strong></p>
+<p>步骤：<code>版本1.4</code></p>
+<ol>
+<li>安装macs</li>
+<li>安装可选软件</li>
+</ol>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[CSS层叠样式表]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/CSS.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/CSS.html</guid>
+            <pubDate>Fri, 22 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p><img src="/Linux-best-practice/blog/assets/2017-03/2017-03-07-1.jpg" alt=""></p>
+<h1><a class="anchor" aria-hidden="true" id="css层叠样式表"></a><a href="#css层叠样式表" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CSS层叠样式表</h1>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[pytorch04]]></title>
+            <link>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/pytorch04.html</link>
+            <guid>https://kaigedong.github.io/Linux-best-practice/blog/2017/09/22/pytorch04.html</guid>
+            <pubDate>Fri, 22 Sep 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<h1><a class="anchor" aria-hidden="true" id="关系拟合回归"></a><a href="#关系拟合回归" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>关系拟合(回归)</h1>
+<p>这次将见证如何通过简单的形式将一群数据用一条线段来表示。</p>
+<h2><a class="anchor" aria-hidden="true" id="建立数据集"></a><a href="#建立数据集" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>建立数据集</h2>
 ]]></description>
         </item>
     </channel>

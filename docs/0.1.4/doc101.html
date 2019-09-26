@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>232用栈实现队列 · Kaige Dong&#x27;s Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## 题目类型"/><meta name="docsearch:version" content="0.1.4"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="232用栈实现队列 · Kaige Dong&#x27;s Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kaigedong.github.io/Linux-best-practice/"/><meta property="og:description" content="## 题目类型"/><meta property="og:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Linux-best-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/atom.xml" title="Kaige Dong&#x27;s Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/feed.xml" title="Kaige Dong&#x27;s Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Linux-best-practice/js/scrollSpy.js"></script><link rel="stylesheet" href="/Linux-best-practice/css/main.css"/><script src="/Linux-best-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Linux-best-practice/"><img class="logo" src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site"/><h2 class="headerTitleWithLogo">Kaige Dong&#x27;s Site</h2></a><a href="/Linux-best-practice/versions"><h3>0.1.4</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/Linux-best-practice/docs/0.1.4/doc1" target="_self">Docs</a></li><li class=""><a href="/Linux-best-practice/docs/0.1.4/doc4" target="_self">API</a></li><li class=""><a href="/Linux-best-practice/help" target="_self">Help</a></li><li class=""><a href="/Linux-best-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Algorithm</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Docusaurus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/0.1.4/doc1">Docusaurus 构建网站</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/0.1.4/doc2">Manjaro的安装、配置到GPU</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">First Category<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/0.1.4/doc9">This is Doc 9</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Second Category<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/0.1.4/doc3">This is document number 3</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Algorithm<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/0.1.4/doc100">01两数之和</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/docs/0.1.4/doc101">232用栈实现队列</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/0.1.4/doc102">738单调递增的数字</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">232用栈实现队列</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="题目类型"></a><a href="#题目类型" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>题目类型</h2>
+<p><code>栈</code>，<code>队列</code></p>
+<h2><a class="anchor" aria-hidden="true" id="思路"></a><a href="#思路" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>思路</h2>
+<p>用两个栈来实现队列，比如有两个栈 stack1,stack2，</p>
+<ul>
+<li><p><code>push</code>方法：直接将元素存放到stack1中；时间复杂度<code>O(1)</code></p></li>
+<li><p><code>pop</code>方法：如果stack2为空，则将stack1的元素，从栈顶依次弹出压入stack2；然后从stack2 栈顶弹出一个元素，则相当与队列中最早入队列的元素。</p>
+<p>如果stack2不为空，直接弹出stack2栈顶元素即可。最差时间复杂度：<code>O(n)</code></p></li>
+<li><p><code>peek</code>方法：与pop方法类似，只是最后不弹出，只是返回栈顶元素即可。最差时间复杂度<code>O(n)</code></p></li>
+<li><p><code>empty</code>方法：判断stack1与stack2是否为空，不为空则返回false；为空返回true。 时间复杂度O(1)</p></li>
+</ul>
+<pre><code class="hljs css language-rust"><span class="hljs-keyword">use</span> std::cell::RefCell;
+
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">MyQueue</span></span> {
+    stack1: RefCell&lt;<span class="hljs-built_in">Vec</span>&lt;<span class="hljs-built_in">i32</span>&gt;&gt;, <span class="hljs-comment">// 继承可变性</span>
+    stack2: RefCell&lt;<span class="hljs-built_in">Vec</span>&lt;<span class="hljs-built_in">i32</span>&gt;&gt;,
+}
+
+
+<span class="hljs-comment">/**
+ * `&amp;self` means the method takes an immutable reference.
+ * If you need a mutable reference, change it to `&amp;mut self` instead.
+ */</span>
+<span class="hljs-keyword">impl</span> MyQueue {
+
+    <span class="hljs-comment">/** Initialize your data structure here. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">new</span></span>() -&gt; <span class="hljs-keyword">Self</span> {
+        <span class="hljs-keyword">return</span> MyQueue{stack1: RefCell::new(<span class="hljs-built_in">vec!</span>()), stack2: RefCell::new(<span class="hljs-built_in">vec!</span>())};
+    }
+
+    <span class="hljs-comment">/** Push element x to the back of queue. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">push</span></span>(&amp;<span class="hljs-keyword">self</span>, x: <span class="hljs-built_in">i32</span>) {
+        <span class="hljs-keyword">self</span>.stack1.borrow_mut().push(x);
+        <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-comment">// 将stack1中的依次pop，并push到stack2中</span>
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">transfer</span></span>(&amp;<span class="hljs-keyword">self</span>) {
+        <span class="hljs-keyword">let</span> stack2_len = <span class="hljs-keyword">self</span>.stack2.borrow().len();
+        <span class="hljs-keyword">if</span> stack2_len == <span class="hljs-number">0</span> {
+            <span class="hljs-keyword">while</span> <span class="hljs-keyword">let</span> <span class="hljs-literal">Some</span>(val) = <span class="hljs-keyword">self</span>.stack1.borrow_mut().pop() {
+                <span class="hljs-keyword">self</span>.stack2.borrow_mut().push(val);
+            }
+        }
+    }
+
+    <span class="hljs-comment">/** Removes the element from in front of queue and returns that element. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">pop</span></span>(&amp;<span class="hljs-keyword">self</span>) -&gt; <span class="hljs-built_in">i32</span> {
+        Self::transfer(&amp;<span class="hljs-keyword">self</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">self</span>.stack2.borrow_mut().pop().unwrap();
+    }
+
+    <span class="hljs-comment">/** Get the front element. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">peek</span></span>(&amp;<span class="hljs-keyword">self</span>) -&gt; <span class="hljs-built_in">i32</span> {
+        Self::transfer(&amp;<span class="hljs-keyword">self</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">self</span>.stack2.borrow()[<span class="hljs-keyword">self</span>.stack2.borrow().len()-<span class="hljs-number">1</span>];<span class="hljs-comment">// 返回最后一个元素的内容</span>
+    }
+
+    <span class="hljs-comment">/** Returns whether the queue is empty. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">empty</span></span>(&amp;<span class="hljs-keyword">self</span>) -&gt; <span class="hljs-built_in">bool</span> {
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">self</span>.stack1.borrow().len() == <span class="hljs-number">0</span> &amp;&amp; <span class="hljs-keyword">self</span>.stack2.borrow().len() == <span class="hljs-number">0</span> {
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+}
+
+<span class="hljs-comment">/**
+ * Your MyQueue object will be instantiated and called as such:
+ * let obj = MyQueue::new();
+ * obj.push(x);
+ * let ret_2: i32 = obj.pop();
+ * let ret_3: i32 = obj.peek();
+ * let ret_4: bool = obj.empty();
+ */</span>
+</code></pre>
+<pre><code class="hljs css language-rust"><span class="hljs-comment">// 测试：lib.rs 将上述方法、MyQueue 用pub修饰</span>
+<span class="hljs-keyword">mod</span> impl_queue_with_stack;
+
+<span class="hljs-meta">#[cfg(test)]</span>
+<span class="hljs-keyword">mod</span> tests {
+    <span class="hljs-keyword">use</span> crate::impl_queue_with_stack::MyQueue;
+
+    <span class="hljs-meta">#[test]</span>
+    <span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">test_impl_queue_with_stack</span></span>() {
+
+        <span class="hljs-keyword">let</span> c = MyQueue::new();
+        c.push(<span class="hljs-number">1</span>);
+        c.push(<span class="hljs-number">2</span>);
+        <span class="hljs-built_in">assert_eq!</span>(c.peek(), <span class="hljs-number">1</span>);
+        <span class="hljs-built_in">assert_eq!</span>(c.pop(), <span class="hljs-number">1</span>);
+        <span class="hljs-built_in">assert_eq!</span>(c.empty(), <span class="hljs-literal">false</span>);
+    }
+}
+</code></pre>
+<p>Leetcode 结果：</p>
+<table>
+<thead>
+<tr><th style="text-align:left">执行用时</th><th style="text-align:left">内存消耗</th><th style="text-align:left">语言</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align:left">0 ms</td><td style="text-align:left">2.1 MB</td><td style="text-align:left">Rust</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="tips"></a><a href="#tips" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tips</h2>
+<ol>
+<li><p><code>RefCell</code>的使用</p></li>
+<li><p>数组的<code>truncate</code>方法：截取前面若干个元素</p>
+<pre><code class="hljs css language-rust"><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> vec = <span class="hljs-built_in">vec!</span>[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+vec.truncate(<span class="hljs-number">2</span>);
+<span class="hljs-built_in">assert_eq!</span>(vec, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]);
+</code></pre></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="leetcode中相似的题型"></a><a href="#leetcode中相似的题型" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Leetcode中相似的题型</h2>
+<p>20.有效的括号</p>
+<p>155.最小栈</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-9-23</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/Linux-best-practice/docs/0.1.4/doc100"><span class="arrow-prev">← </span><span>01两数之和</span></a><a class="docs-next button" href="/Linux-best-practice/docs/0.1.4/doc102"><span>738单调递增的数字</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#题目类型">题目类型</a></li><li><a href="#思路">思路</a></li><li><a href="#tips">Tips</a></li><li><a href="#leetcode中相似的题型">Leetcode中相似的题型</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Linux-best-practice/" class="nav-home"><img src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Linux-best-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Linux-best-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/Linux-best-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Linux-best-practice/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Linux-best-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Linux-best-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Kaige Dong</section></footer></div></body></html>

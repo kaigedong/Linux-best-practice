@@ -1,0 +1,340 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>HTML和CSS基础01-html的语法和基本结构文档设置标记 · Kaige Dong&#x27;s Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="**目标**"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="HTML和CSS基础01-html的语法和基本结构文档设置标记 · Kaige Dong&#x27;s Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kaigedong.github.io/Linux-best-practice/blog/2018/04/13/HTMLandCSS_basic_01"/><meta property="og:description" content="**目标**"/><meta property="og:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Linux-best-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/atom.xml" title="Kaige Dong&#x27;s Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/feed.xml" title="Kaige Dong&#x27;s Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Linux-best-practice/js/scrollSpy.js"></script><link rel="stylesheet" href="/Linux-best-practice/css/main.css"/><script src="/Linux-best-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Linux-best-practice/"><img class="logo" src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site"/><h2 class="headerTitleWithLogo">Kaige Dong&#x27;s Site</h2></a><a href="/Linux-best-practice/versions"><h3>0.1.5</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/Linux-best-practice/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/Linux-best-practice/docs/doc4" target="_self">API</a></li><li class=""><a href="/Linux-best-practice/help" target="_self">Help</a></li><li class="siteNavGroupActive"><a href="/Linux-best-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>All blog posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All blog posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/09/20/scrapy_to_search_engine_Introduction">1.爬虫课程的介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Python_sorting">Python排序算法</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Learn_make_Donot_starve_mods">学习制作饥荒mod</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Donot_starve_mod1">饥荒mod1</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/python_virtual_env">virtualenv 和 pyenv的使用</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/16/Wuenda_machine_learning">吴恩达机器学习笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/13/Django-Apache-wsgi-_deploy">Django+Apache wsgi 部署</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/12/Apache-deploy-Django">Apache 部署 Django</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09/pytorch-60min">PyTorch 60min教程</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09/no_root_install_Apache">无root安装Apache</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/07/GIVEinstall">GIVE安装笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/06/wali_v2ray">搬瓦工2: v2ray</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/16/Curses-python3-7">Curses_python3.7</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/05/12/wali_note">搬瓦工笔记1：ssr</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/19/DQN_5">强化学习实战：从零开始下五子棋</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17/DQN_Sarsa">强化学习之Sarsa</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17/DQN_Sarsa-lambda">增强学习之Sarsa(lambda)</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/16/DQN_Q-learning">深度学习02之Q-learning介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/16/DQN">强化学习介绍与分类01</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/07_shadowsocks_settings">shadowsocks配置</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/19_shell_env_set/env-export">shell变量及进程及set,env,export</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/12_Perl/install_models">Perl安装模块与卸载</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/11_python_convert_exe_videos">python批量转换exe视频</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09_no_root_install_MySQL">服务器无root安装MySQL</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/05/08_Macinstall_MySQL">Mac安装MySQL &amp; Ubuntu下安装MySQL记录</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/tmus">tmus指南</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17_DQN_DQN">增强学习之DQN介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17_DQN2/Algo">增强学习之DQN算法</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/17python的decode/encode-与-r-b-u">python的decode/encode 与 r/b/u</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/17_golang_notes">golang笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09_unroot_install_UCSC_genome_browser">modele_name</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/13_Acer中Arch安装Secure/boot-EFI-设置">Acer中Arch安装Secure boot EFI 设置</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13_HTMLandCSS_basic_03">HTML与CSS基础03-Web框架与表单设计</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/08/20_Linux_crontab">Linux crontab定时任务</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/learn-git">learn-git</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/items2">items2技巧</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_gene_A07-A09">陈巍学基因A07-A09</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_gene_A01-A03">陈巍学基因A01-A03</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_geneA04-A06">陈巍学基因A04-A06</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/boxplot">数据可视化之柱状图</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/begin_building_sites">开始建站Hexo+NexT</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/Hexo-NexT404pages">Hexo-NexT主题的404页面</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/HTMLandCSS_basic_01">HTML和CSS基础01-html的语法和基本结构文档设置标记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/HTML_CSS_basic2">HTML和CSS基础02-图像超链接和表格</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/pig_exons">modele_name</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/Counting-known-microRNAs-in-five-easy-steps">Counting known microRNAs in five easy steps</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/R_214">R极客的情人节</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/25/Adapter-and-quality-trimming-of-illumina-data">Adapter and quality trimming of illumina data</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch_bach">pytorch批训练</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch-Optimizer">pytorch:Optimizer优化器</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch-CNN">pytorch:CNN卷积神经网络</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/sync_server_files">同步服务器文件夹</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch07">pytorch07</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch06">pytorch06</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch05">pytorch05</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/Affymetrix">Affymetrix芯片原理</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch03">pytorch03</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch02">pytorch02</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch01">pytorch 学习笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab04">matlab04图像的增强处理</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab03">matlab03图像的几何变换</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab02">matlab02图像的点运算</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab">matlab学习笔记01</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/WEB_frame">WEB框架</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/ChIP-seq-masc">ChIP-seq-macs</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/CSS">CSS层叠样式表</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch04">pytorch04</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/Linux-best-practice/blog/2018/04/13/HTMLandCSS_basic_01">HTML和CSS基础01-html的语法和基本结构文档设置标记</a></h1><p class="post-meta">April 13, 2018</p><div class="authorBlock"><p class="post-authorName"><a href="" target="_blank" rel="noreferrer noopener">woobamboo</a></p></div></header><div><span><p><strong>目标</strong></p>
+<ol>
+<li>HTML部分：掌握HTML的全部语法，它的<code>主体结构</code>，<code>超链接</code>及<code>常用标记</code>的使用</li>
+<li>CSS部分:掌握<code>CSS三种选择器</code>的使用,明白如何使用<code>DIV+CSS</code>进行网页布局，搞清楚<code>浮动问题</code>.</li>
+<li>HTML的语法、HTML的基本结构、文档设置标记</li>
+</ol>
+<!--truncate-->
+<h1><a class="anchor" aria-hidden="true" id="html和css基础01-html语法及基本结构-文档设置标记"></a><a href="#html和css基础01-html语法及基本结构-文档设置标记" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTML和CSS基础01:HTML语法及基本结构、文档设置标记</h1>
+<p>from 麦子学院</p>
+<h2><a class="anchor" aria-hidden="true" id="一-html的语法"></a><a href="#一-html的语法" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>一、HTML的语法</h2>
+<ol>
+<li>什么是HTML标记语言：表示网页信息的符号标记语言。</li>
+</ol>
+<ul>
+<li>特点</li>
+</ul>
+<blockquote>
+<p>可以设置文本的格式，
+可以创建列表
+可以插入图像和媒体
+可以创建表格
+超链接可以使用鼠标点击超链接实现页面之间的跳转。</p>
+</blockquote>
+<p>2.HTML的标记和其他属性：</p>
+<ul>
+<li>HTML文档的保存格式：<code>html</code>,<code>htm</code>,<code>xhtml</code></li>
+<li>标记和被标记的内容构建出HTML文档</li>
+</ul>
+<p><strong>格式:</strong></p>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">标记</span>&gt;</span>
+内容
+<span class="hljs-tag">&lt;/<span class="hljs-name">标记</span>&gt;</span>
+</code></pre>
+<ul>
+<li><strong>标记的属性：</strong></li>
+</ul>
+<blockquote>
+<p>标记的属性就是用来控制我们的内容（图像，文本等）如何显示</p>
+</blockquote>
+<p><strong>格式 ：</strong></p>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">标记</span> 属性<span class="hljs-attr">1</span>=<span class="hljs-string">属性值</span> 属性<span class="hljs-attr">2</span>=<span class="hljs-string">属性值…</span> …&gt;</span>
+内容
+<span class="hljs-tag">&lt;/<span class="hljs-name">标记</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p>如：<code>&lt;body bgcolor=&quot;red&quot;&gt;内容&lt;/body&gt;</code>,控制网页背景颜色。</p>
+</blockquote>
+<ol start="3">
+<li>语法不区分字母大小写</li>
+</ol>
+<p><code>&lt;HTML&gt;</code>,<code>&lt;Html&gt;</code>,<code>&lt;html&gt;</code>都是定义相同的标记，但是在编写时<strong>尽量使用小写。</strong></p>
+<ol start="4">
+<li>文档注释</li>
+</ol>
+<p>注释一段内容时，使用:</p>
+<pre><code class="hljs"><span class="hljs-comment">&lt;!--这几个字将不会在网页中显示--&gt;</span>
+</code></pre>
+<ol start="5">
+<li>代码格式</li>
+</ol>
+<blockquote>
+<p>空格键和回车键在网页中都不会起到任何作用，为了让代码清晰易读，可以使用空格和回车键进行编排。</p>
+</blockquote>
+<p><strong>！注意：</strong>缩进时为了保持严格的规则，以“Tab”键进行缩进！
+<strong>!</strong>无论有多少个回车，都会被替换成一个空格。</p>
+<ol start="6">
+<li><strong>字符实体</strong></li>
+</ol>
+<p><em>什么是字符实体？</em>比如我们想在网页上显示一个<code>&lt;</code>,但<code>&lt;</code>在HTML中是文档标记的开始标记。所以需要其他实体名称代替。</p>
+<p><strong>注意！</strong>：实体名称对大小写敏感！</p>
+<table>
+<thead>
+<tr><th>显示结果</th><th>描述</th><th>实体名称</th><th>实体编号</th></tr>
+</thead>
+<tbody>
+<tr><td></td><td>空格</td><td><code>&amp;nbsp;</code></td><td><code>&amp;#160;</code></td></tr>
+<tr><td>&lt;</td><td>小于号</td><td><code>&amp;lt;</code></td><td><code>&amp;#60;</code></td></tr>
+<tr><td>&gt;</td><td>大于号</td><td><code>&amp;gt;</code></td><td><code>&amp;#62;</code></td></tr>
+<tr><td>&amp;</td><td>和号</td><td><code>&amp;amp;</code></td><td><code>&amp;#38;</code></td></tr>
+<tr><td>&quot;</td><td>引号</td><td><code>&amp;quot;</code></td><td><code>&amp;#34;</code></td></tr>
+<tr><td>'</td><td>撇号</td><td><code>&amp;apos;</code>(IE不支持)</td><td><code>&amp;#39;</code></td></tr>
+<tr><td>￠</td><td>分（cent）</td><td><code>&amp;cent;</code></td><td><code>&amp;#162;</code></td></tr>
+<tr><td>£</td><td>镑（pound）</td><td><code>&amp;pound;</code></td><td><code>&amp;#163;</code></td></tr>
+<tr><td>¥</td><td>元（yen）</td><td><code>&amp;yen;</code></td><td><code>&amp;#165;</code></td></tr>
+<tr><td>€</td><td>欧元（euro）</td><td><code>&amp;euro;</code></td><td><code>&amp;#8364;</code></td></tr>
+<tr><td>§</td><td>小节</td><td><code>&amp;sect;</code></td><td><code>&amp;#167;</code></td></tr>
+<tr><td>©</td><td>版权（copyright）</td><td><code>copy;</code></td><td><code>&amp;#169;</code></td></tr>
+<tr><td>®</td><td>注册商标</td><td><code>&amp;reg;</code></td><td><code>&amp;#174;</code></td></tr>
+<tr><td>™</td><td>商标</td><td><code>&amp;trade;</code></td><td><code>&amp;#8482;</code></td></tr>
+<tr><td>×</td><td>乘号</td><td><code>&amp;times;</code></td><td><code>&amp;#215;</code></td></tr>
+<tr><td>÷</td><td>除号</td><td><code>&amp;divide;</code></td><td><code>&amp;#247;</code></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="二-html的基本结构"></a><a href="#二-html的基本结构" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>二、HTML的基本结构</h2>
+<h3><a class="anchor" aria-hidden="true" id="1-html-内容-html"></a><a href="#1-html-内容-html" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. <code>&lt;html&gt;内容&lt;/html&gt;</code></h3>
+<ul>
+<li>解释：HTML文档的文档标记，也称为HTML开始标记</li>
+<li>功能：这对标记分别位于网页的最前端和最后段：<code>&lt;html&gt;</code>在最前端表示<code>网页的开始</code>,<code>&lt;/html&gt;</code>在最后端表示网页的结束。</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="2-head-内容-head"></a><a href="#2-head-内容-head" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. <code>&lt;head&gt;内容&lt;/head&gt;</code></h3>
+<ul>
+<li>解释：HTML文件头标记，也称为HTML头信息开始标记</li>
+<li>功能：用来包含文件的基本信息，比如网页的<code>标题</code>，<code>关键字</code>，在<code>&lt;head&gt;&lt;/head&gt;</code>内可以放<code>&lt;title&gt;&lt;/title&gt;</code>,<code>&lt;meta&gt;&lt;/meta&gt;</code>,<code>&lt;style&gt;&lt;/style&gt;</code>等标记
+<strong>!注意：</strong>在<code>&lt;head&gt;&lt;/head&gt;</code>标记内的内容不会再浏览器中显示.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="3-title-内容-title"></a><a href="#3-title-内容-title" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. <code>&lt;title&gt;内容&lt;/title&gt;</code></h3>
+<ul>
+<li>解释：HTML文件标题标记</li>
+<li>功能：网页的“主题”，显示在浏览器的窗口的左上边
+<strong>!注意：</strong>网页的标题不能太长，要短小精悍，能具体反应页面的内容，<code>&lt;title&gt;&lt;/title&gt;</code>标记中不能包含其他标记。</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="4-body-内容-body"></a><a href="#4-body-内容-body" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. <code>&lt;body&gt;内容&lt;/body&gt;</code></h3>
+<ul>
+<li><p>解释：HTML文档的主题标记</p></li>
+<li><p>功能：<code>&lt;body&gt;内容&lt;/body&gt;</code>是网页的主体部分，在此标记之间可以包含如<code>&lt;p&gt;&lt;/p&gt;</code>,<code>&lt;h1&gt;&lt;/h1&gt;</code>,<code>&lt;br&gt;</code>,<code>&lt;hr&gt;</code>等标记，正是由这些内容组成了我们所看见的网页。</p></li>
+<li><p>body标记常见属性：</p></li>
+</ul>
+<pre><code class="hljs"><span class="hljs-comment">&lt;!--bgcolor 设置背景颜色--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">bgcolor</span>=<span class="hljs-string">”red”</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--text 设置文本颜色--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">text</span>=<span class="hljs-string">”green”</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--link 设置链接颜色--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">link</span>=<span class="hljs-string">”blue”</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--vlink 设置访问了的链接颜色--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">vlink</span>=<span class="hljs-string">”yellow”</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--alink 正在被点击的链接颜色--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">alink</span>=<span class="hljs-string">”red”</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="5-meta-属性"></a><a href="#5-meta-属性" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. <code>&lt;meta&gt;</code>属性</h3>
+<ul>
+<li><p>解释：页面的元信息(meta-information)</p></li>
+<li><p>功能：提供有关页面的<code>元信息(meta-information)</code>,比如<strong>针对搜索引擎和更新频度的描述和关键词</strong>。</p></li>
+<li><p><strong>必须的属性</strong>：<code>content</code>. 值：some_text, 定义name属性相关的元信息
+常见的属性：<code>name</code></p></li>
+<li><p>常用的name属性:</p></li>
+</ul>
+<pre><code class="hljs"><span class="hljs-comment">&lt;!--author--&gt;</span>
+<span class="hljs-comment">&lt;!--keywords--&gt;</span>
+<span class="hljs-comment">&lt;!--description--&gt;</span>
+<span class="hljs-comment">&lt;!--others--&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"keywords"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"这是一个学习笔记博客"</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p><strong>!注意：</strong><code>meta标记</code>必须放在<code>head元素</code>里面。</p>
+</blockquote>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>第二节课<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"keywords"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"这是学习笔记blog"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">bgcolor</span>=<span class="hljs-string">"white"</span> <span class="hljs-attr">text</span>=<span class="hljs-string">"blue"</span> <span class="hljs-attr">link</span>=<span class="hljs-string">"red"</span> <span class="hljs-attr">vlink</span>=<span class="hljs-string">"gray"</span> <span class="hljs-attr">alink</span>=<span class="hljs-string">"blue"</span>&gt;</span>
+      
+    <span class="hljs-comment">&lt;!--这里是注释--&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>这是一个内容的标题<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://www.baidu.com"</span>&gt;</span>百度<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="三-文档设置标记"></a><a href="#三-文档设置标记" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>三、文档设置标记</h2>
+<h3><a class="anchor" aria-hidden="true" id="1-几种常见格式标记"></a><a href="#1-几种常见格式标记" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. 几种常见格式标记</h3>
+<ol>
+<li><code>&lt;br&gt;</code>:<code>强制换行标记</code>：让后面的文字、图片、表格等显示在下一行。</li>
+</ol>
+<blockquote>
+<p><code>&lt;br&gt;</code>是<code>单标记</code>，只需要在后面加个斜线即可换行：<code>&lt;br/&gt;</code></p>
+</blockquote>
+<ol start="2">
+<li><code>&lt;p&gt;这是新的一段&lt;/p&gt;</code>: <code>换段落标记</code>：换段落。</li>
+</ol>
+<blockquote>
+<p>由于多个空格和回车在HTML会被等效为一个空格，所以HTML中换段落要用<code>&lt;p&gt;</code>,<strong><code>&lt;p&gt;</code>段落中也可以包含<code>&lt;p&gt;</code>段落！</strong></p>
+</blockquote>
+<ol start="3">
+<li><p><code>&lt;center&gt;</code>:<code>居中对齐标记</code>，让段落或者是文字相对于父标记居中显示。</p></li>
+<li><p><code>&lt;pre&gt;一些 字符串&lt;/pr&gt;</code>:<code>预格式化标记</code>，就是显示原始字符串.</p></li>
+<li><p><code>&lt;li&gt;</code>:<code>列表项目标记</code>，和ul或ol配合使用.单独用<code>&lt;li&gt;</code>效果如下：</p></li>
+</ol>
+<p><img src="/Linux-best-practice/blog/assets/2017-02/2017-02-27-2.jpg" alt=""></p>
+<ol start="6">
+<li><code>&lt;ul&gt;</code>:无序列表标记:列表前面为小圆点.效果类似上图。</li>
+</ol>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>第一节课<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>第二节课<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<ol start="7">
+<li><code>&lt;ol&gt;</code>:有序列表标记，可以显示特定的一些顺序.</li>
+</ol>
+<ul>
+<li>最简单的用法：类似上图，只是小圆点变成了数字<code>1、2、3、4...</code></li>
+</ul>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>第一节课<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>第二节课<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+</code></pre>
+<ul>
+<li><code>ol</code> 和<code>li</code>都可以跟符号类型。格式：</li>
+</ul>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">type</span>=<span class="hljs-string">”符号类型”</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">type</span>=<span class="hljs-string">”符号类型”</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">type</span>=<span class="hljs-string">”符号类型”</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p>有序列表的<code>type属性值</code>
+<code>1:阿拉伯数字</code>1,2,3等，默认type属性值
+<code>A:大小写字母</code>A/B/C等
+<code>a:a/b/c</code>等
+<code>I:大写罗马数字</code>等
+<code>i:小写罗马数字</code>等</p>
+</blockquote>
+<ul>
+<li><code>value</code>：制定一个新的序列数字起始值.</li>
+</ul>
+<p>如下显示编号从罗马5到9</p>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"I"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">value</span>=<span class="hljs-string">5</span>&gt;</span>第一节课<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>第二节课<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>第三节课<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>第四节课<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+</code></pre>
+<p>显示结果：
+<img src="/Linux-best-practice/blog/assets/2017-02/2017-02-27-1.jpg" alt=""></p>
+<ul>
+<li>列表可以进行嵌套</li>
+</ul>
+<p><img src="/Linux-best-practice/blog/assets/2017-02/2017-02-27-3.jpg" alt=""></p>
+<ol start="8">
+<li><code>&lt;dl&gt;&lt;dt&gt;&lt;dd&gt;</code>定义型列表：</li>
+</ol>
+<p>适用场合：<strong>对列表条目进行简短的说明.</strong></p>
+<p>格式：<code>&lt;dt&gt;,&lt;dd&gt;</code>都是在<code>dl</code>里面的。</p>
+<pre><code class="hljs"><span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>软件说明：<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>简单介绍软件的功能及基本应用<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>软件界面：<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>用于选择软件的外观<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+</code></pre>
+<p><img src="/Linux-best-practice/blog/assets/2017-02/2017-02-27-4.jpg" alt=""></p>
+<ol start="9">
+<li>9. <hr>水平分割线标记，
+</li>
+<li><p><div>分区显示标记，也称为层标记。
+常用来编排一大段的HTML段落，也可以用于格式化表，和<p>很相似。
+层可以多层嵌套使用。用CSS渲染的时候就很方便了。</p></li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="2-文本标记"></a><a href="#2-文本标记" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. 文本标记</h3>
+<ol>
+<li><code>hn</code> 标题标记：共有6个级别，n的范围1~6，不同级别对应大小不同的标题，h1最大。<code>&lt;h2&gt;标题&lt;/h2&gt;</code></li>
+<li><code>font</code>字体设置标记：设置字体的格式。
+三个常用属性：</li>
+</ol>
+<ul>
+<li>size(字体大小) <code>&lt;font size=&quot;3&quot;&gt;</code>取值范围1~7,浏览器默认是3，</li>
+<li>color(颜色) <code>&lt;font color=&quot;red&quot;&gt;</code></li>
+<li>face(字体) <code>&lt;font face=&quot;微软雅黑&quot;&gt;</code></li>
+</ul>
+<pre><code class="hljs">&lt;font <span class="hljs-attribute">size</span>=7 <span class="hljs-attribute">color</span>=<span class="hljs-string">"red"</span> <span class="hljs-attribute">face</span>=<span class="hljs-string">"宋体"</span>&gt;这是大字号&lt;font&gt;
+</code></pre>
+<ol start="3">
+<li><code>b</code>粗字体标记<code>&lt;b&gt;这是粗体&lt;/b&gt;</code></li>
+<li><code>i</code>斜体字</li>
+<li><code>sub</code>文字下标字体标记 <code>2&lt;sub&gt;2&lt;/sub&gt;</code></li>
+<li><code>sup</code>文字上标字体标记</li>
+<li><code>tt</code>打印机字体标记</li>
+<li><code>cite</code>引用方式的字体，通常是<code>斜体</code>。</li>
+<li><code>em</code>表示强调，通常显示为<code>斜体字</code>。</li>
+<li><code>strong</code>表示强调，通常显示为<code>粗斜体字</code>。</li>
+<li><code>small</code> 小型字体标记,会比正常字体小一号，可以嵌套。<code>&lt;small&gt;&lt;small&gt;这是1号字体&lt;/small&gt;&lt;/small&gt;</code>，但到了最小就不会再小了。</li>
+<li><code>big</code>同上。</li>
+<li><code>u</code>下划线字体标记。</li>
+</ol>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/Linux-best-practice/blog">Recent posts</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#一-html的语法">一、HTML的语法</a></li><li><a href="#二-html的基本结构">二、HTML的基本结构</a><ul class="toc-headings"><li><a href="#1-内容">1. <code>内容</code></a></li><li><a href="#2-内容">2. <code>内容</code></a></li><li><a href="#3-内容">3. <code>内容</code></a></li><li><a href="#4-内容">4. <code>内容</code></a></li><li><a href="#5-属性">5. ``属性</a></li></ul></li><li><a href="#三-文档设置标记">三、文档设置标记</a><ul class="toc-headings"><li><a href="#1-几种常见格式标记">1. 几种常见格式标记</a></li><li><a href="#2-文本标记">2. 文本标记</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Linux-best-practice/" class="nav-home"><img src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Linux-best-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Linux-best-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/Linux-best-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Linux-best-practice/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Linux-best-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Linux-best-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Kaige Dong</section></footer></div></body></html>

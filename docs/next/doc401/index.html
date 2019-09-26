@@ -1,0 +1,459 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Django RESTful系列教程 · Kaige Dong&#x27;s Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="[简书系列](https://www.jianshu.com/p/4d532214d6e0)文章，简直神文。我将使用最新的python 3.7.4 及 Django 2.2重复这个教程。"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Django RESTful系列教程 · Kaige Dong&#x27;s Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kaigedong.github.io/Linux-best-practice/"/><meta property="og:description" content="[简书系列](https://www.jianshu.com/p/4d532214d6e0)文章，简直神文。我将使用最新的python 3.7.4 及 Django 2.2重复这个教程。"/><meta property="og:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Linux-best-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/atom.xml" title="Kaige Dong&#x27;s Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/feed.xml" title="Kaige Dong&#x27;s Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Linux-best-practice/js/scrollSpy.js"></script><link rel="stylesheet" href="/Linux-best-practice/css/main.css"/><script src="/Linux-best-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Linux-best-practice/"><img class="logo" src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site"/><h2 class="headerTitleWithLogo">Kaige Dong&#x27;s Site</h2></a><a href="/Linux-best-practice/versions"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/Linux-best-practice/docs/next/doc1" target="_self">Docs</a></li><li class=""><a href="/Linux-best-practice/docs/next/doc4" target="_self">API</a></li><li class=""><a href="/Linux-best-practice/help" target="_self">Help</a></li><li class=""><a href="/Linux-best-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Scrapy</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Docusaurus<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc1">Docusaurus 构建网站</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc2">Manjaro的安装、配置到GPU</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">First Category<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc9">This is Doc 9</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Second Category<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc3">This is document number 3</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Algorithm<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc100">01两数之和</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc101">232用栈实现队列</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc102">738单调递增的数字</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc103">doc103</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc104">doc104</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Django<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc200">Django简明笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc201">doc201</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc202">doc202</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc203">doc203</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc204">doc204</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Nginx<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc300">Nginx教程</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc301">doc301</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc302">doc302</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc303">doc303</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc304">doc304</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Scrapy<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc400">Scrapy教程</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/docs/next/doc401">Django RESTful系列教程一</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc402">Django RESTful系列教程二</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc403">doc403</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/docs/next/doc404">doc404</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Django RESTful系列教程</h1></header><article><div><span><p><a href="https://www.jianshu.com/p/4d532214d6e0">简书系列</a>文章，简直神文。我将使用最新的python 3.7.4 及 Django 2.2重复这个教程。</p>
+<h2><a class="anchor" aria-hidden="true" id="教程一"></a><a href="#教程一" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>教程一</h2>
+<h2><a class="anchor" aria-hidden="true" id="本章概要"></a><a href="#本章概要" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>本章概要</h2>
+<p>很多的 web 框架都以方便使用而著称，特别是 <code>flask</code> ，一个文件就可以做一个 Hellow world 了，那 <code>django</code> 可以吗？答案时肯定的。同时，我们将会简单的了解下 REST 的概念 。最后，我们将会利用我们才学的知识来编写我们的第一个 REST 项目。</p>
+<blockquote>
+<p>单文件 <strong>django</strong></p>
+<p>REST 是什么</p>
+<p>第一个 Django REST 项目</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="单文件django"></a><a href="#单文件django" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>单文件Django</h2>
+<p>建立一个文件夹<code>test</code>，并创建文件，此时目录为：</p>
+<pre><code class="hljs"><span class="hljs-keyword">test</span>/
+    <span class="hljs-keyword">test</span>.py
+</code></pre>
+<p>在文件中引入需要的包：</p>
+<pre><code class="hljs css language-python"><span class="hljs-keyword">from</span> django.conf <span class="hljs-keyword">import</span> settings
+<span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> HttpResponse
+<span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path
+</code></pre>
+<p>这三行的意思：</p>
+<p><strong>from django.conf import settings</strong>：</p>
+<p><code>settings</code> 是 django 的配置文件钩子，你可以在项目的任何地方引入它，可以通过 <code>.</code> 路径符来访问项目的配置。比如 <code>settings.ROOT_URLCONF</code> 就会返回根 url 配置。关于钩子，我需要多说两句。讲道理，如果需要引用项目配置，标准的写法难道不应该是 <code>import project.settings as settings</code> 吗，这样才能连接到项目的配置啊，为什么我只是引入 django 自己的配置就可以了呢。这就是 django 的神奇之处了，在一切都还没有运行之前，django 首先做的就是加载配置文件，并且把 <code>settings</code> 对象的属性连接到各个配置上。注意，<code>settings</code> 是个对象，所以像 <code>from django.conf.settings import DEBUG</code> 之类的语法是错误的。因为它不是个模块。所以在访问配置时，只能以 <code>settings.&lt;key&gt;</code> 的形式来调用配置。</p>
+<p>首先加载配置文件是一件天经地义的事情，只有知道了各个部分的配置如何，相应的功能才能按照需求运转。请大家记住这一点，这非常重要。在 django 中，加载配置文件有两种方式：</p>
+<blockquote>
+<p>第一种是使用 <code>settings.configure(**settings)</code>
+手动的写每一项配置，这样做的好处是，如果你需要配置的东西不多，那就不单独再建个文件作为配置文件了。</p>
+<p>第二种是使用 <code>django.setup()</code>
+这是通过环境变量来配置的方法。
+<code>django.setup()</code> 方法会自己查询环境变量 'DJANGO_SETTINGS_MODULE` 的值，会把它的值作为配置文件的路径，并读取这个文件的配置。</p>
+</blockquote>
+<p>以上两种方法都可以用来配置 django 。我们这里采用第一种。注意，两种方式必须用一种，也就是说，想要使用 django ，必须对 django 进行配置。</p>
+<p><strong>from django.http import HttpResponse</strong> 用于返回一个响应。</p>
+<p><strong>from django.urls import path</strong> 用于配置 urlpatterns 。</p>
+<hr>
+<p>首先，让我们来编写配置，在 <code>test.py</code>下一行接着写: test.py</p>
+<pre><code class="hljs css language-python">setting = {
+    <span class="hljs-string">'DEBUG'</span>:<span class="hljs-literal">True</span>,
+    <span class="hljs-string">'ROOT_URLCONF'</span>:__name__
+}
+
+settings.configure(**setting)
+</code></pre>
+<p>我们只是进行了简单的配置，设置 <code>DEGUB</code> 为 <code>True</code> 是因为我们想要在出错时能看到错误报告。设置 <code>ROOT_URLCONF</code> 为 <code>__name__</code> 也就是这个文件本身，也就是说，我们打算把 <code>urlpatterns</code> 这个变量写进这个文件中。</p>
+<p>接下来让我们编写视图，在 <code>test.py</code> 加入以下代码</p>
+<pre><code class="hljs css language-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">home</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">'Hello world!'</span>)
+urlpatterns = [path(<span class="hljs-string">''</span>,home,name=<span class="hljs-string">'home'</span>)]
+</code></pre>
+<p>该如何运行呢？一般情况下，我们是用 <code>manage.py</code> 来运行的。那 <code>manage.py</code> 又是怎么运行的？在 <code>manage.py</code> 内部，它调用了 django 的 <code>exute_from_command_line(**command_line_args)</code> 方法来运行我们的应用，所以，把这部分代码添加到最后（实际上，这是从 <code>manage.py</code> 复制粘贴过来的，去掉了不必要的部分，大家也可以这么做，嘿嘿嘿）：</p>
+<p>到目前为止，你的代码应该是这样的：</p>
+<pre><code class="hljs css language-python"><span class="hljs-keyword">from</span> django.conf <span class="hljs-keyword">import</span> settings
+<span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> HttpResponse
+<span class="hljs-keyword">from</span> django.urls <span class="hljs-keyword">import</span> path
+
+setting = {
+    <span class="hljs-string">'DEBUG'</span>: <span class="hljs-literal">True</span>,
+    <span class="hljs-string">'ROOT_URLCONF'</span>: __name__
+}
+settings.configure(**setting)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">home</span><span class="hljs-params">(request)</span>:</span>
+    <span class="hljs-keyword">return</span> HttpResponse(<span class="hljs-string">'Hello world!'</span>)
+
+urlpatterns = [
+    path(<span class="hljs-string">''</span>, home, name=<span class="hljs-string">'home'</span>),
+]
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">'__main__'</span>:
+    <span class="hljs-keyword">import</span> sys
+    <span class="hljs-keyword">from</span> django.core.management <span class="hljs-keyword">import</span> execute_from_command_line
+    execute_from_command_line(sys.argv)
+</code></pre>
+<p>回到 <code>test</code> 目录下，在终端运行 <code>python test.py runserver</code> ，然后在浏览器访问 <code>127.0.0.1:8000</code> ，不出意外的话，你会看到浏览器上有个 <code>hello world</code>。</p>
+<p>我们仅仅用了 19 行代码就完成了一个单文件的 django 应用。其实它的原理很简单，就是把以前分开的代码给放在了一起，<code>urls.py</code>是 <code>tes.py</code> ,·<code>settings.py</code>是 <code>test.py</code> ，<code>views.py</code>是<code>test.py</code>，甚至连 <code>manage.py</code> 也是 <code>test.py</code> 。
+这个小 demo 意义在于让大家了解 django 在运行的时候都发生了些什么，了解 django 的运行流程，为以后的开发打下基础。</p>
+<h2><a class="anchor" aria-hidden="true" id="rest-是什么"></a><a href="#rest-是什么" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>REST 是什么</h2>
+<h3><a class="anchor" aria-hidden="true" id="先有个印象"></a><a href="#先有个印象" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>先有个印象</strong></h3>
+<p><strong>REST</strong>的种种好处我不再赘述。简单的说说为什么我们需要用 <strong>REST</strong> 。相信写过模板的同学都知道，只要哪怕页面中的数据有一丝丝变动，那整个页面都需要重新渲染，这对性能无疑是巨大的浪费，并且页面中只有一些元素会和数据相联系，比如列表中的 <code>&lt;li&gt;</code> 元素，如果数据有变化，能直接只更新 <code>&lt;li&gt;</code> 元素就好了，<strong>REST</strong> 就是为此而生。
+提到 <strong>REST</strong> ，很多人可能知道一些概念，比如我们将要做的前后端分离的项目会用到它，大概明白它可以用用 <strong>json</strong> 来交换数据。<strong>REST</strong> 不是什么具体的软件或者代码，而是一种思想。这么说就太抽象了，<strong>REST</strong> 刚出来的时候是以论文的形式提出的，是一种设计的形式。对它的概念我们就先了解到这里。在本章，我们就把 <strong>REST</strong> 简单的当作是不再让 django 来渲染我们的前端，而是用 JS 在前端请求数据，用 JS 来渲染我们的页面。让 django 专注于后端的数据处理。</p>
+<h3><a class="anchor" aria-hidden="true" id="我们的-rest"></a><a href="#我们的-rest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>我们的 REST</strong></h3>
+<p>为了明确我们的 <strong>REST</strong> 开发，我们的前后端的分工大概如下：</p>
+<p>客户端（浏览器）----&gt; 前端页面-----&gt; 后端处理数据，并把数据以 json 形式发送到前端</p>
+<p>我们的 <strong>REST</strong> 设计目前就是这样，实际上，<strong>REST</strong> 的抽象架构也就是这样的，</p>
+<h2><a class="anchor" aria-hidden="true" id="第一个rest项目"></a><a href="#第一个rest项目" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>第一个REST项目</strong></h2>
+<p>这个项目的意义在于让大家了解 <strong>REST</strong> 的大致开发流程，踩踩需要踩的坑。这次我们会做一个简单的在线代码执行系统，由于不会用到数据库和模版，所以我们就使用刚才学习的单文件 django 来开发这个应用。</p>
+<blockquote>
+<p>注意，在开发这个应用时，需要你对 <code>JavaScript</code> 和 <code>JQuery</code> 有最基本的了解，要是你对他们还不了解，那就在敲代码时多多查阅文档，在练习当中学会他们。同时我们还会使用 <code>Bootstrap</code> 。在跟随教程敲代码时，注意多翻翻文档，一边敲一边查看文档，搞明白每一行代码是是什么意思。同时，代码注释也是很好的文档搜索关键词。</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="设计应用"></a><a href="#设计应用" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>设计应用</strong></h3>
+<p>我们希望在用户访问我们的主页，并能在页面中编写python代码，在点击执行按钮时，主页上能返回程序执行的结果。</p>
+<pre><code class="hljs css language-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"zh-CN"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"X-UA-Compatible"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"IE=edge"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>在线 Python 解释器<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"anonymous"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>&gt;</span><span class="css">
+    <span class="hljs-selector-id">#run</span> {
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">20%</span>; <span class="hljs-comment">/*规定按钮的宽度*/</span>
+        <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">10px</span>; <span class="hljs-comment">/*留出和输入框的间距*/</span>
+    }
+    <span class="hljs-selector-id">#code</span> {
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">25px</span>;
+        <span class="hljs-attribute">resize</span>: none;
+    }
+    <span class="hljs-selector-id">#output</span> {
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">25px</span>;
+        <span class="hljs-attribute">resize</span>: none;
+    }
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><span class="hljs-comment">&lt;!--在下面的注释中 bs 代表 bootstrap --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span><span class="hljs-comment">&lt;!-- 页面的整体布局 --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span> <span class="hljs-comment">&lt;!-- 这一行单独用来放标题 --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-lg-12"</span>&gt;</span> <span class="hljs-comment">&lt;!-- 根据 bs规定，所有内容应放在 col 中。这一列占满一行 --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center h1"</span>&gt;</span> <span class="hljs-comment">&lt;!-- text-center 是 bs 中央排版类，h1 是 bs 一号标题类 --&gt;</span>
+            在线 Python 解释器
+          <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span><span class="hljs-comment">&lt;!-- 标题和真正内容的分割线 --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span><span class="hljs-comment">&lt;!-- 这一行用来放置主要内容 --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-lg-6"</span>&gt;</span><span class="hljs-comment">&lt;!-- 代码输入部分 --&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center h3"</span>&gt;</span>
+            在下面输入代码
+          <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"code"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Your code here."</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-right"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"run"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary "</span>&gt;</span>运行<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-lg-6"</span>&gt;</span><span class="hljs-comment">&lt;!-- 结果显示部分 --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center h3"</span>&gt;</span>运行结果<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"col-lg-12"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"output"</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Please input your code and click &lt;run&gt; button to excute your python script"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"text-center form-control"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"</span> <span class="hljs-attr">integrity</span>=<span class="hljs-string">"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"</span> <span class="hljs-attr">crossorigin</span>=<span class="hljs-string">"anonymous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-comment">// 改变大小函数</span>
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">changeSize</span>(<span class="hljs-params">ele</span>) </span>{
+            $(ele).css({<span class="hljs-string">'height'</span>: <span class="hljs-string">'auto'</span>, <span class="hljs-string">'overflow-y'</span>: <span class="hljs-string">'hidden'</span>}).height(ele.scrollHeight)
+        }
+        <span class="hljs-comment">// 应用到输入框</span>
+        $(<span class="hljs-string">'#code'</span>).each(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            <span class="hljs-keyword">this</span>.oninput = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                changeSize(<span class="hljs-keyword">this</span>)
+            }
+        })
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>页面效果为：</p>
+<p><img src="/Linux-best-practice/docs/assets/image-20190923163108186.png" alt="image-20190923163108186"></p>
+<p>现在重头来了，我们将实现前端页面和后端的交互部分。
+同样的，我们先来完成对交互的设计。我们希望这样来交互：
+用户点击 <code>运行</code> 按钮时，js 自动发送输入框的代码，待后端处理完之后，接收来自后端的结果，然后再把结果显示在输出框内。我们希望我们用 <code>POST</code> 方法向后端的 <code>/api/</code> 路径发送用户代码。</p>
+<p>在真正开始开发之前，在这里我们会用到一个东西，叫做 <code>ajax</code>，它相当于前端的 <code>requests</code> ，为我们提供了 js 向 URL 发送请求的功能，只是功能没 <code>requests</code> 那么强大，jquery 提供了 ajax 支持，所以我们直接使用就好了。不过我建议，对 ajax 不了解的的同学，现在最好打开 jquery 的 ajax 部分的文档，在跟随代码时对照着看。</p>
+<p>先获取用户输入框代码:</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">//获取输入框代码</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getCode</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">return</span> $(<span class="hljs-string">'#code'</span>).val()
+}
+<span class="hljs-comment">//打印结果到输出框并改变输出框大小</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">print</span>(<span class="hljs-params">data</span>)</span>{
+    <span class="hljs-keyword">var</span> ele = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'output'</span>)
+    output.value = data[<span class="hljs-string">'output'</span>]
+    changeSize(output)
+}
+</code></pre>
+<p>需要注意的是，我们的打印函数最终是作为 ajax 请求成功之后的回调函数来使用的，ajax 会自动往里面传入一个 data 参数，这个 data 是响应数据。我们并没有直接就打印 data ，因为万一后端需要对数据做进一步的分类，比如多一个 status 字段来表示代码执行状态（成功或者失败），那么直接打印 data 就是不合适的做法了。所以我们选择的是提取 data 的 <code>output</code> 字段，这样不管 data 怎么变，只要有 <code>output</code> 参数，我们展示结果的代码就能正常执行。</p>
+<p>最后，把发送代码的动作绑定到点击按钮：</p>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// 点击按钮发送代码</span>
+$(<span class="hljs-string">'#run'</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    $.ajax({
+        <span class="hljs-attr">url</span>:<span class="hljs-string">'/api/'</span>, <span class="hljs-comment">//代码发送的地址</span>
+        type:<span class="hljs-string">'POST'</span>, <span class="hljs-comment">// 请求类型</span>
+        data: {<span class="hljs-string">'code'</span>:getCode()},<span class="hljs-comment">//调用代码获取函数，获得代码文本</span>
+        dataType: <span class="hljs-string">'json'</span>, <span class="hljs-comment">//期望获取的响应类型为 json</span>
+        success: print <span class="hljs-comment">// 在请求成功之后调用 pprint 函数，将结果打印到输出框</span>
+    })
+})
+</code></pre>
+<p>到这里，我们前端的所有内容就算完成了。完整的前端代码大家可以在 <a href="https://link.jianshu.com/?t=https%3A%2F%2Fgithub.com%2FUcag%2Fdjango-rest">github</a> 中找到，就不贴在这里了。接下来，让我们进入后端开发。</p>
+<h2><a class="anchor" aria-hidden="true" id="后端开发"></a><a href="#后端开发" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>后端开发</h2>
+<p>经过了漫长的前端开发，我们终于来到了后端。</p>
+<p>在<code>test.py</code>中添加：</p>
+<pre><code class="hljs css language-python"><span class="hljs-keyword">from</span> django.views.decorators.http <span class="hljs-keyword">import</span> require_POST <span class="hljs-comment"># 目前的 API 视图只能用于接收 POST 请求</span>
+<span class="hljs-keyword">from</span> django.http <span class="hljs-keyword">import</span> JsonResponse <span class="hljs-comment"># 用于返回 JSON 数据</span>
+
+<span class="hljs-meta">@require_POST</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">api</span><span class="hljs-params">(request)</span>:</span>
+    code = request.POST.get(<span class="hljs-string">'code'</span>)
+    output = run_code(code)
+    <span class="hljs-keyword">return</span> JsonResponse(data={<span class="hljs-string">'output'</span>:output})
+    
+urlpatterns = [
+    path(<span class="hljs-string">''</span>, home, name=<span class="hljs-string">'home'</span>),
+    path(<span class="hljs-string">'api'</span>,api,name=<span class="hljs-string">'api'</span>),
+]
+</code></pre>
+<p>下面需要实现<code>run_code</code>模块：</p>
+<p>现在我们来实现 <code>run_code</code> 函数。这个函数会用到你可能不熟悉的模块 <code>subprocess</code> ，我们只是在这里简单的使用 <code>subprocess</code> 封装好了的功能</p>
+<p>考虑 <code>run_code</code> 会遇到的情况：</p>
+<ol>
+<li>能够正确执行来自客户端的代码。也就是说，如果客户端的代码是正确的，那么 <code>run_code</code> 的输出结果也应该是预期的那样。</li>
+<li>当用户代码发生错误时，能够返回错误信息。来自客户端的代码难免会有错误，我们需要像 python 解释器一样返回详尽的错误跟踪信息。</li>
+<li>当用户的代码执行时间过长时，自动中断代码的执行，并在前端给出执行超时提示。有的时候，客户端的代码可能陷入死循环，为了提早让用户知道代码异常，我们应该主动中断代码执行。有的时候用户代码可能是正确的，但是执行时间真的太长，我们也需要中断执行，不能让这个进程一直占用系统资源。一旦用户过多，系统资源很快就会支撑不住</li>
+</ol>
+<p>在<code>test.py</code>中添加：</p>
+<pre><code class="hljs css language-python"><span class="hljs-keyword">import</span> subprocess
+
+<span class="hljs-comment"># 执行客户端代码核心函数</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">run_code</span><span class="hljs-params">(code)</span>:</span>
+    <span class="hljs-keyword">try</span>:
+        output = subprocess.check_output([<span class="hljs-string">'python'</span>,<span class="hljs-string">'-c'</span>,code],
+                universal_newlines=<span class="hljs-literal">True</span>,
+                stderr=subprocess.STDOUT,
+                timeout=<span class="hljs-number">30</span>)
+    <span class="hljs-keyword">except</span> subprocess.CalledProcessError <span class="hljs-keyword">as</span> e:
+        output = e.output
+    <span class="hljs-keyword">except</span> subprocess.TimeoutExpired <span class="hljs-keyword">as</span> e:
+        output = <span class="hljs-string">'\r\n'</span>.join([<span class="hljs-string">'Time Out!!!'</span>,e.output])
+    <span class="hljs-keyword">return</span> output
+</code></pre>
+<blockquote>
+<p>universal_newlines 将binary转为字符串输出， stderr=subprocess.STDOUT 将标准错误重定向到标准输出，这样就能传递给<code>output</code></p>
+</blockquote>
+<p>现在就完成了第一个REST APP，在下一章，我们将会深入 REST ，我们将会制作一个符合 REST 标准的 APP ，以此来熟悉 REST 标准，同时了解 REST 最核心的概念————一切皆资源。</p>
+<h2><a class="anchor" aria-hidden="true" id="第二章"></a><a href="#第二章" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>第二章</h2>
+<blockquote>
+<p>REST 的一般规范</p>
+<p>Django 的项目结构设计</p>
+<p>Mixin 的编写与应用</p>
+<p>了解并运用 UI “状态” 概念</p>
+<p>建立起前端模块化思想</p>
+</blockquote>
+<p><img src="/Linux-best-practice/docs/assets/4245304-d3495c684f98be59.gif" alt="4245304-d3495c684f98be59"></p>
+<p>我们可以很明显的看到，虽然我们进行了诸多操作，但是页面从来没有刷新过。左边的列表 UI 是动态刷新的。大家可以自己先运行着玩玩。代码在<a href="https://link.jianshu.com/?t=https%3A%2F%2Fgithub.com%2FUcag%2Fdjango-rest%2Ftree%2Fmaster%2FChapter-two%2Fonline_intepreter_project">这里</a></p>
+<h3><a class="anchor" aria-hidden="true" id="rest-是什么-1"></a><a href="#rest-是什么-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>REST 是什么？</h3>
+<p>在网上能找到很多的资料，但是大多的 REST 相关的资料都显得诘屈聱牙，晦涩难懂。其实这也不怪那些作者，因为 REST 这个名字就很让人感觉到头痛。 让我们来慢慢梳理下这个在我们教程标题中的重要概念。</p>
+<p>REST 是用来干什么的？ REST 这个晦涩的概念如同其它计算机概念一样，有的时候我们根本不知道它到底是怎么一回事，但是我们却可以熟练的使用它。最典型的例子就是，虽然我们大家都在写 Django ，但是又有多少人能清楚的解释 MTV 模式是什么呢？这就像是做数学题，虽然我不明白解方程中的换元思想，但是我在不知不觉中就用到了它。 当我们提到 REST 的时候，后面通常会跟一个词——API 。所以在一般的概念里，大家都把 REST 作为一种 API 的设计规范来理解。 所以 REST 就是用来设计 API 的吗？至少到目前为止，我们所了解的 REST 就是用来设计 API 的。它规定了一堆很烦人的规矩，让你去遵守它的规则，把你的代码约束在一个固定的格式里。甚至在有的公司里，他们对 REST 的态度是完全不理睬的。好吧，这是人的天性，不喜欢被各种规矩所束缚，也不能怪他们。正如我不喜欢按时起床一样，虽然起得来，但是我就是想要躺在床上。感觉自己冥冥之中在和什么东西作斗争。我们在编写 API 的时候也在作斗争，想要清晰明确的表达 API 的语义，又不想将代码写的太繁琐。有的时候为了解析参数，如果设计不当，你还会不得不自己手写一个 parser 来解析你的 URL 参数。真是烦人。</p>
+<p>REST 就是将我们从灾难中解救出来的东西。现在让我们来正式的认识一下它。REST ，全称是 Representational State Transfer，中文翻译是： 资源的表现层状态转换。好了，我想你看到这第一句就已经不想看了。WTF！ 感觉中文都不通啊，这还理解个什么？？？淡定淡定。仅仅是为了尊重下将这个概念提出来的作者 Roy Felding ，他在他的论文《基于网络的软件架构》 中提出了这个概念。 我也不打算把这个概念解释给你听。我对于学习的哲学是：知识的习得来源于知识对你的启发。所以，我会带着大家来探索下，这个概念是个什么东西。现在，请你忘记 REST 这个概念。 忘记你曾经对 REST 的任何了解。</p>
+<p>假设你是个仓库管理员，管着一个巨大的仓库。不仅看守着大门，还管理着从库的进进出出，虽然仅仅是个小小的管理员，但你已经俨然是个仓库经理的样子了。为了更好的管理仓库，你决定，每个进来拿货的人，都必须出示相关的凭证。凭证上必须有身份证明，如果你是来取货，那就还必须要有取货证明，如果是来运货，那就必须有运货证明。你每天守在大门前，兢兢业业的工作，但是却发现，随着生意到了旺季，每天来来往往的人多起来，你一个人恨不得分身成 8 个，4 个负责管进货的，4 个管出货的。仓库门前那惟一一条路都快被来往的汽车车轮上的泥给染成黄色了。累得够呛。感觉身体透支了。你必须想办法解决下这个问题。</p>
+<p>为了能够快速的检查凭证，你在仓库入口的最前面搭了个小棚，专门检查他们的凭证。而且，为了节约时间，不让他们一拿就拿一堆资料出来，你规定所以的凭证相关信息都必须分门别类的写到一张纸上。你现在只看他们一张纸！是的，管理员就是可以为所欲为，通过了验证就盖个章；等他们凭证检查通过之后，再根据他们凭证上提供的信息，看看他们是要干什么。你多开了两个仓库进出口，进货的人就从左边走，出货的从右边走，来打理仓库的从中间走。不让他们都挤到一条路上。统一从后门出去。进货的顺着左边那条路只能到一个空空的仓库间，供给他们卸货；出货的顺着右边的路只能到一个小小的出货间，他们把车后面的仓库门对准出货间的出口，货物就会顺着流水线自己划到他们的车上。当然，哪些货物可以被运到车上都是由在门口小棚的你来通过电脑全权控制的。打理仓库的人只能进到自己的仓库间，随便他们在仓库间里做什么，做完了就从后门走；所有的货物都用大纸箱包装，进行统一的管理。这样，你每天就坐在小棚里，既没有以前那没累了，工作也更加的有条理。效率提高了一大截。</p>
+<p>这个小故事编的有些蹩脚，不过它还是完美诠释了对于 REST 的理解。我们的数据库就是小故事中的仓库，而 URL 就是我们的大门。 在以前，对数据库做增加或者修改的操作都是由 POST 来完成的。 正如你改革仓库之前的那样，大家都走一条路。 在改革之后，大家各走各的路。 我们的 URL 也需要各走各的路。 往数据库增加东西，请你用 POST 方法请求，修改请你用 PUT 方法来访问。
+查询数据库，请你用 GET 请求。 当然，最重要的是，把凭证都写到一张纸上。 这张纸是什么呢？就是我们的请求头，请不要 POST 里面有你的 UserAgent 信息，也不要把你的验证信息放在 POST 里，把你是谁，你想干什么，你的权限有哪些都放到请求头里。好让我一看你的请求头就知道你要干什么。</p>
+<p>到这里，你可能还是会没多大感觉。不就是 POST 增加, PUT 修改， GET 获取详细信息吗？看看我们在故事里还遗漏了什么？那就是我们多开了出口。出口是什么？就是个管进出的大门吗？请你换种思维。进出口，也是一种资源。进出口也是你管理的众多资源之一。同样的道理，请求头也是资源。
+你修路增加进出口，是在改变“进出口”这个资源，你给凭证上面盖个章，是在改变凭证这个资源。所以，URL 的 Header 也是资源。在用户访问一次之后，你给用户的 cookie 做变动的时候，就是在改变 cookie 这个资源。当你决定用 PUT 来修改资源的时候，是在改变请求方式这个资源。 不仅仅只有数据库是资源。把仓库里的货物规定统一用大纸箱包装，不管这些货物原来是什么样子，在他们从仓库里运出来的时候看到的就是一个个个大纸箱。统一他们的规格。我们的 API 也是同理，不管你后端的资源是什么形式，我可以用 JSON ，可以用 XML 来表示他们。这些资源可能原来是在数据库里的二进制数据，也可能是文本文档，也可能是一个 excel 表格。但是当他们被展示在前端时，他们都统一转化为了一模一样的形式。</p>
+<p>所以 REST 是什么，REST 是一套对资源进行操作和展示的规范。这套规范虽然出生于一篇关于网络的论文，但是这并不妨碍将它运用到仓库管理上。</p>
+<h2><a class="anchor" aria-hidden="true" id="设计-api"></a><a href="#设计-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>设计 API</h2>
+<p>在了解 REST 的核心概念——一切皆资源之后，让我们来看看，它是怎么具体运用到 API 上的。
+很简单，就以下几个点。</p>
+<ul>
+<li>一切皆是资源。不仅仅是对数据库的请求是资源。包括网页中的图片，音乐， cookie ，session 都是资源。</li>
+<li>展示资源。原来的资源可能是表格，可能是文本。但是可以用 XML, JSON 等方式来展示他们</li>
+<li>每一个资源的每一个状态都应该有唯一的操作方式。
+<ul>
+<li>POST 增加资源</li>
+<li>GET 请求资源</li>
+<li>PUT 修改资源</li>
+<li>DELETE 删除资源</li>
+</ul></li>
+<li>所以，资源——视一切为资源，展示——不管资源原来是什么形式，可以用 XML、JSON 等来展示他们，状态——被增加、被修改、被查看、被删除。连起来就是 资源的表现层状态转换。 这下就清晰多了。</li>
+</ul>
+<p>在 API 的设计共识里，我们的 API 应该包含以下几点：</p>
+<ul>
+<li>版本信息。让 API 的使用者清晰的知道使用的 API 是什么版本。</li>
+<li>使用名词的复数形式。比如： <code>http://example.com/users/</code></li>
+<li>请求动词分工明确。GET 就仅仅是请求资源，不会对被请求的资源有任何影响。 POST 就是增加资源，不能修改资源。</li>
+<li>命名规范统一，不能混用。
+<ul>
+<li>驼峰式。<code>http://www.example.com/oldMan/</code></li>
+<li>蛇形。<code>http://www.example.com/old_man/</code></li>
+</ul></li>
+<li>内容协商。内容协商就是，用户希望以什么形式来展现资源。可以是 JSON 可以是 XML 可以是 IMAGE ，可以是 text 。</li>
+<li>请求的所有元信息都放在请求头。</li>
+<li>当有其它资源动作时，在不违背基本的资源操作前提下，以 URL 参数的形式传递动作。比如：<code>http://www.example.com/users/?age=18&amp;sex=girl</code></li>
+<li>返回正确的状态信息。比如大家最常见的 404 。</li>
+</ul>
+<p>根据以上的知识，我们将要为我们的在线 Python 解释器应用设计 API 。</p>
+<p>其中，<code>&lt;arguement&gt;</code> 代表 URL 参数 arguement 。</p>
+<ul>
+<li>添加代码：
+<ul>
+<li>POST <code>/v1/codes/</code></li>
+</ul></li>
+<li>获取所有 code 实例：
+<ul>
+<li>GET <code>/v1/codes/</code></li>
+</ul></li>
+<li>获取指定 code 实例：
+<ul>
+<li>GET <code>/v1/codes/&lt;pk&gt;/</code></li>
+</ul></li>
+<li>修改指定 code 实例：
+<ul>
+<li>PUT <code>/v1/codes/&lt;pk&gt;/</code></li>
+</ul></li>
+<li>删除指定 code 实例：
+<ul>
+<li>DELETE <code>/v1/codes/&lt;pk&gt;/</code></li>
+</ul></li>
+<li>运行代码：
+<ul>
+<li>POST <code>/v1/codes/run/</code>
+为什么用 POST ？ 因为运行代码也是向后台传送新的代码资源的方式。</li>
+</ul></li>
+<li>运行特定代码实例：
+<ul>
+<li>GET <code>/v1/codes/run/&lt;pk&gt;/</code></li>
+</ul></li>
+<li>运行并保存代码实例：
+<ul>
+<li>POST <code>/v1/codes/run/?save=true</code></li>
+</ul></li>
+<li>修改并运行特定代码实例：
+<ul>
+<li>PUT <code>/v1/codes/run/&lt;pk&gt;/?save=true</code></li>
+</ul></li>
+</ul>
+<p>要是用 Django 的方式把我们的 URL 写出来的话，就是这个样子的：</p>
+<pre><code class="hljs css language-python">code_api = [
+    url(<span class="hljs-string">r'^$'</span>, generic_code_view, name=<span class="hljs-string">'generic_code'</span>),  <span class="hljs-comment"># code 集合操作</span>
+    url(<span class="hljs-string">r'^(?P&lt;pk&gt;\d*)/$'</span>, detail_code_view, name=<span class="hljs-string">'detail_code'</span>),  <span class="hljs-comment"># 访问某个特定对象</span>
+    url(<span class="hljs-string">r'^run/$'</span>, run_code_view, name=<span class="hljs-string">'run_code'</span>),  <span class="hljs-comment"># 运行代码</span>
+    url(<span class="hljs-string">r'^run/(?P&lt;pk&gt;\d*)/$'</span>, run_code_view, name=<span class="hljs-string">'run_specific_code'</span>)  <span class="hljs-comment"># 运行特定代码</span>
+]
+api_v1 = [url(<span class="hljs-string">'^codes/'</span>, include(code_api))]  <span class="hljs-comment"># API 的 v1 版本</span>
+api_versions = [url(<span class="hljs-string">r'^v1/'</span>, include(api_v1))]  <span class="hljs-comment"># API 的版本控制入口 URL</span>
+urlpatterns = [url(<span class="hljs-string">r'^api/'</span>, include(api_versions))],  <span class="hljs-comment"># API 访问 URL</span>
+</code></pre>
+<p>感觉 URL 的复杂度一下子就提升了不少。淡定，仔细看看它的结构，这样的结构随时可以供我们随时进行修改。比如，我们的 API 升级换代了，随时可以添加一个 <code>api_v2</code> 版本进去，而不用去硬编码的修改原来的 API 。这样既可以做到向后兼容，也可以方便的拓展。
+当然，你可以先去体验一下。本章的代码我已经写好。大家可以直接运行试试看，我已经准备好了几个数据进去，运行 <code>python manage.py runserver</code> ，访问 <code>http://127.0.0.1:8000</code>。打开控制台，看看在不同操作下都发送了哪些请求。代码在<a href="https://link.jianshu.com/?t=https%3A%2F%2Fgithub.com%2FUcag%2Fdjango-rest%2Ftree%2Fmaster%2FChapter-two%2Fonline_intepreter_project">这里</a>。</p>
+<h2><a class="anchor" aria-hidden="true" id="开发应用"></a><a href="#开发应用" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>开发应用</h2>
+<h2><a class="anchor" aria-hidden="true" id="前期的知识准备"></a><a href="#前期的知识准备" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>前期的知识准备</h2>
+<p>上部分只会讲解最基本的技术和知识，正式的动手写代码会在下部分进行。</p>
+<h3><a class="anchor" aria-hidden="true" id="mixin"></a><a href="#mixin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mixin</h3>
+<p>Mixin 技术是面向对象编程的一个重要技能。它使得代码的结构更加灵活，提高了代码的复用性。在实现一个功能时，根据需要的 Mixin 搭积木就好了，特别的方便。在我们的应用中，我们将会大量的使用 Mixin 技术，并且，Mixin 技术在 Django 中也被频繁的应用。所以掌握 Mixin 是很必要的。</p>
+<p>Mixin 技术能够产生，还是得益于对象的可继承性。</p>
+<pre><code class="hljs css language-python"><span class="hljs-comment"># 比如我有一个对象叫做 Man</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,name, age, height)</span>:</span>
+        self.name = name
+        self.age = age
+        self.height = height
+
+<span class="hljs-comment"># 我想让他会抽烟，于是我写了个抽烟 Mixin:</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SmokeMixin</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">smoke</span><span class="hljs-params">(self)</span>:</span>
+        print(<span class="hljs-string">'饭后一支烟，赛过活神仙！'</span>)
+
+<span class="hljs-comment"># 我还想让他会挣钱，于是写了个挣钱 Mixin：</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MakeMoneyMixin</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">make_money</span><span class="hljs-params">(self)</span>:</span>
+        print(<span class="hljs-string">'面向工资编程中'</span>)
+
+<span class="hljs-comment"># 我想让他有个老婆：    </span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WifeMixin</span>:</span>
+    wife = <span class="hljs-literal">None</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_wife</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">'我的老婆叫{}'</span>.format(self.wife)
+
+<span class="hljs-comment"># 最后，这个 Man 成了这样的人      </span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyMan</span><span class="hljs-params">(SmokeMixin, WifeMixin, MakeMoneyMixin, Man)</span>:</span>
+    wife = <span class="hljs-string">'王翠花'</span> 
+
+my_man = MyMan(name=<span class="hljs-string">'老王'</span>,age=<span class="hljs-number">30</span>,height=<span class="hljs-number">170</span>)
+my_man.smoke() <span class="hljs-comment"># 饭后一支烟，赛过活神仙！</span>
+my_man.make_money() <span class="hljs-comment"># 面向工资编程中</span>
+my_man.get_wife() <span class="hljs-comment"># 我的老婆叫王翠花</span>
+
+
+<span class="hljs-comment"># 但是每个男人都是不同的，因为有的男人也单身：</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SingleMan</span><span class="hljs-params">(SmokeMixin, MakeMoneyMixin)</span>:</span>
+    <span class="hljs-keyword">pass</span>
+sig_man = SingleMan(name=<span class="hljs-string">'老李'</span>,age=<span class="hljs-number">25</span>,height=<span class="hljs-number">165</span>)
+sig_man.smoke() <span class="hljs-comment"># 饭后一支烟，赛过活神仙！</span>
+sig_man.make_money() <span class="hljs-comment"># 面向工资编程</span>
+
+</code></pre>
+<p>这样我们就可以创造出很多个不同的男人，他们有相同点，也有不同点，我们要做的仅仅是把 Mixin 积木搭上去。我们的第二个男人的定义甚至只有一个 <code>pass</code> 。这种写法在大型工程里非常常见，只有一个 <code>pass</code> ，但是却有着丰富的功能。我们项目的视图就使用了 Mixin 技术：</p>
+<pre><code class="hljs css language-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">APICodeView</span><span class="hljs-params">(APIListMixin,  # 获取列表
+                  APIDetailMixin,  # 获取当前请求实例详细信息
+                  APIUpdateMixin,  # 更新当前请求实例
+                  APIDeleteMixin,  # 删除当前实例
+                  APICreateMixin,  # 创建新的的实例
+                  APIMethodMapMixin,  # 请求方法与资源操作方法映射
+                  APIView)</span>:</span>  <span class="hljs-comment"># 记得在最后继承 APIView</span>
+    model = CodeModel  <span class="hljs-comment"># 传入模型</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">list</span><span class="hljs-params">(self)</span>:</span>  <span class="hljs-comment"># 这里仅仅是简单的给父类的 list 函数传参。</span>
+        <span class="hljs-keyword">return</span> super(APICodeView, self).list(fields=[<span class="hljs-string">'name'</span>])
+</code></pre>
+<p>这已经是 CodeAPI 完整代码了，我们并没有在视图中手动的编写功能，只是简单的继承了 Mixin ，我们甚至都没有写 <code>get</code>，<code>post</code>, 等方法，在 Mixin 中也没有写！这些神奇的功能和特性都是由 Mixin 提供的。具体的编写方法我们将会在第二章的下部分进行讲解。保持你的好奇心，或者现在翻到文章开头，去 github 看看这些神奇的 Mixin 是如何编写的。</p>
+<h2><a class="anchor" aria-hidden="true" id="状态"></a><a href="#状态" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>状态</h2>
+<p>这是前端的知识点。在大家编写前端的时候，一定要把逻辑思维转换为视觉思维。比如，当你看到一盏灯亮了的时候，你的第一反应一定是“灯亮了”，而不是“电流通过导线，让灯丝发热发光了”。你看到一辆汽车从禁止变成了运动的状态，你不可能想到的是“摩擦力反作用于车轮让汽车动了起来”。所以，当页面中的 UI 发生变化时，<strong>变化的是 UI 的状态</strong>。一盏灯有熄灭和点亮两种状态，一辆车有发动和禁止的状态，一个人有吃饭，睡觉，走路等状态。拿我们应用中的表格来说，它的状态就是有多少行。比如，原来只有 5 行，你添了一行上去，就变成了 6 行，此时这张表格从有 5 行的状态变成了 6 行的状态。 这就是状态。
+UI 的状态，就是它的样子，UI 的样子是由它相关联的数据决定的。这是很重要的概念，在我们编写我们项目的前端时会发挥巨大作用。同时，这也是为讲解 flux 和 Vuex 打下基础。</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/Linux-best-practice/docs/next/doc400"><span class="arrow-prev">← </span><span>Scrapy教程</span></a><a class="docs-next button" href="/Linux-best-practice/docs/next/doc402"><span>Django RESTful系列教程二</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#教程一">教程一</a></li><li><a href="#本章概要">本章概要</a></li><li><a href="#单文件django">单文件Django</a></li><li><a href="#rest-是什么">REST 是什么</a><ul class="toc-headings"><li><a href="#先有个印象"><strong>先有个印象</strong></a></li><li><a href="#我们的-rest"><strong>我们的 REST</strong></a></li></ul></li><li><a href="#第一个rest项目"><strong>第一个REST项目</strong></a><ul class="toc-headings"><li><a href="#设计应用"><strong>设计应用</strong></a></li></ul></li><li><a href="#后端开发">后端开发</a></li><li><a href="#第二章">第二章</a><ul class="toc-headings"><li><a href="#rest-是什么-1">REST 是什么？</a></li></ul></li><li><a href="#设计-api">设计 API</a></li><li><a href="#开发应用">开发应用</a></li><li><a href="#前期的知识准备">前期的知识准备</a><ul class="toc-headings"><li><a href="#mixin">Mixin</a></li></ul></li><li><a href="#状态">状态</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Linux-best-practice/" class="nav-home"><img src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Linux-best-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Linux-best-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/Linux-best-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Linux-best-practice/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Linux-best-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Linux-best-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Kaige Dong</section></footer></div></body></html>

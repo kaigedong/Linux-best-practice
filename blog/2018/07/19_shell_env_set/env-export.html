@@ -1,0 +1,324 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>shell变量及进程及set,env,export · Kaige Dong&#x27;s Site</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="shell中，有三种变量：`系统变量`，`环境变量`，`用户变量`。"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="shell变量及进程及set,env,export · Kaige Dong&#x27;s Site"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kaigedong.github.io/Linux-best-practice/blog/2018/07/19_shell_env_set/env-export"/><meta property="og:description" content="shell中，有三种变量：`系统变量`，`环境变量`，`用户变量`。"/><meta property="og:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://kaigedong.github.io/Linux-best-practice/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/Linux-best-practice/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/atom.xml" title="Kaige Dong&#x27;s Site Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kaigedong.github.io/Linux-best-practice/blog/feed.xml" title="Kaige Dong&#x27;s Site Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/Linux-best-practice/js/scrollSpy.js"></script><link rel="stylesheet" href="/Linux-best-practice/css/main.css"/><script src="/Linux-best-practice/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/Linux-best-practice/"><img class="logo" src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site"/><h2 class="headerTitleWithLogo">Kaige Dong&#x27;s Site</h2></a><a href="/Linux-best-practice/versions"><h3>0.1.5</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/Linux-best-practice/docs/doc1" target="_self">Docs</a></li><li class=""><a href="/Linux-best-practice/docs/doc4" target="_self">API</a></li><li class=""><a href="/Linux-best-practice/help" target="_self">Help</a></li><li class="siteNavGroupActive"><a href="/Linux-best-practice/blog/" target="_self">Blog</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>All blog posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All blog posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/09/20/scrapy_to_search_engine_Introduction">1.爬虫课程的介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Python_sorting">Python排序算法</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Learn_make_Donot_starve_mods">学习制作饥荒mod</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/Donot_starve_mod1">饥荒mod1</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/04/09/python_virtual_env">virtualenv 和 pyenv的使用</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/16/Wuenda_machine_learning">吴恩达机器学习笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/13/Django-Apache-wsgi-_deploy">Django+Apache wsgi 部署</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/12/Apache-deploy-Django">Apache 部署 Django</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09/pytorch-60min">PyTorch 60min教程</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09/no_root_install_Apache">无root安装Apache</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/07/GIVEinstall">GIVE安装笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/06/wali_v2ray">搬瓦工2: v2ray</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/16/Curses-python3-7">Curses_python3.7</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/05/12/wali_note">搬瓦工笔记1：ssr</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/19/DQN_5">强化学习实战：从零开始下五子棋</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17/DQN_Sarsa">强化学习之Sarsa</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17/DQN_Sarsa-lambda">增强学习之Sarsa(lambda)</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/16/DQN_Q-learning">深度学习02之Q-learning介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/16/DQN">强化学习介绍与分类01</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/07_shadowsocks_settings">shadowsocks配置</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/Linux-best-practice/blog/2018/07/19_shell_env_set/env-export">shell变量及进程及set,env,export</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/12_Perl/install_models">Perl安装模块与卸载</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/07/11_python_convert_exe_videos">python批量转换exe视频</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09_no_root_install_MySQL">服务器无root安装MySQL</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/05/08_Macinstall_MySQL">Mac安装MySQL &amp; Ubuntu下安装MySQL记录</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/tmus">tmus指南</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17_DQN_DQN">增强学习之DQN介绍</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/17_DQN2/Algo">增强学习之DQN算法</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/17python的decode/encode-与-r-b-u">python的decode/encode 与 r/b/u</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/17_golang_notes">golang笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/12/09_unroot_install_UCSC_genome_browser">modele_name</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/08/13_Acer中Arch安装Secure/boot-EFI-设置">Acer中Arch安装Secure boot EFI 设置</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13_HTMLandCSS_basic_03">HTML与CSS基础03-Web框架与表单设计</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2019/08/20_Linux_crontab">Linux crontab定时任务</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/learn-git">learn-git</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/items2">items2技巧</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_gene_A07-A09">陈巍学基因A07-A09</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_gene_A01-A03">陈巍学基因A01-A03</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/chenwei_geneA04-A06">陈巍学基因A04-A06</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/boxplot">数据可视化之柱状图</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/begin_building_sites">开始建站Hexo+NexT</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/Hexo-NexT404pages">Hexo-NexT主题的404页面</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/HTMLandCSS_basic_01">HTML和CSS基础01-html的语法和基本结构文档设置标记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2018/04/13/HTML_CSS_basic2">HTML和CSS基础02-图像超链接和表格</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/pig_exons">modele_name</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/Counting-known-microRNAs-in-five-easy-steps">Counting known microRNAs in five easy steps</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/26/R_214">R极客的情人节</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/25/Adapter-and-quality-trimming-of-illumina-data">Adapter and quality trimming of illumina data</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch_bach">pytorch批训练</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch-Optimizer">pytorch:Optimizer优化器</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/23/pytorch-CNN">pytorch:CNN卷积神经网络</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/sync_server_files">同步服务器文件夹</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch07">pytorch07</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch06">pytorch06</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch05">pytorch05</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/Affymetrix">Affymetrix芯片原理</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch03">pytorch03</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch02">pytorch02</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch01">pytorch 学习笔记</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab04">matlab04图像的增强处理</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab03">matlab03图像的几何变换</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab02">matlab02图像的点运算</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/matlab">matlab学习笔记01</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/WEB_frame">WEB框架</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/ChIP-seq-masc">ChIP-seq-macs</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/CSS">CSS层叠样式表</a></li><li class="navListItem"><a class="navItem" href="/Linux-best-practice/blog/2017/09/22/pytorch04">pytorch04</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/Linux-best-practice/blog/2018/07/19_shell_env_set/env-export">shell变量及进程及set,env,export</a></h1><p class="post-meta">July 19, 2018</p><div class="authorBlock"><p class="post-authorName"><a href="" target="_blank" rel="noreferrer noopener">woobamboo</a></p></div></header><div><span><p>shell中，有三种变量：<code>系统变量</code>，<code>环境变量</code>，<code>用户变量</code>。</p>
+<!--truncate-->
+<h2><a class="anchor" aria-hidden="true" id="shell-变量"></a><a href="#shell-变量" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>shell 变量</h2>
+<h3><a class="anchor" aria-hidden="true" id="11系统变量"></a><a href="#11系统变量" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.1系统变量</h3>
+<p>Shell常用的系统变量并不多，但却十分有用，特别是在做一些参数检测的时候。下面是<code>Shell常用的系统变量</code></p>
+<table>
+<thead>
+<tr><th>[表示方法]</th><th>[描述]</th></tr>
+</thead>
+<tbody>
+<tr><td><code>$n</code></td><td><code>$1 表示第一个参数，$2 表示第二个参数 ...</code></td></tr>
+<tr><td><code>$#</code></td><td><code>命令行参数的个数</code></td></tr>
+<tr><td><code>$0</code></td><td><code>当前程序的名称</code></td></tr>
+<tr><td><code>$?</code></td><td><code>前一个命令或函数的返回码</code></td></tr>
+<tr><td><code>$*</code></td><td><code>以&quot;参数1 参数2 ... &quot; 形式保存所有参数</code></td></tr>
+<tr><td><code>$@</code></td><td><code>以&quot;参数1&quot; &quot;参数2&quot; ... 形式保存所有参数</code></td></tr>
+<tr><td><code>$$</code></td><td><code>本程序的(进程ID号)PID</code></td></tr>
+<tr><td><code>$!</code></td><td><code>上一个命令的PID</code></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="12-shell进程"></a><a href="#12-shell进程" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.2 shell进程</h3>
+<blockquote>
+<p>在利用上面的系统变量进行编程时，<code>$$</code>,<code>$!</code>并没有按预想的那样，输出上个<code>命令</code>的PID，这里需要学习一下shell中的进程。</p>
+</blockquote>
+<p>1：什么是shell子进程</p>
+<p>2：shell什么情况下会产生子进程</p>
+<p>3：子进程的特点与注意事项</p>
+<p>4:<code>$</code>变量<code>$$</code>在脚本里的意义，及如何得到子进程里的进程号</p>
+<blockquote>
+<ol>
+<li>什么事shell子进程</li>
+</ol>
+</blockquote>
+<p>子进程，是从父子进程的概念出发的，unix操作系统的进程从init进程开始（init进程为1,而进程号0为系统原始进程，以下讨论的进程原则上不包括进程0)均有其对应的子进程，就算是由于父进程先行结束导致的孤儿进程，也会被init领养，使其父进程ID为1。</p>
+<p>也因为所有的进程均有父进程，事实上，所有进程的创建，都可视为子进程创建过程。在apue一书里提及unix操作系统进程的创建，大抵上的模式都是进行fork+exec类系统调用。</p>
+<p>理解子进程的创建执行，需要至少细分到二个步骤，包括</p>
+<ul>
+<li>通过fork创建子进程环境，</li>
+<li>通过exec加载并执行进程代码。</li>
+<li>其间诸如继承的环境变量等细节，可以查看apue第八章相关章节。</li>
+</ul>
+<p>而shell子进程（以下均称subshell），顾名思义，就是由“当前shell进程”创建的一个子进程</p>
+<blockquote>
+<ol start="2">
+<li>shell什么情况下会产生子进程</li>
+</ol>
+</blockquote>
+<p>以下几个创建子进程的情况。（以下英文摘自info bash)</p>
+<ol>
+<li><code>&amp;</code>提交后台作业</li>
+</ol>
+<p>If a command is terminated by the control operator `&amp;', the shell executes the command asynchronously in a subshell.</p>
+<ol start="2">
+<li>管道</li>
+</ol>
+<p>Each command in a pipeline is executed in its own subshell</p>
+<p>3:括号命令列表 <code>()</code>操作符</p>
+<p>Placing a list of commands between parentheses causes a subshell environment to be created</p>
+<p>4：执行外部脚本、程序：</p>
+<p>When Bash finds such a file while searching the <code>$PATH</code> for a command, it spawns a subshell to execute it.  In other words, executing filename ARGUMENTS is equivalent to executing bash filename ARGUMENTS</p>
+<p>说明：大致上子进程的创建包括以上四种情况了。需要说明的是只要是符合上边四种情况之一，便会创建(fork)子进程，不因是否是函数，命令，或程序，也不会因为是内置函数(buitin)或是外部程序。</p>
+<p>此外，上边提到子进程创建与执行的二个步骤，shell子进程的创建在步骤之一并无多大差别，一般还是父进程调用fork产生进程环境，估在第二步exec的时候，是存在差别的。</p>
+<p>shell 作为解释语言程序，提供给第二步exec加载和执行的程序体并不是脚本本身，而是由第一行<code>#!</code>指定的，默认为shell程序,当然也可以是awk,sed等程序。</p>
+<p>只不过子进程的执行会根据情况而有所差别，对于<strong><em>内置函数</em></strong>，exec程序体为shell程序，并在会在子shell直接调用内置函数，</p>
+<p>而<strong><em>外部函数或程序</em></strong>，在创建了子进程环境后，大致会有二种执行情况：</p>
+<ul>
+<li>直接exec外部程序，</li>
+</ul>
+<p>比如下边例子中直接执行的sleep,pstree命令等</p>
+<ul>
+<li>subshell exec程序体为shell程序，在此基础上会进一步创建一个子进程以执行函数。</li>
+</ul>
+<p>比如下边例子中通过函数提交后台程序中的shell命令等</p>
+<pre><code class="hljs">例：内置函数(直接在subshell里执行，不管是否通过函数)
+$ mkfifo a
+
+$ type echo
+echo <span class="hljs-keyword">is</span> a shell builtin
+
+$ b(){echo a&gt;a;}
+$ b&amp;
+[<span class="hljs-number">2</span>] <span class="hljs-number">129180</span>
+[<span class="hljs-number">2</span>]  + <span class="hljs-number">129180</span> done       b
+
+$ echo a&gt;a &amp;
+[<span class="hljs-number">2</span>] <span class="hljs-number">129649</span>
+[<span class="hljs-number">2</span>]  + <span class="hljs-number">129649</span> done       echo a &gt; a
+
+
+$ pstree -pa $$
+zsh,<span class="hljs-number">130152</span>
+ └─pstree,<span class="hljs-number">130233</span> -pa <span class="hljs-number">130152</span>
+
+例：定义函数并提交后台运行（函数调用中的sleep在subshell之下又创建一个子进程,而pstree,sleep命令的直接执行，则是直接在子进程上进行）
+
+$ a(){ sleep <span class="hljs-number">30</span>;  } ;
+
+$ sleep <span class="hljs-number">40</span> &amp;
+[<span class="hljs-number">1</span>] <span class="hljs-number">131052</span>
+
+$ a &amp;
+[<span class="hljs-number">2</span>] <span class="hljs-number">131059</span>
+
+$ pstree -pa $$
+zsh,<span class="hljs-number">130152</span>
+ ├─pstree,<span class="hljs-number">2133</span> -pa <span class="hljs-number">130152</span>
+ ├─sleep,<span class="hljs-number">131052</span> <span class="hljs-number">40</span>
+ └─zsh,<span class="hljs-number">131059</span>
+     └─sleep,<span class="hljs-number">131060</span> <span class="hljs-number">30</span>
+
+要注意，shell脚本的执行模式，在第四点的二种模式下，shell是会创建子进程的：
+
+filename ARGUMENTS
+bash filename ARGUMENTS
+
+但shell同时提供二种不创建子程序的进程创建方式
+
+<span class="hljs-number">1</span>：source命令，使用方法
+
+source   filename ARGUMENTS
+或
+. filename ARGUMENTS
+
+此种方法，直接在当前shell进程中执行filename脚本，filename结束后继续返回当前shell进程
+
+
+<span class="hljs-number">2</span>：exec命令，使用方法
+
+exec filename ARGUMENTS
+
+此种方法直接在当前shell进程中执行filname脚本，filename结束后退出当前shell进程
+</code></pre>
+<blockquote>
+<ol start="3">
+<li>子进程特点与注意事项</li>
+</ol>
+</blockquote>
+<p>这方面不具体展开，只提一点写脚本容易出现的错误。</p>
+<p>做为子进程，其进程环境与父进程的环境是独立的， 所以在变量传递过程中，需要注意子进程内部不能更改到父进程的变量。比如如下通过管道求和并赋给外部变量sum例子，结果sum值并不会因此改变：</p>
+<pre><code class="hljs"><span class="hljs-meta">$</span><span class="bash"> sum=0</span>
+<span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">echo</span> <span class="hljs-string">'1 2 3 4'</span> | sed <span class="hljs-string">'s/ /\n/g'</span> | <span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> line;<span class="hljs-keyword">do</span> sum+=<span class="hljs-variable">$line</span>; <span class="hljs-keyword">done</span></span>
+<span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">echo</span> <span class="hljs-variable">$sum</span></span>
+01234
+
+很尴尬我的会变。
+</code></pre>
+<blockquote>
+<ol start="4">
+<li>变量<code>$$</code>在脚本中的意义</li>
+</ol>
+</blockquote>
+<p>变量<code>$$</code>代表的是当前shell进程的进和id，这里要特别留意<strong><em><code>当前shell</code></em></strong>，</p>
+<p>看看info bash里的说明</p>
+<p><code>$</code></p>
+<p>Expands to the process ID of the shell.  In a <code>()</code> subshell, it expands to the process ID of the invoking shell, not the subshell.</p>
+<p>所以在实际环境中，<code>$$</code>并不一定“当前进程”的进程号，而是<code>当前shell进程</code>的进程号。</p>
+<p>从文档中，需要留意的便是 invoking shell (info) 或  current  shell（man) 与 当前subshell进程的关系了</p>
+<p>这就引出了几个问题</p>
+<ul>
+<li><p>到底怎么样算是current  shell</p></li>
+<li><p>子进程里的$$对应的是哪个current  shell</p></li>
+<li><p>如何猎取子进程的<code>$$</code>?</p></li>
+</ul>
+<p>做为调试和测试，下边的例子引用几个变量,</p>
+<h3><a class="anchor" aria-hidden="true" id="2环境变量"></a><a href="#2环境变量" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2.环境变量</h3>
+<p><strong><em>shell 环境变量是所有shell 程序都会接受的参数。shell程序运行时，都会接收一组变量，这组变量就是环境变量。常用的环境变量：</em></strong></p>
+<p><strong><em>在shell程序中，使用export导出的环境变量仅仅在本shell程序中管用（包括调用的其他shell程序文件）；当本shell程序结束，该环境变量就不起作用了。</em></strong></p>
+<h3><a class="anchor" aria-hidden="true" id="3用户变量"></a><a href="#3用户变量" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3.用户变量</h3>
+<p>不管系统变量有多少，对于需求来说，总是不够的。用户变量是最常用到的变量，使用也十分简单。</p>
+<pre><code class="hljs"><span class="hljs-comment"># 定义：</span>
+name=<span class="hljs-string">"Winter Is Coming!"</span>
+
+<span class="hljs-comment"># 使用：</span>
+echo $name
+
+<span class="hljs-comment"># 切割变量的方法：</span>
+a = ${name%Coming}
+b = ${a<span class="hljs-comment">#Winter}</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="set-env-export"></a><a href="#set-env-export" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>set,env,export</h2>
+<h3><a class="anchor" aria-hidden="true" id="1set命令"></a><a href="#1set命令" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1.set命令</h3>
+<p>作用：</p>
+<ul>
+<li>显示系统中已存在的shell变量</li>
+<li>设置shell变量的新变量值</li>
+</ul>
+<blockquote>
+<p>set 命令不能定义新的shell变量。如果要定义新的变量，可以用<code>declare</code>命令及<code>变量名=值</code>的格式进行定义。</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="实例"></a><a href="#实例" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>实例</h3>
+<pre><code class="hljs"><span class="hljs-meta"># 使用declare命令定义一个新的环境变量<span class="hljs-string">"mylove"</span>，并且将其值设置为<span class="hljs-string">"Visual C++"</span>，输入如下命令：</span>
+
+declare mylove=<span class="hljs-string">'Visual C++'</span>   <span class="hljs-meta">#定义新环境变量</span>
+
+<span class="hljs-meta"># 再使用set命令将新定义的变量输出为环境变量，输入如下命令：</span>
+set -a mylove                 <span class="hljs-meta">#设置为环境变量</span>
+
+<span class="hljs-meta"># 执行该命令后，将会新添加对应的环境变量。用户可以使用env命令和grep命令分别显示和搜索环境变量<span class="hljs-string">"mylove"</span>，输入命令如下：</span>
+
+env | grep mylove             <span class="hljs-meta">#显示环境变量值</span>
+
+此时，该命令执行后，将输出查询到的环境变量值。
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="export"></a><a href="#export" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>export</h3>
+<p>pass</p>
+<h3><a class="anchor" aria-hidden="true" id="env"></a><a href="#env" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>env</h3>
+<p><strong>env命令</strong>用于显示系统中已存在的<code>环境变量</code>，以及在定义的环境中执行指令。该命令只使用&quot;-&quot;作为参数选项时，隐藏了选项&quot;-i&quot;的功能。若没有设置任何选项和参数时，则直接显示当前的环境变量。</p>
+<h2><a class="anchor" aria-hidden="true" id="附录"></a><a href="#附录" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>附录：</h2>
+<h3><a class="anchor" aria-hidden="true" id="常用的环境变量"></a><a href="#常用的环境变量" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>常用的环境变量</h3>
+<table>
+<thead>
+<tr><th>名称</th><th>描述</th></tr>
+</thead>
+<tbody>
+<tr><td>PATH</td><td>命令搜索路径,以冒号为分隔符.注意与DOS下不同的是, 当前目录不在系统路径里</td></tr>
+<tr><td>HOME</td><td>用户home目录的路径名,是cd命令的默认参数</td></tr>
+<tr><td>COLUMNS</td><td>定义了命令编辑模式下可使用命令行的长度</td></tr>
+<tr><td>EDITOR</td><td>默认的行编辑器</td></tr>
+<tr><td>VISUAL</td><td>默认的可视编辑器</td></tr>
+<tr><td>FCEDIT</td><td>命令fc使用的编辑器</td></tr>
+<tr><td>HISTFILE</td><td>命令历史文件</td></tr>
+<tr><td>HISTSIZE</td><td>命令历史文件中最多可包含的命令条数</td></tr>
+<tr><td>HISTFILESIZE</td><td>命令历史文件中包含的最大行数</td></tr>
+<tr><td>IFS</td><td>定义SHELL使用的分隔符</td></tr>
+<tr><td>LOGNAME</td><td>用户登录名</td></tr>
+<tr><td>MAIL</td><td>指向一个需要SHELL监视其修改时间的文件.当该文件修改后, SHELL将发消息You hava mail给用户</td></tr>
+<tr><td>MAILCHECK</td><td>SHELL检查MAIL文件的周期,单位是秒</td></tr>
+<tr><td>MAILPATH</td><td>功能与MAIL类似.但可以用一组文件,以冒号分隔,每个文件后可跟一个问号和一条发向用户的消息</td></tr>
+<tr><td>SHELL</td><td>SHELL的路径名</td></tr>
+<tr><td>TERM</td><td>终端类型</td></tr>
+<tr><td>TMOUT</td><td>SHELL自动退出的时间,单位为秒,若设为0则禁止SHELL自动退出</td></tr>
+<tr><td>PROMPT_COMMAND</td><td>指定在主命令提示符前应执行的命令</td></tr>
+<tr><td>PS1</td><td>主命令提示符</td></tr>
+<tr><td>PS2</td><td>二级命令提示符,命令执行过程中要求输入数据时用</td></tr>
+<tr><td>PS3</td><td>select的命令提示符</td></tr>
+<tr><td>PS4</td><td>调试命令提示符</td></tr>
+<tr><td>MANPATH</td><td>寻找手册页的路径,以冒号分隔</td></tr>
+<tr><td>LD_LIBRARY_PATH</td><td>寻找库的路径,以冒号分隔</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="set-选项"></a><a href="#set-选项" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>set 选项：</h2>
+<pre><code class="hljs">-<span class="ruby">a：标示已修改的变量，以供输出至环境变量。
+</span>-<span class="ruby">b：使被中止的后台程序立刻回报执行状态。
+</span>-<span class="ruby">C：转向所产生的文件无法覆盖已存在的文件。
+</span>-<span class="ruby">d：Shell预设会用杂凑表记忆使用过的指令，以加速指令的执行。使用-d参数可取消。
+</span>-<span class="ruby">e：若指令传回值不等于<span class="hljs-number">0</span>，则立即退出shell。
+</span>-<span class="ruby">f：取消使用通配符。
+</span>-<span class="ruby">h：自动记录函数的所在位置。
+</span>-<span class="ruby">H Shell：可利用<span class="hljs-string">"!"</span>加&lt;指令编号&gt;的方式来执行history中记录的指令。
+</span>-<span class="ruby">k：指令所给的参数都会被视为此指令的环境变量。
+</span>-<span class="ruby">l：记录<span class="hljs-keyword">for</span>循环的变量名称。
+</span>-<span class="ruby">m：使用监视模式。
+</span>-<span class="ruby">n：只读取指令，而不实际执行。
+</span>-<span class="ruby">p：启动优先顺序模式。
+</span>-<span class="ruby">P：启动-P参数后，执行指令时，会以实际的文件或目录来取代符号连接。
+</span>-<span class="ruby">t：执行完随后的指令，即退出shell。
+</span>-<span class="ruby">u：当执行时使用到未定义过的变量，则显示错误信息。
+</span>-<span class="ruby">v：显示shell所读取的输入值。
+</span>-<span class="ruby">x：执行指令后，会先显示该指令及所下的参数。
+</span></code></pre>
+<h2><a class="anchor" aria-hidden="true" id="参考"></a><a href="#参考" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参考</h2>
+<ul>
+<li><a href="http://blog.sina.com.cn/s/blog_4b9eab320100rirb.html">unix shell的系统变量，环境变量，用户变量(引)</a></li>
+<li><a href="http://man.linuxde.net/set">set命令</a></li>
+<li><a href="http://man.linuxde.net/env">env命令</a></li>
+<li><a href="https://blog.csdn.net/sosodream/article/details/5683515">实例解析shell子进程（subshell )</a></li>
+</ul>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/Linux-best-practice/blog">Recent posts</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#shell-变量">shell 变量</a><ul class="toc-headings"><li><a href="#11系统变量">1.1系统变量</a></li><li><a href="#12-shell进程">1.2 shell进程</a></li><li><a href="#2环境变量">2.环境变量</a></li><li><a href="#3用户变量">3.用户变量</a></li></ul></li><li><a href="#set-env-export">set,env,export</a><ul class="toc-headings"><li><a href="#1set命令">1.set命令</a></li><li><a href="#实例">实例</a></li><li><a href="#export">export</a></li><li><a href="#env">env</a></li></ul></li><li><a href="#附录">附录：</a><ul class="toc-headings"><li><a href="#常用的环境变量">常用的环境变量</a></li></ul></li><li><a href="#set-选项">set 选项：</a></li><li><a href="#参考">参考</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/Linux-best-practice/" class="nav-home"><img src="/Linux-best-practice/img/favicon.ico" alt="Kaige Dong&#x27;s Site" width="66" height="58"/></a><div><h5>Docs</h5><a href="/Linux-best-practice/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/Linux-best-practice/docs/en/doc2.html">Guides (or other categories)</a><a href="/Linux-best-practice/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/Linux-best-practice/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/Linux-best-practice/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/Linux-best-practice/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2019 Kaige Dong</section></footer></div></body></html>
