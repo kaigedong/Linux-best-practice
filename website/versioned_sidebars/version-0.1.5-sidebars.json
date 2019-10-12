@@ -1,0 +1,48 @@
+{
+  "version-0.1.5-docs": {
+    "Docusaurus": [
+      "version-0.1.5-doc1",
+      "version-0.1.5-doc2"
+    ],
+    "First Category": [
+      "version-0.1.5-doc9"
+    ],
+    "Second Category": [
+      "version-0.1.5-doc3"
+    ],
+    "Algorithm": [
+      "version-0.1.5-doc100",
+      "version-0.1.5-doc101",
+      "version-0.1.5-doc102",
+      "version-0.1.5-doc103",
+      "version-0.1.5-doc104"
+    ],
+    "Django": [
+      "version-0.1.5-doc200",
+      "version-0.1.5-doc201",
+      "version-0.1.5-doc202",
+      "version-0.1.5-doc203",
+      "version-0.1.5-doc204"
+    ],
+    "Nginx": [
+      "version-0.1.5-doc300",
+      "version-0.1.5-doc301",
+      "version-0.1.5-doc302",
+      "version-0.1.5-doc303",
+      "version-0.1.5-doc304"
+    ],
+    "Scrapy": [
+      "version-0.1.5-doc400",
+      "version-0.1.5-doc401",
+      "version-0.1.5-doc402",
+      "version-0.1.5-doc403",
+      "version-0.1.5-doc404"
+    ]
+  },
+  "version-0.1.5-docs-other": {
+    "First Category": [
+      "version-0.1.5-doc4",
+      "version-0.1.5-doc5"
+    ]
+  }
+}

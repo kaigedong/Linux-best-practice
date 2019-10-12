@@ -3,7 +3,10 @@
     "Docusaurus": ["doc1","doc2"],
     "First Category": ["doc9"],
     "Second Category": ["doc3"],
-    "Algorithm": ["doc100", "doc101", "doc102", "doc103", "doc104"]
+    "Algorithm": ["doc100", "doc101", "doc102", "doc103", "doc104"],
+    "Django": ["doc200","doc201", "doc202", "doc203", "doc204"],
+    "Nginx": ["doc300", "doc301", "doc302", "doc303", "doc304"],
+    "Scrapy": ["doc400", "doc401", "doc402", "doc403", "doc404"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]

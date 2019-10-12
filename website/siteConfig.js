@@ -44,6 +44,10 @@ const siteConfig = {
     {blog: true, label: 'Blog'},
   ],
 
+  blogSidebarCount: 'ALL',
+  blogSidebarTitle: { default: 'Recent posts', all: 'All blog posts' },
+
+
   // If you have users set above, you add it here:
   users,
 
