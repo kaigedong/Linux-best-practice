@@ -1,8 +1,8 @@
 {
   "docs": {
-    "Docusaurus": ["doc1","doc2"],
-    "First Category": ["doc9"],
-    "Second Category": ["doc3"],
+    "初始工作环境": ["doc1","doc2", "doc3"],
+    "Django+Xadmin网课站点": ["doc9","doc206", "doc207", "doc208"],
+
     "Algorithm": ["doc100", "doc101", "doc102", "doc103", "doc104"],
     "Django": ["doc200","doc201", "doc202", "doc203", "doc204"],
     "Nginx": ["doc300", "doc301", "doc302", "doc303", "doc304"],
